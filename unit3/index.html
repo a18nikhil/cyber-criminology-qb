@@ -1,1 +1,689 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unit III - Cyber Criminology</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f3f4f6;
+            color: #222;
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 22px 18px 45px;
+        }
+
+
+        /* BACK LINK */
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 14px;
+            color: #1d4f91;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+
+        /* UNIT HEADER */
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+
+            background: #ffffff;
+            border-top: 5px solid #263b5e;
+            border-radius: 8px;
+
+            padding: 24px 20px;
+            margin-bottom: 24px;
+        }
+
+        .unit-label {
+            flex-shrink: 0;
+
+            display: inline-block;
+            background: #263b5e;
+            color: #ffffff;
+
+            padding: 5px 12px;
+            border-radius: 4px;
+
+            font-size: 15px;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #1d2f4d;
+            font-size: 27px;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+
+        /* TOPIC CARD */
+
+        .topic {
+            background: #ffffff;
+            border-radius: 8px;
+            margin-bottom: 18px;
+            overflow: hidden;
+            box-shadow: 0 2px 7px rgba(0,0,0,0.06);
+        }
+
+
+        /* TOPIC HEADER */
+
+        .topic-heading {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 14px 16px;
+
+            border-left: 5px solid #263b5e;
+            border-bottom: 1px solid #e3e5e8;
+
+            background: #fafbfc;
+        }
+
+        .topic-number {
+            flex-shrink: 0;
+
+            display: inline-block;
+            color: #1d4f91;
+            background: #eaf0f8;
+
+            padding: 3px 8px;
+            border-radius: 3px;
+
+            font-size: 12px;
+            letter-spacing: 0.6px;
+            white-space: nowrap;
+        }
+
+        .topic-heading h2 {
+            margin: 0;
+            color: #1d2f4d;
+            font-size: 20px;
+            font-weight: normal;
+            line-height: 1.25;
+        }
+
+
+        /* QUESTION CARDS */
+
+        .question-link {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+
+            margin: 12px;
+            padding: 13px 14px;
+
+            background: #f7f8fa;
+            border: 1px solid #e4e6e9;
+            border-radius: 6px;
+
+            text-decoration: none;
+            color: #222;
+        }
+
+        .question-link + .question-link {
+            margin-top: 0;
+        }
+
+        .q-number {
+            flex-shrink: 0;
+
+            background: #263b5e;
+            color: #ffffff;
+
+            padding: 4px 8px;
+            border-radius: 4px;
+
+            font-size: 14px;
+            line-height: 1.2;
+        }
+
+        .question-content {
+            flex: 1;
+        }
+
+        .question-text {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        .view-answer {
+            display: block;
+            margin-top: 6px;
+            color: #1d4f91;
+            font-size: 14px;
+        }
+
+
+        /* NO DIRECT QB QUESTION */
+
+        .no-question {
+            margin: 12px;
+            padding: 11px 14px;
+
+            background: #f7f8fa;
+            border: 1px solid #e4e6e9;
+            border-radius: 6px;
+
+            color: #777;
+            font-size: 15px;
+            font-style: italic;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding: 14px 10px 30px;
+            }
+
+            .back-link {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+
+            /* Horizontal Unit Header */
+
+            .header {
+                gap: 7px;
+                padding: 17px 9px;
+                margin-bottom: 17px;
+            }
+
+            .unit-label {
+                font-size: 10px;
+                padding: 4px 6px;
+                letter-spacing: 0.4px;
+            }
+
+            .header h1 {
+                font-size: 17px;
+                line-height: 1.15;
+                letter-spacing: -0.3px;
+                white-space: nowrap;
+            }
+
+
+            /* Topics */
+
+            .topic {
+                margin-bottom: 14px;
+            }
+
+            .topic-heading {
+                gap: 7px;
+                padding: 11px 10px;
+            }
+
+            .topic-number {
+                font-size: 9px;
+                padding: 3px 5px;
+                letter-spacing: 0.3px;
+            }
+
+            .topic-heading h2 {
+                font-size: 14px;
+                line-height: 1.2;
+                letter-spacing: -0.2px;
+            }
+
+
+            /* Questions */
+
+            .question-link {
+                gap: 9px;
+                margin: 9px;
+                padding: 10px;
+            }
+
+            .question-link + .question-link {
+                margin-top: 0;
+            }
+
+            .q-number {
+                font-size: 12px;
+                padding: 4px 6px;
+            }
+
+            .question-text {
+                font-size: 14px;
+                line-height: 1.35;
+            }
+
+            .view-answer {
+                margin-top: 5px;
+                font-size: 12px;
+            }
+
+            .no-question {
+                margin: 9px;
+                padding: 9px 10px;
+                font-size: 13px;
+            }
+        }
+
+
+        /* EXTRA SMALL PHONES */
+
+        @media (max-width: 380px) {
+
+            .header {
+                gap: 5px;
+                padding-left: 7px;
+                padding-right: 7px;
+            }
+
+            .unit-label {
+                font-size: 9px;
+                padding: 4px 5px;
+            }
+
+            .header h1 {
+                font-size: 15px;
+                letter-spacing: -0.4px;
+            }
+
+            .topic-heading {
+                gap: 5px;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .topic-number {
+                font-size: 8.5px;
+                padding: 3px 4px;
+            }
+
+            .topic-heading h2 {
+                font-size: 13px;
+                letter-spacing: -0.3px;
+            }
+
+            .question-text {
+                font-size: 13.5px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <a href="../index.html" class="back-link">
+        ← Back to Units
+    </a>
+
+
+    <!-- UNIT HEADER -->
+
+    <header class="header">
+
+        <div class="unit-label">
+            UNIT III
+        </div>
+
+        <h1>
+            Cyber Crime, Victimization and Human Rights
+        </h1>
+
+    </header>
+
+
+
+    <!-- TOPIC 1 -->
+
+    <section class="topic">
+
+        <div class="topic-heading">
+
+            <div class="topic-number">
+                TOPIC 1
+            </div>
+
+            <h2>
+                Women Victims in Online Social Networking
+            </h2>
+
+        </div>
+
+
+        <a href="q6.html" class="question-link">
+
+            <span class="q-number">
+                Q6
+            </span>
+
+            <div class="question-content">
+
+                <div class="question-text">
+                    Analyze the role of anonymity in the online
+                    victimization of women.
+                </div>
+
+                <span class="view-answer">
+                    View Answer →
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <a href="q29.html" class="question-link">
+
+            <span class="q-number">
+                Q29
+            </span>
+
+            <div class="question-content">
+
+                <div class="question-text">
+                    Analyze the vulnerabilities and factors contributing
+                    to women's victimization on social networks.
+                </div>
+
+                <span class="view-answer">
+                    View Answer →
+                </span>
+
+            </div>
+
+        </a>
+
+    </section>
+
+
+
+    <!-- TOPIC 2 -->
+
+    <section class="topic">
+
+        <div class="topic-heading">
+
+            <div class="topic-number">
+                TOPIC 2
+            </div>
+
+            <h2>
+                Malware Victimization
+            </h2>
+
+        </div>
+
+
+        <a href="q8.html" class="question-link">
+
+            <span class="q-number">
+                Q8
+            </span>
+
+            <div class="question-content">
+
+                <div class="question-text">
+                    Describe malware victimization with examples, and
+                    explain the common ways in which individuals and
+                    organizations become victims.
+                </div>
+
+                <span class="view-answer">
+                    View Answer →
+                </span>
+
+            </div>
+
+        </a>
+
+    </section>
+
+
+
+    <!-- TOPIC 3 -->
+
+    <section class="topic">
+
+        <div class="topic-heading">
+
+            <div class="topic-number">
+                TOPIC 3
+            </div>
+
+            <h2>
+                Cyber Vandalism
+            </h2>
+
+        </div>
+
+
+        <a href="q14.html" class="question-link">
+
+            <span class="q-number">
+                Q14
+            </span>
+
+            <div class="question-content">
+
+                <div class="question-text">
+                    Discuss cyber vandalism as a form of cybercrime,
+                    covering its motivations and consequences.
+                </div>
+
+                <span class="view-answer">
+                    View Answer →
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <a href="q21.html" class="question-link">
+
+            <span class="q-number">
+                Q21
+            </span>
+
+            <div class="question-content">
+
+                <div class="question-text">
+                    Define cyber vandalism and explain its common forms.
+                </div>
+
+                <span class="view-answer">
+                    View Answer →
+                </span>
+
+            </div>
+
+        </a>
+
+    </section>
+
+
+
+    <!-- TOPIC 4 -->
+
+    <section class="topic">
+
+        <div class="topic-heading">
+
+            <div class="topic-number">
+                TOPIC 4
+            </div>
+
+            <h2>
+                Cyber Bullying
+            </h2>
+
+        </div>
+
+
+        <a href="q10.html" class="question-link">
+
+            <span class="q-number">
+                Q10
+            </span>
+
+            <div class="question-content">
+
+                <div class="question-text">
+                    Describe cyberbullying and its impact on victims.
+                </div>
+
+                <span class="view-answer">
+                    View Answer →
+                </span>
+
+            </div>
+
+        </a>
+
+    </section>
+
+
+
+    <!-- TOPIC 5 -->
+
+    <section class="topic">
+
+        <div class="topic-heading">
+
+            <div class="topic-number">
+                TOPIC 5
+            </div>
+
+            <h2>
+                Human Rights Infringement in the Digital Age
+            </h2>
+
+        </div>
+
+
+        <a href="q26.html" class="question-link">
+
+            <span class="q-number">
+                Q26
+            </span>
+
+            <div class="question-content">
+
+                <div class="question-text">
+                    Discuss the connection between cybercrime victimization
+                    and human rights, and highlight which rights are most
+                    violated.
+                </div>
+
+                <span class="view-answer">
+                    View Answer →
+                </span>
+
+            </div>
+
+        </a>
+
+    </section>
+
+
+
+    <!-- TOPIC 6 -->
+
+    <section class="topic">
+
+        <div class="topic-heading">
+
+            <div class="topic-number">
+                TOPIC 6
+            </div>
+
+            <h2>
+                Legal and Ethical Issues in Cyber Crime
+            </h2>
+
+        </div>
+
+
+        <a href="q24.html" class="question-link">
+
+            <span class="q-number">
+                Q24
+            </span>
+
+            <div class="question-content">
+
+                <div class="question-text">
+                    Explain any two legal provisions addressing cybercrime
+                    victimization, along with their scope and limitations
+                    in protecting victims.
+                </div>
+
+                <span class="view-answer">
+                    View Answer →
+                </span>
+
+            </div>
+
+        </a>
+
+    </section>
+
+
+
+    <!-- TOPIC 7 -->
+
+    <section class="topic">
+
+        <div class="topic-heading">
+
+            <div class="topic-number">
+                TOPIC 7
+            </div>
+
+            <h2>
+                Case Studies on Cyber Crimes
+            </h2>
+
+        </div>
+
+
+        <div class="no-question">
+            No direct Question Bank question from this topic.
+        </div>
+
+    </section>
+
+
+</div>
+
+</body>
+  </html>
