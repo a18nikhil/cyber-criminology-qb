@@ -1,1 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Q16 - Café Culture and Yahoo Boyism</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f2f2f2;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        /* =========================
+           WEBSITE AREA
+           ========================= */
+
+        .page-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 18px 14px 35px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: #1d4f91;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        /* =========================
+           EXAM ANSWER SHEET
+           ========================= */
+
+        .answer-sheet {
+            background: #ffffff;
+            padding: 34px 40px 38px;
+            border: 1px solid #dedede;
+
+            /* Blue pen */
+            color: #173f8a;
+
+            font-size: 18px;
+            line-height: 1.65;
+        }
+
+        /* =========================
+           QUESTION
+           ========================= */
+
+        .question {
+            margin: 0 0 25px;
+            font-size: 19px;
+            line-height: 1.5;
+        }
+
+        /* =========================
+           HEADINGS
+           BLUE PEN + UNDERLINE
+           ========================= */
+
+        .answer-heading {
+            display: inline-block;
+            margin: 0 0 9px;
+
+            color: #173f8a;
+            font-size: 18px;
+            font-weight: normal;
+
+            border-bottom: 1px solid #173f8a;
+            line-height: 1.2;
+        }
+
+        .section {
+            margin-bottom: 22px;
+        }
+
+        .section p {
+            margin: 0 0 10px;
+        }
+
+        /* =========================
+           BULLET POINTS
+           ========================= */
+
+        .pen-list {
+            margin: 6px 0 10px;
+            padding-left: 27px;
+        }
+
+        .pen-list li {
+            margin-bottom: 5px;
+            padding-left: 2px;
+        }
+
+        /* =========================
+           NUMBERED POINTS
+           ========================= */
+
+        .number-list {
+            margin: 6px 0 0;
+            padding-left: 28px;
+        }
+
+        .number-list li {
+            margin-bottom: 8px;
+            padding-left: 3px;
+        }
+
+        /*
+           In an exam, important point names
+           can simply be underlined with pen.
+        */
+
+        .point-name {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        /* =========================
+           TABLE
+
+           TEXT = BLUE PEN
+           LINES = PENCIL / RULER
+           ========================= */
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+
+        .exam-table {
+            width: 100%;
+            border-collapse: collapse;
+
+            /* Text written using blue pen */
+            color: #173f8a;
+
+            font-size: 17px;
+        }
+
+        .exam-table th,
+        .exam-table td {
+
+            /* Border represents pencil/ruler */
+            border: 1px solid #777777;
+
+            padding: 8px 10px;
+            text-align: left;
+            vertical-align: top;
+            font-weight: normal;
+        }
+
+        .exam-table th {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        /* =========================
+           FLOWCHART
+
+           WORDS = BLUE PEN
+           BOXES + ARROWS = PENCIL
+           ========================= */
+
+        .diagram {
+            width: 340px;
+            max-width: 100%;
+            margin: 16px auto 4px;
+            text-align: center;
+        }
+
+        .diagram-box {
+
+            /* Pencil-drawn box */
+            border: 1px solid #777777;
+
+            /* Words inside box = blue pen */
+            color: #173f8a;
+
+            padding: 7px 8px;
+            background: transparent;
+
+            font-size: 16px;
+            line-height: 1.3;
+        }
+
+        /* Pencil arrow */
+
+        .diagram-arrow {
+            height: 29px;
+            position: relative;
+        }
+
+        .diagram-arrow::before {
+            content: "";
+            position: absolute;
+
+            left: 50%;
+            top: 0;
+
+            height: 21px;
+
+            border-left: 1px solid #777777;
+        }
+
+        .diagram-arrow::after {
+            content: "";
+            position: absolute;
+
+            left: calc(50% - 4px);
+            top: 16px;
+
+            width: 7px;
+            height: 7px;
+
+            border-right: 1px solid #777777;
+            border-bottom: 1px solid #777777;
+
+            transform: rotate(45deg);
+        }
+
+        /* =========================
+           CONCLUSION
+           ========================= */
+
+        .conclusion {
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           WEBSITE NAVIGATION
+           ========================= */
+
+        .bottom-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+
+            margin-top: 14px;
+        }
+
+        .nav-link {
+            background: #ffffff;
+            border: 1px solid #d6d6d6;
+            border-radius: 5px;
+
+            padding: 9px 13px;
+
+            color: #1d4f91;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .next {
+            margin-left: auto;
+        }
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 600px) {
+
+            .page-container {
+                padding: 12px 8px 25px;
+            }
+
+            .back-link {
+                margin-left: 3px;
+                margin-bottom: 9px;
+                font-size: 13px;
+            }
+
+            .answer-sheet {
+                padding: 22px 16px 26px;
+
+                font-size: 15.5px;
+                line-height: 1.6;
+            }
+
+            .question {
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 22px;
+            }
+
+            .answer-heading {
+                font-size: 16px;
+                margin-bottom: 7px;
+            }
+
+            .section {
+                margin-bottom: 19px;
+            }
+
+            .section p {
+                margin-bottom: 9px;
+            }
+
+            .pen-list {
+                padding-left: 23px;
+            }
+
+            .number-list {
+                padding-left: 24px;
+            }
+
+            .pen-list li {
+                margin-bottom: 4px;
+            }
+
+            .number-list li {
+                margin-bottom: 7px;
+            }
+
+            /* Mobile table */
+
+            .exam-table {
+                font-size: 14px;
+            }
+
+            .exam-table th,
+            .exam-table td {
+                padding: 7px;
+            }
+
+            /* Mobile flowchart */
+
+            .diagram {
+                width: 280px;
+                margin-top: 13px;
+            }
+
+            .diagram-box {
+                font-size: 14px;
+                padding: 6px 7px;
+            }
+
+            .diagram-arrow {
+                height: 25px;
+            }
+
+            .diagram-arrow::before {
+                height: 18px;
+            }
+
+            .diagram-arrow::after {
+                top: 13px;
+            }
+
+            /* Navigation */
+
+            .bottom-nav {
+                margin-top: 10px;
+            }
+
+            .nav-link {
+                font-size: 12.5px;
+                padding: 8px 10px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="page-container">
+
+    <!-- WEBSITE NAVIGATION -->
+
+    <a href="index.html" class="back-link">
+        ← Back to Unit I
+    </a>
+
+
+    <!-- =====================================
+         EXAM ANSWER SHEET
+         ===================================== -->
+
+    <main class="answer-sheet">
+
+
+        <!-- QUESTION
+             WRITE WITH BLUE PEN -->
+
+        <p class="question">
+            Q16. Describe the concept of Café Culture and Yahoo Boyism
+            in Nigeria as a form of cybercrime subculture.
+        </p>
+
+
+        <!-- INTRODUCTION -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                Introduction
+            </h2>
+
+            <p>
+                Café Culture and Yahoo Boyism are related to the growth
+                of internet fraud in Nigeria. When internet access became
+                common through cyber cafés, some people started using
+                these cafés for online fraud. Such people became popularly
+                known as Yahoo Boys.
+            </p>
+
+        </section>
+
+
+        <!-- 1 -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                1. Café Culture
+            </h2>
+
+            <p>
+                In the early days of the internet in Nigeria, many people
+                did not have internet access at home. Therefore, they used
+                cyber cafés to access the internet.
+            </p>
+
+            <p>
+                Most people used cyber cafés for normal purposes, but some
+                used them for online fraud. They used cafés to:
+            </p>
+
+            <ul class="pen-list">
+                <li>Create fake accounts and identities.</li>
+                <li>Send fake emails and messages.</li>
+                <li>Contact people in other countries.</li>
+                <li>Carry out online scams.</li>
+                <li>Learn fraud methods from other people.</li>
+            </ul>
+
+            <p>
+                In this way, cyber cafés also became meeting and working
+                places for some online fraudsters.
+            </p>
+
+        </section>
+
+
+        <!-- 2 -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                2. Yahoo Boyism
+            </h2>
+
+            <p>
+                Yahoo Boyism refers to a type of online fraud mainly
+                associated with some young internet fraudsters in Nigeria.
+                These fraudsters are commonly called Yahoo Boys.
+            </p>
+
+            <p>
+                Their main aim is to trick people online and get money
+                from them.
+            </p>
+
+            <p>
+                They may use fake names, fake photos, false stories and
+                attractive offers to gain the trust of victims.
+            </p>
+
+        </section>
+
+
+        <!-- 3 -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                3. Common Activities of Yahoo Boys
+            </h2>
+
+
+            <!--
+                TABLE:
+                Borders = Pencil / Ruler
+                Text = Blue Pen
+            -->
+
+            <div class="table-wrapper">
+
+                <table class="exam-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Activity</th>
+                            <th>Simple Meaning</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Advance-fee fraud</td>
+                            <td>
+                                Asking for money first by making a false promise
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Romance scam</td>
+                            <td>
+                                Creating a fake love relationship to get money
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Fake business offer</td>
+                            <td>
+                                Giving false job, business or investment offers
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Impersonation</td>
+                            <td>
+                                Pretending to be another person
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Phishing</td>
+                            <td>
+                                Sending fake messages to steal personal information
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- 4 -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                4. Yahoo Boyism as a Cybercrime Subculture
+            </h2>
+
+            <p>
+                A subculture is a group of people who share similar ideas,
+                habits and ways of doing things.
+            </p>
+
+            <p>
+                Yahoo Boyism is called a cybercrime subculture because
+                some Yahoo Boys:
+            </p>
+
+            <ul class="pen-list">
+                <li>Work or communicate with other fraudsters.</li>
+                <li>Share ideas and fraud methods.</li>
+                <li>Learn new tricks from each other.</li>
+                <li>Use similar methods to cheat victims.</li>
+                <li>
+                    May see successful fraudsters as examples to follow.
+                </li>
+            </ul>
+
+            <p>
+                The process can be shown as:
+            </p>
+
+
+            <!--
+                FLOWCHART:
+                Boxes + Arrows = Pencil
+                Words = Blue Pen
+            -->
+
+            <div class="diagram">
+
+                <div class="diagram-box">
+                    Internet / Cyber Café
+                </div>
+
+                <div class="diagram-arrow"></div>
+
+                <div class="diagram-box">
+                    Meeting Other Fraudsters
+                </div>
+
+                <div class="diagram-arrow"></div>
+
+                <div class="diagram-box">
+                    Learning Fraud Methods
+                </div>
+
+                <div class="diagram-arrow"></div>
+
+                <div class="diagram-box">
+                    Online Scams
+                </div>
+
+                <div class="diagram-arrow"></div>
+
+                <div class="diagram-box">
+                    Getting Money
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 5 -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                5. Main Features of Yahoo Boyism
+            </h2>
+
+            <ol class="number-list">
+
+                <li>
+                    <span class="point-name">
+                        Use of the internet:
+                    </span>
+                    Online platforms are used to contact victims.
+                </li>
+
+                <li>
+                    <span class="point-name">
+                        Fake identity:
+                    </span>
+                    Fraudsters may use fake names, photos and accounts.
+                </li>
+
+                <li>
+                    <span class="point-name">
+                        Tricking victims:
+                    </span>
+                    They gain the victim's trust and then ask for money.
+                </li>
+
+                <li>
+                    <span class="point-name">
+                        Learning from others:
+                    </span>
+                    Fraud methods may be shared among fraudsters.
+                </li>
+
+                <li>
+                    <span class="point-name">
+                        Money as the main aim:
+                    </span>
+                    Most scams are carried out for financial gain.
+                </li>
+
+                <li>
+                    <span class="point-name">
+                        Victims from different countries:
+                    </span>
+                    The internet allows them to target people anywhere
+                    in the world.
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- CONCLUSION -->
+
+        <section class="section conclusion">
+
+            <h2 class="answer-heading">
+                Conclusion
+            </h2>
+
+            <p>
+                Café Culture helped some online fraudsters meet,
+                communicate and carry out scams through the internet.
+                Yahoo Boyism developed as a cybercrime subculture in which
+                fraudsters use fake identities, false stories and online
+                communication to cheat people for money.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- WEBSITE NAVIGATION -->
+
+    <nav class="bottom-nav">
+
+        <a href="index.html" class="nav-link">
+            ← Unit I
+        </a>
+
+        <a href="q25.html" class="nav-link next">
+            Q25 →
+        </a>
+
+    </nav>
+
+</div>
+
+</body>
+</html>
