@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Q3 - Virtual Sex Offenders in Cyberspace</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f2f2f2;
+            font-family: "Times New Roman", Times, Georgia, serif;
+        }
+
+
+        /* =========================
+           WEBSITE AREA
+           ========================= */
+
+        .page-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 18px 14px 35px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 12px;
+
+            color: #1d4f91;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           EXAM ANSWER SHEET
+           ========================= */
+
+        .answer-sheet {
+            background: #ffffff;
+
+            padding: 34px 40px 38px;
+
+            border: 1px solid #dedede;
+
+            color: #173f8a;
+
+            font-size: 18px;
+            line-height: 1.65;
+        }
+
+
+        /* =========================
+           QUESTION
+           ========================= */
+
+        .question {
+            margin: 0 0 25px;
+
+            font-size: 19px;
+            line-height: 1.5;
+
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+
+        /* =========================
+           SECTIONS
+           ========================= */
+
+        .section {
+            margin-bottom: 22px;
+        }
+
+
+        /* =========================
+           HEADINGS
+           ========================= */
+
+        .answer-heading,
+        .sub-heading {
+            display: inline;
+
+            color: #173f8a;
+
+            font-weight: normal;
+
+            text-decoration-line: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+
+            text-align: left;
+        }
+
+        .answer-heading {
+            font-size: 18px;
+            line-height: 1.35;
+        }
+
+        .sub-heading {
+            font-size: 17px;
+            line-height: 1.35;
+        }
+
+        .answer-heading + p,
+        .answer-heading + .number-list,
+        .answer-heading + .pen-list,
+        .sub-heading + p,
+        .sub-heading + .pen-list {
+            margin-top: 10px;
+        }
+
+
+        /* =========================
+           PARAGRAPHS
+           ========================= */
+
+        .section p,
+        .behavior-part p {
+            margin: 0 0 10px;
+
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+
+        /* =========================
+           NUMBERED POINTS
+           ========================= */
+
+        .number-list {
+            margin-bottom: 0;
+            padding-left: 28px;
+        }
+
+        .number-list li {
+            margin-bottom: 9px;
+            padding-left: 3px;
+
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+
+        /* =========================
+           BULLET POINTS
+           ========================= */
+
+        .pen-list {
+            margin-bottom: 10px;
+            padding-left: 27px;
+        }
+
+        .pen-list li {
+            margin-bottom: 6px;
+            padding-left: 2px;
+
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+
+        /* =========================
+           IMPORTANT POINT NAMES
+           ========================= */
+
+        .point-name {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+
+        /* =========================
+           BEHAVIOR SUB-SECTIONS
+           ========================= */
+
+        .behavior-part {
+            margin: 14px 0 17px;
+        }
+
+
+        /* =========================
+           VERTICAL FLOW
+           ========================= */
+
+        .vertical-flow {
+            width: 100%;
+            max-width: 350px;
+
+            margin: 14px auto 4px;
+
+            color: #173f8a;
+
+            font-size: 17px;
+            line-height: 1.3;
+
+            text-align: center;
+        }
+
+        .flow-item {
+            text-align: center;
+        }
+
+        .flow-arrow {
+            margin: 4px 0;
+
+            font-size: 21px;
+            line-height: 1;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           CONCLUSION
+           ========================= */
+
+        .conclusion {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           BOTTOM UNIT NAVIGATION
+           ========================= */
+
+        .bottom-nav {
+            display: flex;
+            align-items: center;
+
+            margin-top: 14px;
+        }
+
+        .nav-link {
+            display: inline-block;
+
+            background: #ffffff;
+
+            border: 1px solid #d6d6d6;
+            border-radius: 5px;
+
+            padding: 9px 13px;
+
+            color: #1d4f91;
+            text-decoration: none;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 600px) {
+
+            .page-container {
+                padding: 12px 8px 25px;
+            }
+
+            .back-link {
+                margin-left: 3px;
+                margin-bottom: 9px;
+
+                font-size: 13px;
+            }
+
+            .answer-sheet {
+                padding: 22px 16px 26px;
+
+                font-size: 15.5px;
+                line-height: 1.6;
+            }
+
+
+            /* Question */
+
+            .question {
+                margin-bottom: 22px;
+
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+
+            /* Headings */
+
+            .answer-heading {
+                font-size: 16px;
+                line-height: 1.35;
+            }
+
+            .sub-heading {
+                font-size: 15.5px;
+                line-height: 1.35;
+            }
+
+
+            /* Sections */
+
+            .section {
+                margin-bottom: 19px;
+            }
+
+            .behavior-part {
+                margin: 12px 0 15px;
+            }
+
+
+            /* Lists */
+
+            .number-list {
+                padding-left: 24px;
+            }
+
+            .pen-list {
+                padding-left: 23px;
+            }
+
+            .number-list li {
+                margin-bottom: 8px;
+            }
+
+            .pen-list li {
+                margin-bottom: 5px;
+            }
+
+
+            /* Vertical flow */
+
+            .vertical-flow {
+                max-width: 290px;
+
+                margin-top: 12px;
+
+                font-size: 14.5px;
+                line-height: 1.25;
+            }
+
+            .flow-arrow {
+                margin: 3px 0;
+
+                font-size: 18px;
+            }
+
+
+            /* Bottom navigation */
+
+            .bottom-nav {
+                margin-top: 10px;
+            }
+
+            .nav-link {
+                padding: 8px 10px;
+
+                font-size: 12.5px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="page-container">
+
+
+    <!-- =========================
+         TOP NAVIGATION
+         ========================= -->
+
+    <a href="index.html" class="back-link">
+        ← Back to Unit I
+    </a>
+
+
+
+    <!-- =========================
+         EXAM ANSWER
+         ========================= -->
+
+    <main class="answer-sheet">
+
+
+        <!-- QUESTION -->
+
+        <p class="question">
+            Q3. Analyze the Profile and Behavioral Patterns of Virtual
+            Sex Offenders in Cyberspace.
+        </p>
+
+
+
+        <!-- INTRODUCTION -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                Introduction
+            </h2>
+
+            <p>
+                Virtual sex offenders are people who use the internet and
+                digital platforms for illegal or harmful sexual activities.
+                They may use social media, chat rooms, messaging apps,
+                online games or other platforms to contact and exploit
+                victims.
+            </p>
+
+            <p>
+                Their behaviour can include grooming, sexual harassment,
+                sending unwanted sexual content, or seeking illegal sexual
+                material.
+            </p>
+
+        </section>
+
+
+
+        <!-- 1. PROFILE -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                1. Profile of Virtual Sex Offenders
+            </h2>
+
+            <p>
+                There is no single fixed profile of a virtual sex offender.
+                They can come from different age groups, occupations and
+                social backgrounds.
+            </p>
+
+            <p>
+                However, some common features may include:
+            </p>
+
+            <ol class="number-list">
+
+                <li>
+                    <span class="point-name">
+                        Good use of technology:
+                    </span>
+                    They know how to use social media, messaging apps and
+                    other online platforms.
+                </li>
+
+                <li>
+                    <span class="point-name">
+                        Use of fake identities:
+                    </span>
+                    They may use a false name, age, photograph or profile
+                    to hide their real identity.
+                </li>
+
+                <li>
+                    <span class="point-name">
+                        Search for vulnerable victims:
+                    </span>
+                    Some offenders look for people who may be easier to
+                    influence or manipulate.
+                </li>
+
+                <li>
+                    <span class="point-name">
+                        Need for secrecy:
+                    </span>
+                    They may try to keep their online activities hidden
+                    from family, friends and authorities.
+                </li>
+
+                <li>
+                    <span class="point-name">
+                        Use of multiple accounts:
+                    </span>
+                    Some offenders may create several accounts to contact
+                    victims or hide their identity.
+                </li>
+
+            </ol>
+
+        </section>
+
+
+
+        <!-- 2. BEHAVIORAL PATTERNS -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                2. Behavioral Patterns of Virtual Sex Offenders
+            </h2>
+
+            <p>
+                Their online behaviour may follow certain patterns.
+            </p>
+
+
+            <!-- A -->
+
+            <div class="behavior-part">
+
+                <h3 class="sub-heading">
+                    a) Searching for Victims
+                </h3>
+
+                <p>
+                    Offenders may search social media, chat rooms, online
+                    games and other platforms to find possible victims.
+                </p>
+
+            </div>
+
+
+            <!-- B -->
+
+            <div class="behavior-part">
+
+                <h3 class="sub-heading">
+                    b) Building Trust
+                </h3>
+
+                <p>
+                    They may first behave in a friendly and caring way.
+                    They can talk regularly with the victim and try to
+                    build trust.
+                </p>
+
+            </div>
+
+
+            <!-- C -->
+
+            <div class="behavior-part">
+
+                <h3 class="sub-heading">
+                    c) Grooming
+                </h3>
+
+                <p>
+                    Grooming means slowly building trust with a person in
+                    order to sexually exploit or abuse them later.
+                </p>
+
+                <p>
+                    The offender may:
+                </p>
+
+                <ul class="pen-list">
+
+                    <li>
+                        Give compliments and attention.
+                    </li>
+
+                    <li>
+                        Pretend to share the victim's interests.
+                    </li>
+
+                    <li>
+                        Offer gifts or emotional support.
+                    </li>
+
+                    <li>
+                        Ask increasingly personal questions.
+                    </li>
+
+                    <li>
+                        Try to keep conversations secret.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- D -->
+
+            <div class="behavior-part">
+
+                <h3 class="sub-heading">
+                    d) Sexualizing the Conversation
+                </h3>
+
+                <p>
+                    After gaining trust, the offender may slowly introduce
+                    sexual topics or send inappropriate messages or content.
+                </p>
+
+            </div>
+
+
+            <!-- E -->
+
+            <div class="behavior-part">
+
+                <h3 class="sub-heading">
+                    e) Asking for Private Content
+                </h3>
+
+                <p>
+                    The offender may ask the victim to send private or
+                    sexual photographs, videos or messages.
+                </p>
+
+            </div>
+
+
+            <!-- F -->
+
+            <div class="behavior-part">
+
+                <h3 class="sub-heading">
+                    f) Threats and Blackmail
+                </h3>
+
+                <p>
+                    After obtaining private material, some offenders may
+                    threaten to share it unless the victim sends more
+                    material, money, or continues contact.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 3. COMMON PATTERN -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                3. Common Pattern of Behaviour
+            </h2>
+
+            <p>
+                The behaviour can be shown as:
+            </p>
+
+
+            <!-- QUICK VERTICAL FLOW -->
+
+            <div class="vertical-flow">
+
+                <div class="flow-item">
+                    Finding a Victim
+                </div>
+
+                <div class="flow-arrow">
+                    ↓
+                </div>
+
+                <div class="flow-item">
+                    Starting Friendly Communication
+                </div>
+
+                <div class="flow-arrow">
+                    ↓
+                </div>
+
+                <div class="flow-item">
+                    Building Trust
+                </div>
+
+                <div class="flow-arrow">
+                    ↓
+                </div>
+
+                <div class="flow-item">
+                    Grooming
+                </div>
+
+                <div class="flow-arrow">
+                    ↓
+                </div>
+
+                <div class="flow-item">
+                    Introducing Sexual Content
+                </div>
+
+                <div class="flow-arrow">
+                    ↓
+                </div>
+
+                <div class="flow-item">
+                    Sexual Exploitation / Threats
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 4. ROLE OF CYBERSPACE -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                4. Role of Cyberspace
+            </h2>
+
+            <p>
+                Cyberspace can make such offending easier because:
+            </p>
+
+            <ul class="pen-list">
+
+                <li>
+                    Offenders can contact people from different places.
+                </li>
+
+                <li>
+                    Fake profiles can hide their real identity.
+                </li>
+
+                <li>
+                    Private messaging allows secret communication.
+                </li>
+
+                <li>
+                    Communication can happen at any time.
+                </li>
+
+                <li>
+                    One offender may contact many possible victims.
+                </li>
+
+            </ul>
+
+            <p>
+                However, online anonymity is not complete, and digital
+                activities can sometimes leave evidence that investigators
+                can use.
+            </p>
+
+        </section>
+
+
+
+        <!-- 5. EFFECTS ON VICTIMS -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                5. Effects on Victims
+            </h2>
+
+            <p>
+                Virtual sexual victimization can cause serious harm,
+                such as:
+            </p>
+
+            <ul class="pen-list">
+
+                <li>
+                    Fear and anxiety.
+                </li>
+
+                <li>
+                    Shame and embarrassment.
+                </li>
+
+                <li>
+                    Loss of trust.
+                </li>
+
+                <li>
+                    Emotional stress.
+                </li>
+
+                <li>
+                    Social isolation.
+                </li>
+
+                <li>
+                    Fear that private material may be shared online.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- CONCLUSION -->
+
+        <section class="section conclusion">
+
+            <h2 class="answer-heading">
+                Conclusion
+            </h2>
+
+            <p>
+                Virtual sex offenders use digital platforms to find,
+                contact and sometimes exploit victims. Common behavioral
+                patterns include using fake identities, building trust,
+                grooming, introducing sexual content and sometimes using
+                threats or blackmail. Awareness of these patterns is
+                important for identifying risky online behaviour and
+                protecting users from online sexual victimization.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         BOTTOM NAVIGATION
+         ========================= -->
+
+    <nav class="bottom-nav">
+
+        <a href="index.html" class="nav-link">
+            ← Unit I
+        </a>
+
+    </nav>
+
+
+</div>
+
+</body>
+</html>
