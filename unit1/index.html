@@ -40,30 +40,40 @@
         /* UNIT HEADER */
 
         .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+
             background: #ffffff;
             border-top: 5px solid #263b5e;
             border-radius: 8px;
+
             padding: 24px 20px;
             margin-bottom: 24px;
-            text-align: center;
         }
 
         .unit-label {
+            flex-shrink: 0;
+
             display: inline-block;
             background: #263b5e;
             color: #ffffff;
-            padding: 4px 13px;
+
+            padding: 5px 12px;
             border-radius: 4px;
+
             font-size: 15px;
-            letter-spacing: 1.2px;
-            margin-bottom: 7px;
+            letter-spacing: 1px;
+            white-space: nowrap;
         }
 
         .header h1 {
             margin: 0;
             color: #1d2f4d;
-            font-size: 28px;
+            font-size: 27px;
             font-weight: normal;
+            line-height: 1.2;
         }
 
 
@@ -86,8 +96,10 @@
             gap: 10px;
 
             padding: 14px 16px;
+
             border-left: 5px solid #263b5e;
             border-bottom: 1px solid #e3e5e8;
+
             background: #fafbfc;
         }
 
@@ -152,6 +164,7 @@
 
         .question-content {
             flex: 1;
+            min-width: 0;
         }
 
         .question-text {
@@ -180,23 +193,37 @@
                 margin-bottom: 10px;
             }
 
+
+            /* HORIZONTAL UNIT HEADER */
+
             .header {
-                padding: 17px 10px 18px;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 8px;
+
+                padding: 16px 10px;
                 margin-bottom: 17px;
             }
 
             .unit-label {
-                font-size: 13px;
-                padding: 4px 11px;
-                margin-bottom: 6px;
+                font-size: 10px;
+                padding: 4px 6px;
+                letter-spacing: 0.3px;
             }
 
             .header h1 {
-                font-size: 21px;
+                flex: 1;
+                min-width: 0;
+
+                font-size: 18px;
+                line-height: 1.15;
+                letter-spacing: -0.2px;
+
+                white-space: normal;
             }
 
 
-            /* Topic heading stays horizontal */
+            /* TOPICS */
 
             .topic {
                 margin-bottom: 14px;
@@ -220,7 +247,7 @@
             }
 
 
-            /* Questions */
+            /* QUESTIONS */
 
             .question-link {
                 gap: 9px;
@@ -253,6 +280,21 @@
 
         @media (max-width: 380px) {
 
+            .header {
+                gap: 6px;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .unit-label {
+                font-size: 9px;
+                padding: 4px 5px;
+            }
+
+            .header h1 {
+                font-size: 16px;
+            }
+
             .topic-heading {
                 gap: 5px;
                 padding-left: 8px;
@@ -282,10 +324,13 @@
 
 <div class="container">
 
+
     <a href="../index.html" class="back-link">
         ← Back to Units
     </a>
 
+
+    <!-- UNIT HEADER -->
 
     <header class="header">
 
@@ -300,22 +345,29 @@
     </header>
 
 
+
     <!-- TOPIC 1 -->
 
     <section class="topic">
 
         <div class="topic-heading">
 
-            <div class="topic-number">TOPIC 1</div>
+            <div class="topic-number">
+                TOPIC 1
+            </div>
 
-            <h2>Café Culture and Yahoo Boyism in Nigeria</h2>
+            <h2>
+                Café Culture and Yahoo Boyism in Nigeria
+            </h2>
 
         </div>
 
 
         <a href="q16.html" class="question-link">
 
-            <span class="q-number">Q16</span>
+            <span class="q-number">
+                Q16
+            </span>
 
             <div class="question-content">
 
@@ -335,7 +387,9 @@
 
         <a href="q25.html" class="question-link">
 
-            <span class="q-number">Q25</span>
+            <span class="q-number">
+                Q25
+            </span>
 
             <div class="question-content">
 
@@ -355,22 +409,29 @@
     </section>
 
 
+
     <!-- TOPIC 2 -->
 
     <section class="topic">
 
         <div class="topic-heading">
 
-            <div class="topic-number">TOPIC 2</div>
+            <div class="topic-number">
+                TOPIC 2
+            </div>
 
-            <h2>Internet Gambling</h2>
+            <h2>
+                Internet Gambling
+            </h2>
 
         </div>
 
 
         <a href="q23.html" class="question-link">
 
-            <span class="q-number">Q23</span>
+            <span class="q-number">
+                Q23
+            </span>
 
             <div class="question-content">
 
@@ -390,22 +451,29 @@
     </section>
 
 
+
     <!-- TOPIC 3 -->
 
     <section class="topic">
 
         <div class="topic-heading">
 
-            <div class="topic-number">TOPIC 3</div>
+            <div class="topic-number">
+                TOPIC 3
+            </div>
 
-            <h2>Identity Construction Among Hackers</h2>
+            <h2>
+                Identity Construction Among Hackers
+            </h2>
 
         </div>
 
 
         <a href="q28.html" class="question-link">
 
-            <span class="q-number">Q28</span>
+            <span class="q-number">
+                Q28
+            </span>
 
             <div class="question-content">
 
@@ -426,22 +494,29 @@
     </section>
 
 
+
     <!-- TOPIC 4 -->
 
     <section class="topic">
 
         <div class="topic-heading">
 
-            <div class="topic-number">TOPIC 4</div>
+            <div class="topic-number">
+                TOPIC 4
+            </div>
 
-            <h2>Virtual Sex Offenders</h2>
+            <h2>
+                Virtual Sex Offenders
+            </h2>
 
         </div>
 
 
         <a href="q3.html" class="question-link">
 
-            <span class="q-number">Q3</span>
+            <span class="q-number">
+                Q3
+            </span>
 
             <div class="question-content">
 
@@ -461,22 +536,29 @@
     </section>
 
 
+
     <!-- TOPIC 5 -->
 
     <section class="topic">
 
         <div class="topic-heading">
 
-            <div class="topic-number">TOPIC 5</div>
+            <div class="topic-number">
+                TOPIC 5
+            </div>
 
-            <h2>Internet Child Pornography Consumers</h2>
+            <h2>
+                Internet Child Pornography Consumers
+            </h2>
 
         </div>
 
 
         <a href="q13.html" class="question-link">
 
-            <span class="q-number">Q13</span>
+            <span class="q-number">
+                Q13
+            </span>
 
             <div class="question-content">
 
@@ -497,7 +579,9 @@
 
         <a href="q18.html" class="question-link">
 
-            <span class="q-number">Q18</span>
+            <span class="q-number">
+                Q18
+            </span>
 
             <div class="question-content">
 
@@ -517,28 +601,35 @@
     </section>
 
 
+
     <!-- TOPIC 6 -->
 
     <section class="topic">
 
         <div class="topic-heading">
 
-            <div class="topic-number">TOPIC 6</div>
+            <div class="topic-number">
+                TOPIC 6
+            </div>
 
-            <h2>Bandura's Theory of Reciprocal Determinism</h2>
+            <h2>
+                Bandura's Theory of Reciprocal Determinism
+            </h2>
 
         </div>
 
 
         <a href="q1.html" class="question-link">
 
-            <span class="q-number">Q1</span>
+            <span class="q-number">
+                Q1
+            </span>
 
             <div class="question-content">
 
                 <div class="question-text">
-                    Explain Bandura's Theory of Reciprocal Determinism and
-                    its application to cyber-criminal behavior.
+                    Explain Bandura's Theory of Reciprocal Determinism
+                    and its application to cyber-criminal behavior.
                 </div>
 
                 <span class="view-answer">
@@ -552,22 +643,29 @@
     </section>
 
 
+
     <!-- TOPIC 7 -->
 
     <section class="topic">
 
         <div class="topic-heading">
 
-            <div class="topic-number">TOPIC 7</div>
+            <div class="topic-number">
+                TOPIC 7
+            </div>
 
-            <h2>Online Social Networking and Pedophilia</h2>
+            <h2>
+                Online Social Networking and Pedophilia
+            </h2>
 
         </div>
 
 
         <a href="q9.html" class="question-link">
 
-            <span class="q-number">Q9</span>
+            <span class="q-number">
+                Q9
+            </span>
 
             <div class="question-content">
 
@@ -588,22 +686,29 @@
     </section>
 
 
+
     <!-- TOPIC 8 -->
 
     <section class="topic">
 
         <div class="topic-heading">
 
-            <div class="topic-number">TOPIC 8</div>
+            <div class="topic-number">
+                TOPIC 8
+            </div>
 
-            <h2>Internet as a Terrorist's Tool</h2>
+            <h2>
+                Internet as a Terrorist's Tool
+            </h2>
 
         </div>
 
 
         <a href="q11.html" class="question-link">
 
-            <span class="q-number">Q11</span>
+            <span class="q-number">
+                Q11
+            </span>
 
             <div class="question-content">
 
@@ -621,6 +726,7 @@
         </a>
 
     </section>
+
 
 </div>
 
