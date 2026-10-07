@@ -7,6 +7,7 @@
     <title>Q16 - Café Culture and Yahoo Boyism</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -16,6 +17,7 @@
             background: #f2f2f2;
             font-family: "Times New Roman", Times, Georgia, serif;
         }
+
 
         /* =========================
            WEBSITE AREA
@@ -30,10 +32,12 @@
         .back-link {
             display: inline-block;
             margin-bottom: 12px;
+
             color: #1d4f91;
             text-decoration: none;
             font-size: 15px;
         }
+
 
         /* =========================
            EXAM ANSWER SHEET
@@ -41,7 +45,9 @@
 
         .answer-sheet {
             background: #ffffff;
+
             padding: 34px 40px 38px;
+
             border: 1px solid #dedede;
 
             /* Blue pen appearance */
@@ -51,37 +57,21 @@
             line-height: 1.65;
         }
 
+
         /* =========================
            QUESTION
            ========================= */
 
-.question {
-    margin: 0 0 25px;
-    font-size: 19px;
-    line-height: 1.5;
+        .question {
+            margin: 0 0 25px;
 
-    text-align: justify;
-    text-justify: inter-word;
-}
+            font-size: 19px;
+            line-height: 1.5;
 
-        /* =========================
-           HEADINGS
-           ========================= */
-
-        .answer-heading {
-            display: inline-block;
-            margin: 0 0 9px;
-
-            color: #173f8a;
-            font-size: 18px;
-            font-weight: normal;
-            line-height: 1.2;
-
-            /* Exam-style underline */
-            border-bottom: 1px solid #173f8a;
-
-            text-align: left;
+            text-align: justify;
+            text-justify: inter-word;
         }
+
 
         /* =========================
            SECTIONS
@@ -91,7 +81,37 @@
             margin-bottom: 22px;
         }
 
-        /* Normal explanatory writing */
+
+        /* =========================
+           HEADINGS
+           ========================= */
+
+        .answer-heading {
+            display: inline;
+
+            color: #173f8a;
+
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 1.35;
+
+            text-decoration-line: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+
+            text-align: left;
+        }
+
+        .answer-heading + p,
+        .answer-heading + .number-list,
+        .answer-heading + .pen-list {
+            margin-top: 10px;
+        }
+
+
+        /* =========================
+           PARAGRAPHS
+           ========================= */
 
         .section p {
             margin: 0 0 10px;
@@ -100,12 +120,13 @@
             text-justify: inter-word;
         }
 
+
         /* =========================
            BULLET POINTS
            ========================= */
 
         .pen-list {
-            margin: 6px 0 10px;
+            margin-bottom: 10px;
             padding-left: 27px;
         }
 
@@ -117,12 +138,13 @@
             text-justify: inter-word;
         }
 
+
         /* =========================
            NUMBERED POINTS
            ========================= */
 
         .number-list {
-            margin: 6px 0 0;
+            margin-bottom: 0;
             padding-left: 28px;
         }
 
@@ -134,21 +156,22 @@
             text-justify: inter-word;
         }
 
-        /*
-           Important point names are underlined,
-           just as a student can underline them
-           using the same blue pen.
-        */
+
+        /* Important words / point names */
 
         .point-name {
             text-decoration: underline;
             text-underline-offset: 2px;
         }
 
+
         /* =========================
            VERTICAL FLOW
-           BLUE PEN
-           NO BOXES / NO PENCIL
+
+           Simple blue-pen flow.
+           No boxes.
+           No ruler.
+           No pencil required.
            ========================= */
 
         .vertical-flow {
@@ -158,10 +181,11 @@
             margin: 14px auto 4px;
 
             color: #173f8a;
-            text-align: center;
 
             font-size: 17px;
             line-height: 1.3;
+
+            text-align: center;
         }
 
         .flow-item {
@@ -169,13 +193,14 @@
         }
 
         .flow-arrow {
-            text-align: center;
+            margin: 4px 0;
 
             font-size: 21px;
             line-height: 1;
 
-            margin: 4px 0;
+            text-align: center;
         }
+
 
         /* =========================
            CONCLUSION
@@ -185,21 +210,23 @@
             margin-bottom: 0;
         }
 
+
         /* =========================
-           WEBSITE NAVIGATION
+           BOTTOM UNIT NAVIGATION
            ========================= */
 
         .bottom-nav {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            gap: 10px;
 
             margin-top: 14px;
         }
 
         .nav-link {
+            display: inline-block;
+
             background: #ffffff;
+
             border: 1px solid #d6d6d6;
             border-radius: 5px;
 
@@ -207,12 +234,10 @@
 
             color: #1d4f91;
             text-decoration: none;
+
             font-size: 14px;
         }
 
-        .next {
-            margin-left: auto;
-        }
 
         /* =========================
            MOBILE
@@ -227,6 +252,7 @@
             .back-link {
                 margin-left: 3px;
                 margin-bottom: 9px;
+
                 font-size: 13px;
             }
 
@@ -237,16 +263,29 @@
                 line-height: 1.6;
             }
 
+
+            /* Question */
+
             .question {
+                margin-bottom: 22px;
+
                 font-size: 16px;
                 line-height: 1.5;
-                margin-bottom: 22px;
+
+                text-align: justify;
+                text-justify: inter-word;
             }
+
+
+            /* Headings */
 
             .answer-heading {
                 font-size: 16px;
-                margin-bottom: 7px;
+                line-height: 1.35;
             }
+
+
+            /* Sections */
 
             .section {
                 margin-bottom: 19px;
@@ -258,6 +297,9 @@
                 text-align: justify;
                 text-justify: inter-word;
             }
+
+
+            /* Lists */
 
             .pen-list {
                 padding-left: 23px;
@@ -275,7 +317,8 @@
                 margin-bottom: 7px;
             }
 
-            /* Vertical flow on phone */
+
+            /* Vertical flow */
 
             .vertical-flow {
                 max-width: 280px;
@@ -287,39 +330,48 @@
             }
 
             .flow-arrow {
-                font-size: 18px;
                 margin: 3px 0;
+
+                font-size: 18px;
             }
 
-            /* Navigation */
+
+            /* Bottom navigation */
 
             .bottom-nav {
                 margin-top: 10px;
             }
 
             .nav-link {
-                font-size: 12.5px;
                 padding: 8px 10px;
+
+                font-size: 12.5px;
             }
+
         }
 
     </style>
 </head>
 
+
 <body>
 
 <div class="page-container">
 
-    <!-- WEBSITE NAVIGATION -->
+
+    <!-- =========================
+         TOP NAVIGATION
+         ========================= -->
 
     <a href="index.html" class="back-link">
         ← Back to Unit I
     </a>
 
 
-    <!-- =====================================
+
+    <!-- =========================
          EXAM ANSWER
-         ===================================== -->
+         ========================= -->
 
     <main class="answer-sheet">
 
@@ -330,6 +382,7 @@
             Q16. Describe the concept of Café Culture and Yahoo Boyism
             in Nigeria as a form of cybercrime subculture.
         </p>
+
 
 
         <!-- INTRODUCTION -->
@@ -349,6 +402,7 @@
             </p>
 
         </section>
+
 
 
         <!-- 1. CAFE CULTURE -->
@@ -371,11 +425,27 @@
             </p>
 
             <ul class="pen-list">
-                <li>Create fake accounts and identities.</li>
-                <li>Send fake emails and messages.</li>
-                <li>Contact people in other countries.</li>
-                <li>Carry out online scams.</li>
-                <li>Learn fraud methods from other people.</li>
+
+                <li>
+                    Create fake accounts and identities.
+                </li>
+
+                <li>
+                    Send fake emails and messages.
+                </li>
+
+                <li>
+                    Contact people in other countries.
+                </li>
+
+                <li>
+                    Carry out online scams.
+                </li>
+
+                <li>
+                    Learn fraud methods from other people.
+                </li>
+
             </ul>
 
             <p>
@@ -384,6 +454,7 @@
             </p>
 
         </section>
+
 
 
         <!-- 2. YAHOO BOYISM -->
@@ -411,6 +482,7 @@
             </p>
 
         </section>
+
 
 
         <!-- 3. COMMON ACTIVITIES -->
@@ -463,6 +535,7 @@
         </section>
 
 
+
         <!-- 4. CYBERCRIME SUBCULTURE -->
 
         <section class="section">
@@ -482,11 +555,27 @@
             </p>
 
             <ul class="pen-list">
-                <li>Work or communicate with other fraudsters.</li>
-                <li>Share ideas and fraud methods.</li>
-                <li>Learn new tricks from each other.</li>
-                <li>Use similar methods to cheat victims.</li>
-                <li>May see successful fraudsters as examples to follow.</li>
+
+                <li>
+                    Work or communicate with other fraudsters.
+                </li>
+
+                <li>
+                    Share ideas and fraud methods.
+                </li>
+
+                <li>
+                    Learn new tricks from each other.
+                </li>
+
+                <li>
+                    Use similar methods to cheat victims.
+                </li>
+
+                <li>
+                    May see successful fraudsters as examples to follow.
+                </li>
+
             </ul>
 
             <p>
@@ -494,16 +583,7 @@
             </p>
 
 
-            <!--
-                QUICK VERTICAL FLOW
-
-                Everything here can be written
-                directly using blue pen.
-
-                No boxes.
-                No ruler.
-                No pencil required.
-            -->
+            <!-- QUICK VERTICAL FLOW -->
 
             <div class="vertical-flow">
 
@@ -546,6 +626,7 @@
             </div>
 
         </section>
+
 
 
         <!-- 5. MAIN FEATURES -->
@@ -606,6 +687,7 @@
         </section>
 
 
+
         <!-- CONCLUSION -->
 
         <section class="section conclusion">
@@ -628,7 +710,10 @@
     </main>
 
 
-    <!-- WEBSITE NAVIGATION -->
+
+    <!-- =========================
+         BOTTOM NAVIGATION
+         ========================= -->
 
     <nav class="bottom-nav">
 
@@ -636,11 +721,8 @@
             ← Unit I
         </a>
 
-        <a href="q25.html" class="nav-link next">
-            Q25 →
-        </a>
-
     </nav>
+
 
 </div>
 
