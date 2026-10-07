@@ -14,7 +14,7 @@
         body {
             margin: 0;
             background: #f2f2f2;
-            font-family: "Times New Roman", Times, serif;
+            font-family: "Times New Roman", Times, Georgia, serif;
         }
 
         /* =========================
@@ -44,7 +44,7 @@
             padding: 34px 40px 38px;
             border: 1px solid #dedede;
 
-            /* Blue pen */
+            /* Blue pen appearance */
             color: #173f8a;
 
             font-size: 18px;
@@ -59,11 +59,11 @@
             margin: 0 0 25px;
             font-size: 19px;
             line-height: 1.5;
+            text-align: left;
         }
 
         /* =========================
            HEADINGS
-           BLUE PEN + UNDERLINE
            ========================= */
 
         .answer-heading {
@@ -73,17 +73,29 @@
             color: #173f8a;
             font-size: 18px;
             font-weight: normal;
-
-            border-bottom: 1px solid #173f8a;
             line-height: 1.2;
+
+            /* Exam-style underline */
+            border-bottom: 1px solid #173f8a;
+
+            text-align: left;
         }
+
+        /* =========================
+           SECTIONS
+           ========================= */
 
         .section {
             margin-bottom: 22px;
         }
 
+        /* Normal explanatory writing */
+
         .section p {
             margin: 0 0 10px;
+
+            text-align: justify;
+            text-justify: inter-word;
         }
 
         /* =========================
@@ -98,6 +110,9 @@
         .pen-list li {
             margin-bottom: 5px;
             padding-left: 2px;
+
+            text-align: justify;
+            text-justify: inter-word;
         }
 
         /* =========================
@@ -112,11 +127,15 @@
         .number-list li {
             margin-bottom: 8px;
             padding-left: 3px;
+
+            text-align: justify;
+            text-justify: inter-word;
         }
 
         /*
-           In an exam, important point names
-           can simply be underlined with pen.
+           Important point names are underlined,
+           just as a student can underline them
+           using the same blue pen.
         */
 
         .point-name {
@@ -125,108 +144,35 @@
         }
 
         /* =========================
-           TABLE
-
-           TEXT = BLUE PEN
-           LINES = PENCIL / RULER
+           VERTICAL FLOW
+           BLUE PEN
+           NO BOXES / NO PENCIL
            ========================= */
 
-        .table-wrapper {
+        .vertical-flow {
             width: 100%;
-            overflow-x: auto;
-            margin-top: 10px;
-            margin-bottom: 4px;
-        }
+            max-width: 330px;
 
-        .exam-table {
-            width: 100%;
-            border-collapse: collapse;
+            margin: 14px auto 4px;
 
-            /* Text written using blue pen */
             color: #173f8a;
+            text-align: center;
 
             font-size: 17px;
-        }
-
-        .exam-table th,
-        .exam-table td {
-
-            /* Border represents pencil/ruler */
-            border: 1px solid #777777;
-
-            padding: 8px 10px;
-            text-align: left;
-            vertical-align: top;
-            font-weight: normal;
-        }
-
-        .exam-table th {
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-
-        /* =========================
-           FLOWCHART
-
-           WORDS = BLUE PEN
-           BOXES + ARROWS = PENCIL
-           ========================= */
-
-        .diagram {
-            width: 340px;
-            max-width: 100%;
-            margin: 16px auto 4px;
-            text-align: center;
-        }
-
-        .diagram-box {
-
-            /* Pencil-drawn box */
-            border: 1px solid #777777;
-
-            /* Words inside box = blue pen */
-            color: #173f8a;
-
-            padding: 7px 8px;
-            background: transparent;
-
-            font-size: 16px;
             line-height: 1.3;
         }
 
-        /* Pencil arrow */
-
-        .diagram-arrow {
-            height: 29px;
-            position: relative;
+        .flow-item {
+            text-align: center;
         }
 
-        .diagram-arrow::before {
-            content: "";
-            position: absolute;
+        .flow-arrow {
+            text-align: center;
 
-            left: 50%;
-            top: 0;
+            font-size: 21px;
+            line-height: 1;
 
-            height: 21px;
-
-            border-left: 1px solid #777777;
-        }
-
-        .diagram-arrow::after {
-            content: "";
-            position: absolute;
-
-            left: calc(50% - 4px);
-            top: 16px;
-
-            width: 7px;
-            height: 7px;
-
-            border-right: 1px solid #777777;
-            border-bottom: 1px solid #777777;
-
-            transform: rotate(45deg);
+            margin: 4px 0;
         }
 
         /* =========================
@@ -306,6 +252,9 @@
 
             .section p {
                 margin-bottom: 9px;
+
+                text-align: justify;
+                text-justify: inter-word;
             }
 
             .pen-list {
@@ -324,39 +273,20 @@
                 margin-bottom: 7px;
             }
 
-            /* Mobile table */
+            /* Vertical flow on phone */
 
-            .exam-table {
-                font-size: 14px;
+            .vertical-flow {
+                max-width: 280px;
+
+                margin-top: 12px;
+
+                font-size: 14.5px;
+                line-height: 1.25;
             }
 
-            .exam-table th,
-            .exam-table td {
-                padding: 7px;
-            }
-
-            /* Mobile flowchart */
-
-            .diagram {
-                width: 280px;
-                margin-top: 13px;
-            }
-
-            .diagram-box {
-                font-size: 14px;
-                padding: 6px 7px;
-            }
-
-            .diagram-arrow {
-                height: 25px;
-            }
-
-            .diagram-arrow::before {
-                height: 18px;
-            }
-
-            .diagram-arrow::after {
-                top: 13px;
+            .flow-arrow {
+                font-size: 18px;
+                margin: 3px 0;
             }
 
             /* Navigation */
@@ -386,14 +316,13 @@
 
 
     <!-- =====================================
-         EXAM ANSWER SHEET
+         EXAM ANSWER
          ===================================== -->
 
     <main class="answer-sheet">
 
 
-        <!-- QUESTION
-             WRITE WITH BLUE PEN -->
+        <!-- QUESTION -->
 
         <p class="question">
             Q16. Describe the concept of Café Culture and Yahoo Boyism
@@ -420,7 +349,7 @@
         </section>
 
 
-        <!-- 1 -->
+        <!-- 1. CAFE CULTURE -->
 
         <section class="section">
 
@@ -455,7 +384,7 @@
         </section>
 
 
-        <!-- 2 -->
+        <!-- 2. YAHOO BOYISM -->
 
         <section class="section">
 
@@ -482,7 +411,7 @@
         </section>
 
 
-        <!-- 3 -->
+        <!-- 3. COMMON ACTIVITIES -->
 
         <section class="section">
 
@@ -490,73 +419,49 @@
                 3. Common Activities of Yahoo Boys
             </h2>
 
+            <ol class="number-list">
 
-            <!--
-                TABLE:
-                Borders = Pencil / Ruler
-                Text = Blue Pen
-            -->
+                <li>
+                    <span class="point-name">
+                        Advance-fee fraud:
+                    </span>
+                    Asking for money first by making a false promise.
+                </li>
 
-            <div class="table-wrapper">
+                <li>
+                    <span class="point-name">
+                        Romance scam:
+                    </span>
+                    Creating a fake love relationship to get money.
+                </li>
 
-                <table class="exam-table">
+                <li>
+                    <span class="point-name">
+                        Fake business offer:
+                    </span>
+                    Giving false job, business or investment offers.
+                </li>
 
-                    <thead>
+                <li>
+                    <span class="point-name">
+                        Impersonation:
+                    </span>
+                    Pretending to be another person.
+                </li>
 
-                        <tr>
-                            <th>Activity</th>
-                            <th>Simple Meaning</th>
-                        </tr>
+                <li>
+                    <span class="point-name">
+                        Phishing:
+                    </span>
+                    Sending fake messages to steal personal information.
+                </li>
 
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>Advance-fee fraud</td>
-                            <td>
-                                Asking for money first by making a false promise
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Romance scam</td>
-                            <td>
-                                Creating a fake love relationship to get money
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Fake business offer</td>
-                            <td>
-                                Giving false job, business or investment offers
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Impersonation</td>
-                            <td>
-                                Pretending to be another person
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Phishing</td>
-                            <td>
-                                Sending fake messages to steal personal information
-                            </td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
+            </ol>
 
         </section>
 
 
-        <!-- 4 -->
+        <!-- 4. CYBERCRIME SUBCULTURE -->
 
         <section class="section">
 
@@ -579,9 +484,7 @@
                 <li>Share ideas and fraud methods.</li>
                 <li>Learn new tricks from each other.</li>
                 <li>Use similar methods to cheat victims.</li>
-                <li>
-                    May see successful fraudsters as examples to follow.
-                </li>
+                <li>May see successful fraudsters as examples to follow.</li>
             </ul>
 
             <p>
@@ -590,38 +493,51 @@
 
 
             <!--
-                FLOWCHART:
-                Boxes + Arrows = Pencil
-                Words = Blue Pen
+                QUICK VERTICAL FLOW
+
+                Everything here can be written
+                directly using blue pen.
+
+                No boxes.
+                No ruler.
+                No pencil required.
             -->
 
-            <div class="diagram">
+            <div class="vertical-flow">
 
-                <div class="diagram-box">
+                <div class="flow-item">
                     Internet / Cyber Café
                 </div>
 
-                <div class="diagram-arrow"></div>
+                <div class="flow-arrow">
+                    ↓
+                </div>
 
-                <div class="diagram-box">
+                <div class="flow-item">
                     Meeting Other Fraudsters
                 </div>
 
-                <div class="diagram-arrow"></div>
+                <div class="flow-arrow">
+                    ↓
+                </div>
 
-                <div class="diagram-box">
+                <div class="flow-item">
                     Learning Fraud Methods
                 </div>
 
-                <div class="diagram-arrow"></div>
+                <div class="flow-arrow">
+                    ↓
+                </div>
 
-                <div class="diagram-box">
+                <div class="flow-item">
                     Online Scams
                 </div>
 
-                <div class="diagram-arrow"></div>
+                <div class="flow-arrow">
+                    ↓
+                </div>
 
-                <div class="diagram-box">
+                <div class="flow-item">
                     Getting Money
                 </div>
 
@@ -630,7 +546,7 @@
         </section>
 
 
-        <!-- 5 -->
+        <!-- 5. MAIN FEATURES -->
 
         <section class="section">
 
