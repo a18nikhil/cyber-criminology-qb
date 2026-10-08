@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q30 - P2P Network Users and Digital Piracy</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f2f2f2;
+    font-family: "Times New Roman", Times, Georgia, serif;
+}
+
+.page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 18px 14px 35px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #1d4f91;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.answer-sheet {
+    background: #ffffff;
+    padding: 34px 40px 38px;
+    border: 1px solid #dedede;
+    color: #173f8a;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+.question {
+    margin: 0 0 25px;
+    font-size: 19px;
+    line-height: 1.5;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.section {
+    margin-bottom: 22px;
+}
+
+.answer-heading,
+.sub-heading {
+    display: inline;
+    color: #173f8a;
+    font-weight: normal;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-align: left;
+}
+
+.answer-heading {
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.sub-heading {
+    font-size: 17px;
+    line-height: 1.35;
+}
+
+.answer-heading + p,
+.answer-heading + .number-list,
+.answer-heading + .pen-list,
+.answer-heading + .table-wrapper,
+.sub-heading + p {
+    margin-top: 10px;
+}
+
+.section p,
+.risk-part p {
+    margin: 0 0 10px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.number-list {
+    margin-bottom: 10px;
+    padding-left: 28px;
+}
+
+.number-list li {
+    margin-bottom: 9px;
+    padding-left: 3px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.pen-list {
+    margin-bottom: 10px;
+    padding-left: 27px;
+}
+
+.pen-list li {
+    margin-bottom: 7px;
+    padding-left: 2px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.point-name {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.risk-part {
+    margin: 14px 0 17px;
+}
+
+/* P2P CONNECTION DIAGRAM */
+
+.p2p-diagram {
+    width: 100%;
+    margin: 15px auto;
+    color: #173f8a;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.p2p-diagram .arrow {
+    display: inline-block;
+    padding: 0 8px;
+}
+
+/* COMPARISON TABLE */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #173f8a;
+    font-size: 16.5px;
+    line-height: 1.45;
+}
+
+.comparison-table th,
+.comparison-table td {
+    width: 50%;
+    border: 1px solid #777777;
+    padding: 8px 9px;
+    vertical-align: top;
+    font-weight: normal;
+}
+
+.comparison-table th {
+    text-align: left;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.comparison-table td {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.conclusion {
+    margin-bottom: 0;
+}
+
+.bottom-nav {
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.nav-link {
+    display: inline-block;
+    background: #ffffff;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    padding: 9px 13px;
+    color: #1d4f91;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .page-container {
+        padding: 12px 8px 25px;
+    }
+
+    .back-link {
+        margin-left: 3px;
+        margin-bottom: 9px;
+        font-size: 13px;
+    }
+
+    .answer-sheet {
+        padding: 22px 16px 26px;
+        font-size: 15.5px;
+        line-height: 1.6;
+    }
+
+    .question {
+        margin-bottom: 22px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .answer-heading {
+        font-size: 16px;
+        line-height: 1.35;
+    }
+
+    .sub-heading {
+        font-size: 15.5px;
+        line-height: 1.35;
+    }
+
+    .section {
+        margin-bottom: 19px;
+    }
+
+    .risk-part {
+        margin: 12px 0 15px;
+    }
+
+    .number-list {
+        padding-left: 24px;
+    }
+
+    .pen-list {
+        padding-left: 23px;
+    }
+
+    .number-list li {
+        margin-bottom: 8px;
+    }
+
+    .pen-list li {
+        margin-bottom: 6px;
+    }
+
+    .p2p-diagram {
+        font-size: 13px;
+        margin: 12px auto;
+    }
+
+    .p2p-diagram .arrow {
+        padding: 0 3px;
+    }
+
+    .comparison-table {
+        font-size: 13.5px;
+        line-height: 1.4;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 6px;
+    }
+
+    .bottom-nav {
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        padding: 8px 10px;
+        font-size: 12.5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page-container">
+
+    <!-- TOP NAVIGATION -->
+
+    <a href="index.html" class="back-link">
+        ← Back to Unit II
+    </a>
+
+    <!-- EXAM ANSWER -->
+
+    <main class="answer-sheet">
+
+        <!-- QUESTION -->
+
+        <p class="question">
+            Q30. Describe P2P Network Users, Their Role in Digital
+            Piracy, and the Associated Risks and Legal Consequences.
+        </p>
+
+        <!-- INTRODUCTION -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">Introduction</h2>
+
+            <p>
+                P2P (Peer-to-Peer) network is a system in which users
+                can share digital files directly with each other
+                through the internet.
+            </p>
+
+            <p>
+                People who use these networks are called P2P network
+                users. P2P technology itself is not illegal, but it
+                becomes a problem when users share copyrighted movies,
+                music, software, games or books without permission.
+            </p>
+
+        </section>
+
+        <!-- 1. P2P NETWORK USERS -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                1. P2P Network Users
+            </h2>
+
+            <p>
+                In a P2P network, each user's computer can both
+                download and share files with other users.
+            </p>
+
+            <p>
+                Unlike a normal system where files come from one
+                central server, P2P networks allow files to move
+                directly between users.
+            </p>
+
+            <p>
+                The basic working can be shown as:
+            </p>
+
+            <!-- P2P DIAGRAM -->
+
+            <div class="p2p-diagram">
+                <span>User A</span>
+                <span class="arrow">↔</span>
+                <span>User B</span>
+                <span class="arrow">↔</span>
+                <span>User C</span>
+                <span class="arrow">↔</span>
+                <span>User D</span>
+            </div>
+
+            <p>
+                Each user can act as both a receiver and a provider
+                of files.
+            </p>
+
+        </section>
+
+        <!-- 2. ROLE IN DIGITAL PIRACY -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                2. Role of P2P Users in Digital Piracy
+            </h2>
+
+            <p>
+                P2P users can contribute to digital piracy in the
+                following ways:
+            </p>
+
+            <ol class="number-list">
+
+                <li>
+                    <span class="point-name">
+                        Downloading Copyrighted Content:
+                    </span>
+                    Users may download movies, music, games or
+                    software without permission.
+                </li>
+
+                <li>
+                    <span class="point-name">
+                        Uploading Files:
+                    </span>
+                    Users may make copyrighted files available for
+                    others to download.
+                </li>
+
+                <li>
+                    <span class="point-name">
+                        Sharing Files:
+                    </span>
+                    A single file can be shared among a large
+                    number of users.
+                </li>
+
+                <li>
+                    <span class="point-name">
+                        Fast Distribution:
+                    </span>
+                    Popular copyrighted content can spread quickly
+                    across a P2P network.
+                </li>
+
+                <li>
+                    <span class="point-name">
+                        Repeated Sharing:
+                    </span>
+                    A person who downloads a file may also share
+                    the same file with other users.
+                </li>
+
+            </ol>
+
+            <p>
+                Therefore, P2P networks can make the illegal distribution
+                of copyrighted material easier and faster.
+            </p>
+
+        </section>
+
+        <!-- 3. RISKS -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                3. Risks Associated with P2P Networks
+            </h2>
+
+            <p>
+                P2P users may face several risks:
+            </p>
+
+            <div class="risk-part">
+
+                <h3 class="sub-heading">a) Malware</h3>
+
+                <p>
+                    Files downloaded from unknown users may contain
+                    viruses, spyware or other malware.
+                </p>
+
+            </div>
+
+            <div class="risk-part">
+
+                <h3 class="sub-heading">b) Data Theft</h3>
+
+                <p>
+                    Unsafe files or software may be used to steal
+                    passwords, banking details or other personal
+                    information.
+                </p>
+
+            </div>
+
+            <div class="risk-part">
+
+                <h3 class="sub-heading">c) Fake Files</h3>
+
+                <p>
+                    A downloaded file may be different from what its
+                    name suggests and may contain harmful or unwanted
+                    content.
+                </p>
+
+            </div>
+
+            <div class="risk-part">
+
+                <h3 class="sub-heading">d) Privacy Risk</h3>
+
+                <p>
+                    P2P software may expose information about a user's
+                    device or accidentally make personal files
+                    available to others.
+                </p>
+
+            </div>
+
+            <div class="risk-part">
+
+                <h3 class="sub-heading">e) Financial Loss</h3>
+
+                <p>
+                    Malware or online fraud connected with unsafe
+                    downloads may cause financial loss.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- 4. LEGAL CONSEQUENCES -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                4. Legal Consequences
+            </h2>
+
+            <p>
+                Sharing copyrighted material without permission
+                may violate copyright law.
+            </p>
+
+            <p>
+                Possible legal consequences include:
+            </p>
+
+            <ul class="pen-list">
+
+                <li>Copyright complaints or legal notices</li>
+
+                <li>Removal of illegally shared content</li>
+
+                <li>
+                    Payment of compensation or fines,
+                    depending on the law
+                </li>
+
+                <li>Civil legal action by copyright owners</li>
+
+                <li>
+                    Criminal penalties in serious cases,
+                    depending on the country and offence
+                </li>
+
+            </ul>
+
+            <p>
+                A user may face legal consequences not only for
+                downloading copyrighted content but also for
+                uploading or distributing it to others.
+            </p>
+
+        </section>
+
+        <!-- 5. LEGAL AND ILLEGAL USE -->
+
+        <section class="section">
+
+            <h2 class="answer-heading">
+                5. Legal and Illegal Use of P2P
+            </h2>
+
+            <div class="table-wrapper">
+
+                <table class="comparison-table">
+
+                    <thead>
+                        <tr>
+                            <th>Legal Use</th>
+                            <th>Illegal Use</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Sharing your own files</td>
+                            <td>Sharing copyrighted movies without permission</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sharing free or open-source software</td>
+                            <td>Sharing pirated software</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sharing public-domain content</td>
+                            <td>Sharing copyrighted music illegally</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sharing files with the owner's permission</td>
+                            <td>Distributing cracked games</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- CONCLUSION -->
+
+        <section class="section conclusion">
+
+            <h2 class="answer-heading">Conclusion</h2>
+
+            <p>
+                P2P networks allow users to share files directly with
+                one another. Although P2P technology has many legal
+                uses, it can also be used for digital piracy when
+                copyrighted content is shared without permission.
+                P2P users may face malware, privacy and data-theft
+                risks, as well as legal consequences for copyright
+                infringement.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- BOTTOM NAVIGATION -->
+
+    <nav class="bottom-nav">
+
+        <a href="index.html" class="nav-link">
+            ← Unit II
+        </a>
+
+    </nav>
+
+</div>
+
+</body>
+</html>
