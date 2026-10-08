@@ -1,669 +1,253 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Q1 - Bandura's Theory of Reciprocal Determinism</title>
 
-    <title>Q1 - Bandura's Theory of Reciprocal Determinism</title>
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            background: #f2f2f2;
-            font-family: "Times New Roman", Times, Georgia, serif;
-        }
-
-        .page-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 18px 14px 35px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 12px;
-            color: #1d4f91;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        .answer-sheet {
-            background: #ffffff;
-            padding: 34px 40px 38px;
-            border: 1px solid #dedede;
-            color: #173f8a;
-            font-size: 18px;
-            line-height: 1.65;
-        }
-
-        .question {
-            margin: 0 0 25px;
-            font-size: 19px;
-            line-height: 1.5;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-        .section {
-            margin-bottom: 22px;
-        }
-
-        .answer-heading,
-        .sub-heading {
-            display: inline;
-            color: #173f8a;
-            font-weight: normal;
-            text-decoration-line: underline;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 3px;
-            text-align: left;
-        }
-
-        .answer-heading {
-            font-size: 18px;
-            line-height: 1.35;
-        }
-
-        .sub-heading {
-            font-size: 17px;
-            line-height: 1.35;
-        }
-
-        .answer-heading + p,
-        .answer-heading + .number-list,
-        .sub-heading + p,
-        .sub-heading + .pen-list {
-            margin-top: 10px;
-        }
-
-        .section p,
-        .factor-part p,
-        .application-part p {
-            margin: 0 0 10px;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-        .number-list {
-            margin-bottom: 10px;
-            padding-left: 28px;
-        }
-
-        .number-list li {
-            margin-bottom: 7px;
-            padding-left: 3px;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-        .pen-list {
-            margin-bottom: 10px;
-            padding-left: 27px;
-        }
-
-        .pen-list li {
-            margin-bottom: 6px;
-            padding-left: 2px;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-        .factor-part,
-        .application-part {
-            margin: 14px 0 17px;
-        }
-
-        .point-name {
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-
-
-        /* =========================
-           RECIPROCAL RELATIONSHIP
-           ========================= */
-
-        .reciprocal-diagram {
-            width: 100%;
-            max-width: 350px;
-            margin: 15px auto;
-            color: #173f8a;
-            text-align: center;
-            font-size: 17px;
-            line-height: 1.35;
-        }
-
-        .diagram-top {
-            text-align: center;
-        }
-
-        .diagram-arrow {
-            margin: 3px 0;
-            font-size: 22px;
-            line-height: 1;
-            text-align: center;
-        }
-
-        .diagram-bottom {
-            text-align: center;
-        }
-
-
-        /* =========================
-           EXAMPLE VERTICAL FLOW
-           ========================= */
-
-        .vertical-flow {
-            width: 100%;
-            max-width: 350px;
-            margin: 14px auto 4px;
-            color: #173f8a;
-            font-size: 17px;
-            line-height: 1.3;
-            text-align: center;
-        }
-
-        .flow-item {
-            text-align: center;
-        }
-
-        .flow-arrow {
-            margin: 4px 0;
-            font-size: 21px;
-            line-height: 1;
-            text-align: center;
-        }
-
-        .conclusion {
-            margin-bottom: 0;
-        }
-
-        .bottom-nav {
-            display: flex;
-            align-items: center;
-            margin-top: 14px;
-        }
-
-        .nav-link {
-            display: inline-block;
-            background: #ffffff;
-            border: 1px solid #d6d6d6;
-            border-radius: 5px;
-            padding: 9px 13px;
-            color: #1d4f91;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           MOBILE
-           ========================= */
-
-        @media (max-width: 600px) {
-
-            .page-container {
-                padding: 12px 8px 25px;
-            }
-
-            .back-link {
-                margin-left: 3px;
-                margin-bottom: 9px;
-                font-size: 13px;
-            }
-
-            .answer-sheet {
-                padding: 22px 16px 26px;
-                font-size: 15.5px;
-                line-height: 1.6;
-            }
-
-            .question {
-                margin-bottom: 22px;
-                font-size: 16px;
-                line-height: 1.5;
-            }
-
-            .answer-heading {
-                font-size: 16px;
-                line-height: 1.35;
-            }
-
-            .sub-heading {
-                font-size: 15.5px;
-                line-height: 1.35;
-            }
-
-            .section {
-                margin-bottom: 19px;
-            }
-
-            .factor-part,
-            .application-part {
-                margin: 12px 0 15px;
-            }
-
-            .number-list {
-                padding-left: 24px;
-            }
-
-            .pen-list {
-                padding-left: 23px;
-            }
-
-            .number-list li {
-                margin-bottom: 6px;
-            }
-
-            .pen-list li {
-                margin-bottom: 5px;
-            }
-
-            .reciprocal-diagram {
-                max-width: 280px;
-                margin: 12px auto;
-                font-size: 14.5px;
-            }
-
-            .diagram-arrow {
-                font-size: 19px;
-            }
-
-            .vertical-flow {
-                max-width: 290px;
-                margin-top: 12px;
-                font-size: 14.5px;
-                line-height: 1.25;
-            }
-
-            .flow-arrow {
-                margin: 3px 0;
-                font-size: 18px;
-            }
-
-            .bottom-nav {
-                margin-top: 10px;
-            }
-
-            .nav-link {
-                padding: 8px 10px;
-                font-size: 12.5px;
-            }
-
-        }
-
-    </style>
-</head>
-
-
+<link href="../style.css" rel="stylesheet"/></head>
 <body>
-
 <div class="page-container">
-
-
-    <!-- TOP NAVIGATION -->
-
-    <a href="index.html" class="back-link">
+<!-- TOP NAVIGATION -->
+<a class="back-link" href="index.html">
         ← Back to Unit I
     </a>
-
-
-    <!-- EXAM ANSWER -->
-
-    <main class="answer-sheet">
-
-
-        <!-- QUESTION -->
-
-        <p class="question">
+<!-- EXAM ANSWER -->
+<main class="answer-sheet">
+<!-- QUESTION -->
+<h1 class="question">
             Q1. Explain Bandura's Theory of Reciprocal Determinism and
             Its Application to Cyber-Criminal Behavior.
-        </p>
-
-
-        <!-- INTRODUCTION -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+        </h1>
+<!-- INTRODUCTION -->
+<section class="section">
+<h2 class="answer-heading">
                 Introduction
             </h2>
-
-            <p>
+<p>
                 Bandura's Theory of Reciprocal Determinism explains that
                 human behaviour is not controlled by only one factor.
                 According to psychologist Albert Bandura, a person's
                 behaviour is influenced by three factors:
             </p>
-
-            <ol class="number-list">
-                <li>Personal factors</li>
-                <li>Behavior</li>
-                <li>Environment</li>
-            </ol>
-
-            <p>
+<ol class="answer-list">
+<li>Personal factors</li>
+<li>Behavior</li>
+<li>Environment</li>
+</ol>
+<p>
                 These three factors continuously influence each other.
             </p>
-
-        </section>
-
-
-        <!-- 1. THREE MAIN FACTORS -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</section>
+<!-- 1. THREE MAIN FACTORS -->
+<section class="section">
+<h2 class="answer-heading">
                 1. Three Main Factors of Reciprocal Determinism
             </h2>
-
-
-            <!-- A -->
-
-            <div class="factor-part">
-
-                <h3 class="sub-heading">
+<!-- A -->
+<div class="subpart">
+<h3 class="sub-heading">
                     a) Personal Factors
                 </h3>
-
-                <p>
+<p>
                     Personal factors include a person's thoughts, feelings,
                     beliefs, attitudes and motivations.
                 </p>
-
-                <p>
+<p>
                     For example, a person may believe that committing an
                     online crime is an easy way to earn money.
                 </p>
-
-            </div>
-
-
-            <!-- B -->
-
-            <div class="factor-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- B -->
+<div class="subpart">
+<h3 class="sub-heading">
                     b) Behavior
                 </h3>
-
-                <p>
+<p>
                     Behavior means the actions performed by a person.
                 </p>
-
-                <p>
+<p>
                     In cybercrime, this may include activities such as
                     online fraud, hacking, cyberbullying or digital piracy.
                 </p>
-
-            </div>
-
-
-            <!-- C -->
-
-            <div class="factor-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- C -->
+<div class="subpart">
+<h3 class="sub-heading">
                     c) Environment
                 </h3>
-
-                <p>
+<p>
                     Environment includes the people and situations around
                     a person.
                 </p>
-
-                <p>
+<p>
                     In cyberspace, this may include:
                 </p>
-
-                <ul class="pen-list">
-                    <li>Friends and peer groups</li>
-                    <li>Social media</li>
-                    <li>Online communities</li>
-                    <li>Hacker groups</li>
-                    <li>Family and society</li>
-                </ul>
-
-            </div>
-
-        </section>
-
-
-        <!-- 2. RECIPROCAL RELATIONSHIP -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+<ul class="answer-list">
+<li>Friends and peer groups</li>
+<li>Social media</li>
+<li>Online communities</li>
+<li>Hacker groups</li>
+<li>Family and society</li>
+</ul>
+</div>
+</section>
+<!-- 2. RECIPROCAL RELATIONSHIP -->
+<section class="section">
+<h2 class="answer-heading">
                 2. Reciprocal Relationship
             </h2>
-
-            <p>
+<p>
                 The three factors influence one another:
             </p>
-
-
-            <!-- SIMPLE THEORY DIAGRAM -->
-
-            <div class="reciprocal-diagram">
-
-                <div class="diagram-top">
+<!-- SIMPLE THEORY DIAGRAM -->
+<div class="reciprocal-diagram">
+<div class="diagram-top">
                     Personal Factors
                 </div>
-
-                <div class="diagram-arrow">
+<div class="diagram-arrow">
                     ↕
                 </div>
-
-                <div class="diagram-bottom">
+<div class="diagram-bottom">
                     Behavior ↔ Environment
                 </div>
-
-            </div>
-
-
-            <p>
+</div>
+<p>
                 For example, a person's beliefs can affect their online
                 behaviour. Their behaviour can change their environment,
                 and the online environment can again influence their
                 beliefs and future behaviour.
             </p>
-
-            <p>
+<p>
                 This continuous interaction is called reciprocal
                 determinism.
             </p>
-
-        </section>
-
-
-        <!-- 3. APPLICATION -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</section>
+<!-- 3. APPLICATION -->
+<section class="section">
+<h2 class="answer-heading">
                 3. Application to Cyber-Criminal Behavior
             </h2>
-
-            <p>
+<p>
                 Bandura's theory can be used to understand why a person
                 may become involved in cybercrime.
             </p>
-
-
-            <!-- A -->
-
-            <div class="application-part">
-
-                <h3 class="sub-heading">
+<!-- A -->
+<div class="subpart">
+<h3 class="sub-heading">
                     a) Influence of Personal Factors
                 </h3>
-
-                <p>
+<p>
                     A person may be motivated by:
                 </p>
-
-                <ul class="pen-list">
-                    <li>Desire for money</li>
-                    <li>Curiosity</li>
-                    <li>Anger or revenge</li>
-                    <li>Desire for recognition</li>
-                    <li>Belief that cybercrime is not very harmful</li>
-                </ul>
-
-                <p>
+<ul class="answer-list">
+<li>Desire for money</li>
+<li>Curiosity</li>
+<li>Anger or revenge</li>
+<li>Desire for recognition</li>
+<li>Belief that cybercrime is not very harmful</li>
+</ul>
+<p>
                     These thoughts can encourage cyber-criminal behaviour.
                 </p>
-
-            </div>
-
-
-            <!-- B -->
-
-            <div class="application-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- B -->
+<div class="subpart">
+<h3 class="sub-heading">
                     b) Influence of the Online Environment
                 </h3>
-
-                <p>
+<p>
                     A person may join an online group where other members
                     are involved in cybercrime.
                 </p>
-
-                <p>
+<p>
                     If the group supports or praises such behaviour, the
                     person may begin to see cybercrime as acceptable.
                 </p>
-
-            </div>
-
-
-            <!-- C -->
-
-            <div class="application-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- C -->
+<div class="subpart">
+<h3 class="sub-heading">
                     c) Learning from Others
                 </h3>
-
-                <p>
+<p>
                     People can learn by watching and copying others.
                 </p>
-
-                <p>
+<p>
                     For example, a young person may see friends gaining
                     money or recognition through online fraud and may copy
                     their behaviour.
                 </p>
-
-            </div>
-
-
-            <!-- D -->
-
-            <div class="application-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- D -->
+<div class="subpart">
+<h3 class="sub-heading">
                     d) Rewards Encourage Repetition
                 </h3>
-
-                <p>
+<p>
                     If a person commits a cybercrime and receives money,
                     praise or status without facing immediate punishment,
                     they may repeat the behaviour.
                 </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- 4. EXAMPLE -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</div>
+</section>
+<!-- 4. EXAMPLE -->
+<section class="section">
+<h2 class="answer-heading">
                 4. Example
             </h2>
-
-            <p>
+<p>
                 Suppose a person joins an online group where members carry
                 out online fraud.
             </p>
-
-
-            <!-- VERTICAL FLOW -->
-
-            <div class="vertical-flow">
-
-                <div class="flow-item">
+<!-- VERTICAL FLOW -->
+<div class="vertical-flow">
+<div class="flow-item">
                     Online Group
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Person Learns Fraud from Others
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Commits Online Fraud
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Gets Money or Recognition
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Believes Fraud is Rewarding
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Continues the Behaviour
                 </div>
-
-            </div>
-
-            <p>
+</div>
+<p>
                 Here, the person's environment, personal thinking and
                 behaviour influence one another.
             </p>
-
-        </section>
-
-
-        <!-- CONCLUSION -->
-
-        <section class="section conclusion">
-
-            <h2 class="answer-heading">
+</section>
+<!-- CONCLUSION -->
+<section class="section conclusion">
+<h2 class="answer-heading">
                 Conclusion
             </h2>
-
-            <p>
+<p>
                 Bandura's Theory of Reciprocal Determinism explains
                 cyber-criminal behaviour through the interaction of
                 personal factors, behaviour and environment. A person's
@@ -673,25 +257,14 @@
                 can develop through the continuous influence of all three
                 factors.
             </p>
-
-        </section>
-
-
-    </main>
-
-
-    <!-- BOTTOM NAVIGATION -->
-
-    <nav class="bottom-nav">
-
-        <a href="index.html" class="nav-link">
+</section>
+</main>
+<!-- BOTTOM NAVIGATION -->
+<nav class="bottom-nav">
+<a class="nav-link" href="index.html">
             ← Unit I
         </a>
-
-    </nav>
-
-
+</nav>
 </div>
-
 </body>
-          </html>
+</html>

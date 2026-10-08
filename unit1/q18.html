@@ -1,596 +1,213 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Q18 - Characteristics and Motivations of Internet Child Pornography Consumers</title>
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            background: #f2f2f2;
-            font-family: "Times New Roman", Times, Georgia, serif;
-        }
-
-
-        /* =========================
-           WEBSITE AREA
-           ========================= */
-
-        .page-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 18px 14px 35px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 12px;
-
-            color: #1d4f91;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-
-        /* =========================
-           EXAM ANSWER SHEET
-           ========================= */
-
-        .answer-sheet {
-            background: #ffffff;
-
-            padding: 34px 40px 38px;
-
-            border: 1px solid #dedede;
-
-            color: #173f8a;
-
-            font-size: 18px;
-            line-height: 1.65;
-        }
-
-
-        /* =========================
-           QUESTION
-           ========================= */
-
-        .question {
-            margin: 0 0 25px;
-
-            font-size: 19px;
-            line-height: 1.5;
-
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-
-        /* =========================
-           SECTIONS
-           ========================= */
-
-        .section {
-            margin-bottom: 22px;
-        }
-
-
-        /* =========================
-           HEADINGS
-           ========================= */
-
-        .answer-heading,
-        .sub-heading {
-            display: inline;
-
-            color: #173f8a;
-
-            font-weight: normal;
-
-            text-decoration-line: underline;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 3px;
-
-            text-align: left;
-        }
-
-        .answer-heading {
-            font-size: 18px;
-            line-height: 1.35;
-        }
-
-        .sub-heading {
-            font-size: 17px;
-            line-height: 1.35;
-        }
-
-        .answer-heading + p,
-        .answer-heading + .number-list,
-        .sub-heading + p {
-            margin-top: 10px;
-        }
-
-
-        /* =========================
-           PARAGRAPHS
-           ========================= */
-
-        .section p,
-        .motivation-part p {
-            margin: 0 0 10px;
-
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-
-        /* =========================
-           NUMBERED POINTS
-           ========================= */
-
-        .number-list {
-            margin-bottom: 0;
-            padding-left: 28px;
-        }
-
-        .number-list li {
-            margin-bottom: 9px;
-            padding-left: 3px;
-
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-
-        /* =========================
-           IMPORTANT POINT NAMES
-           ========================= */
-
-        .point-name {
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-
-
-        /* =========================
-           MOTIVATION SUB-SECTIONS
-           ========================= */
-
-        .motivation-part {
-            margin: 14px 0 17px;
-        }
-
-
-        /* =========================
-           CONCLUSION
-           ========================= */
-
-        .conclusion {
-            margin-bottom: 0;
-        }
-
-
-        /* =========================
-           BOTTOM UNIT NAVIGATION
-           ========================= */
-
-        .bottom-nav {
-            display: flex;
-            align-items: center;
-
-            margin-top: 14px;
-        }
-
-        .nav-link {
-            display: inline-block;
-
-            background: #ffffff;
-
-            border: 1px solid #d6d6d6;
-            border-radius: 5px;
-
-            padding: 9px 13px;
-
-            color: #1d4f91;
-            text-decoration: none;
-
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           MOBILE
-           ========================= */
-
-        @media (max-width: 600px) {
-
-            .page-container {
-                padding: 12px 8px 25px;
-            }
-
-            .back-link {
-                margin-left: 3px;
-                margin-bottom: 9px;
-
-                font-size: 13px;
-            }
-
-            .answer-sheet {
-                padding: 22px 16px 26px;
-
-                font-size: 15.5px;
-                line-height: 1.6;
-            }
-
-
-            /* Question */
-
-            .question {
-                margin-bottom: 22px;
-
-                font-size: 16px;
-                line-height: 1.5;
-            }
-
-
-            /* Headings */
-
-            .answer-heading {
-                font-size: 16px;
-                line-height: 1.35;
-            }
-
-            .sub-heading {
-                font-size: 15.5px;
-                line-height: 1.35;
-            }
-
-
-            /* Sections */
-
-            .section {
-                margin-bottom: 19px;
-            }
-
-            .motivation-part {
-                margin: 12px 0 15px;
-            }
-
-
-            /* Lists */
-
-            .number-list {
-                padding-left: 24px;
-            }
-
-            .number-list li {
-                margin-bottom: 8px;
-            }
-
-
-            /* Bottom navigation */
-
-            .bottom-nav {
-                margin-top: 10px;
-            }
-
-            .nav-link {
-                padding: 8px 10px;
-
-                font-size: 12.5px;
-            }
-
-        }
-
-    </style>
-</head>
-
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Q18 - Characteristics and Motivations of Internet Child Pornography Consumers</title>
+
+<link href="../style.css" rel="stylesheet"/></head>
 <body>
-
 <div class="page-container">
-
-
-    <!-- =========================
+<!-- =========================
          TOP NAVIGATION
          ========================= -->
-
-    <a href="index.html" class="back-link">
+<a class="back-link" href="index.html">
         ← Back to Unit I
     </a>
-
-
-
-    <!-- =========================
+<!-- =========================
          EXAM ANSWER
          ========================= -->
-
-    <main class="answer-sheet">
-
-
-        <!-- QUESTION -->
-
-        <p class="question">
+<main class="answer-sheet">
+<!-- QUESTION -->
+<h1 class="question">
             Q18. Discuss the Characteristics and Motivations of Internet
             Child Pornography Consumers.
-        </p>
-
-
-
-        <!-- INTRODUCTION -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+        </h1>
+<!-- INTRODUCTION -->
+<section class="section">
+<h2 class="answer-heading">
                 Introduction
             </h2>
-
-            <p>
+<p>
                 Internet Child Pornography Consumers are people who use
                 the internet to view, download, store, or share illegal
                 sexual material involving children. Today, the term Child
                 Sexual Abuse Material (CSAM) is preferred because such
                 material shows the sexual abuse or exploitation of children.
             </p>
-
-            <p>
+<p>
                 These consumers may show certain characteristics and
                 motivations that help explain their online behaviour.
             </p>
-
-        </section>
-
-
-
-        <!-- 1. CHARACTERISTICS -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</section>
+<!-- 1. CHARACTERISTICS -->
+<section class="section">
+<h2 class="answer-heading">
                 1. Characteristics of Internet Child Pornography Consumers
             </h2>
-
-            <p>
+<p>
                 There is no single fixed profile of such consumers. They
                 may come from different ages, occupations and social
                 backgrounds. However, some common characteristics may
                 include:
             </p>
+<ol class="answer-list">
+<li>
 
-            <ol class="number-list">
-
-                <li>
-                    <span class="point-name">
                         Regular Internet Use:
-                    </span>
+                    
                     They may spend a large amount of time online searching
                     for or viewing illegal material.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Secrecy:
-                    </span>
+                    
                     They usually try to keep their activities hidden
                     because they know the behaviour is illegal.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Use of Fake Identities:
-                    </span>
+                    
                     Some may use fake usernames or accounts to hide their
                     real identity.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Repeated Viewing:
-                    </span>
+                    
                     Some consumers repeatedly view or collect such illegal
                     material over time.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Collection and Storage:
-                    </span>
+                    
                     Some may download and store illegal images or videos
                     on digital devices.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Interaction with Others:
-                    </span>
+                    
                     Some may communicate with other offenders who have
                     similar illegal interests.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Sharing of Material:
-                    </span>
+                    
                     Some consumers may exchange or distribute illegal
                     material to others.
                 </li>
-
-            </ol>
-
-        </section>
-
-
-
-        <!-- 2. MOTIVATIONS -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</ol>
+</section>
+<!-- 2. MOTIVATIONS -->
+<section class="section">
+<h2 class="answer-heading">
                 2. Motivations of Internet Child Pornography Consumers
             </h2>
-
-            <p>
+<p>
                 Different offenders may have different motivations.
             </p>
-
-
-            <!-- A -->
-
-            <div class="motivation-part">
-
-                <h3 class="sub-heading">
+<!-- A -->
+<div class="subpart">
+<h3 class="sub-heading">
                     a) Sexual Interest
                 </h3>
-
-                <p>
+<p>
                     Some consumers may have a sexual interest in children,
                     which motivates them to search for such material.
                 </p>
-
-            </div>
-
-
-            <!-- B -->
-
-            <div class="motivation-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- B -->
+<div class="subpart">
+<h3 class="sub-heading">
                     b) Curiosity
                 </h3>
-
-                <p>
+<p>
                     For some individuals, the behaviour may begin because
                     of curiosity and later become repeated behaviour.
                 </p>
-
-            </div>
-
-
-            <!-- C -->
-
-            <div class="motivation-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- C -->
+<div class="subpart">
+<h3 class="sub-heading">
                     c) Sexual Gratification
                 </h3>
-
-                <p>
+<p>
                     Some offenders consume such material for sexual
                     pleasure or satisfaction.
                 </p>
-
-            </div>
-
-
-            <!-- D -->
-
-            <div class="motivation-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- D -->
+<div class="subpart">
+<h3 class="sub-heading">
                     d) Habit and Repeated Behaviour
                 </h3>
-
-                <p>
+<p>
                     Repeated viewing may develop into a strong habit,
                     causing the person to continue seeking such material.
                 </p>
-
-            </div>
-
-
-            <!-- E -->
-
-            <div class="motivation-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- E -->
+<div class="subpart">
+<h3 class="sub-heading">
                     e) Feeling of Anonymity
                 </h3>
-
-                <p>
+<p>
                     The internet may give offenders a feeling that their
                     real identity is hidden. This can reduce their fear
                     of being caught.
                 </p>
-
-            </div>
-
-
-            <!-- F -->
-
-            <div class="motivation-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- F -->
+<div class="subpart">
+<h3 class="sub-heading">
                     f) Influence of Online Groups
                 </h3>
-
-                <p>
+<p>
                     Communication with other offenders may encourage the
                     behaviour. Such groups may wrongly make the offender
                     feel that the behaviour is normal or acceptable.
                 </p>
-
-            </div>
-
-
-            <!-- G -->
-
-            <div class="motivation-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- G -->
+<div class="subpart">
+<h3 class="sub-heading">
                     g) Lack of Self-Control
                 </h3>
-
-                <p>
+<p>
                     Some offenders may find it difficult to control their
                     urges and may continue the behaviour even when they
                     know it is harmful and illegal.
                 </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- 3. HARMFUL NATURE -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</div>
+</section>
+<!-- 3. HARMFUL NATURE -->
+<section class="section">
+<h2 class="answer-heading">
                 3. Harmful Nature of This Behaviour
             </h2>
-
-            <p>
+<p>
                 The consumption of such material is not a victimless
                 activity. The material records the sexual abuse and
                 exploitation of real children.
             </p>
-
-            <p>
+<p>
                 Viewing, possessing, producing or sharing such material
                 can be a serious criminal offence. Continued demand for
                 it can also contribute to further exploitation of children.
             </p>
-
-        </section>
-
-
-
-        <!-- CONCLUSION -->
-
-        <section class="section conclusion">
-
-            <h2 class="answer-heading">
+</section>
+<!-- CONCLUSION -->
+<section class="section conclusion">
+<h2 class="answer-heading">
                 Conclusion
             </h2>
-
-            <p>
+<p>
                 Internet Child Pornography Consumers do not have one fixed
                 profile, but some may show characteristics such as secrecy,
                 repeated viewing, collection of illegal material and
@@ -600,28 +217,16 @@
                 behaviour is harmful because it is directly connected
                 with the sexual abuse and exploitation of children.
             </p>
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- =========================
+</section>
+</main>
+<!-- =========================
          BOTTOM NAVIGATION
          ========================= -->
-
-    <nav class="bottom-nav">
-
-        <a href="index.html" class="nav-link">
+<nav class="bottom-nav">
+<a class="nav-link" href="index.html">
             ← Unit I
         </a>
-
-    </nav>
-
-
+</nav>
 </div>
-
 </body>
-  </html>
+</html>

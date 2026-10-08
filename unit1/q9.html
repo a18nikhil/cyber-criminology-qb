@@ -1,656 +1,245 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Q9 - Online Social Networking and Pedophilia</title>
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            background: #f2f2f2;
-            font-family: "Times New Roman", Times, Georgia, serif;
-        }
-
-        .page-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 18px 14px 35px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 12px;
-            color: #1d4f91;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        .answer-sheet {
-            background: #ffffff;
-            padding: 34px 40px 38px;
-            border: 1px solid #dedede;
-            color: #173f8a;
-            font-size: 18px;
-            line-height: 1.65;
-        }
-
-        .question {
-            margin: 0 0 25px;
-            font-size: 19px;
-            line-height: 1.5;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-        .section {
-            margin-bottom: 22px;
-        }
-
-        .answer-heading {
-            display: inline;
-            color: #173f8a;
-            font-size: 18px;
-            font-weight: normal;
-            line-height: 1.35;
-
-            text-decoration-line: underline;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 3px;
-
-            text-align: left;
-        }
-
-        .answer-heading + p,
-        .answer-heading + .pen-list,
-        .answer-heading + .number-list,
-        .answer-heading + .table-wrapper {
-            margin-top: 10px;
-        }
-
-        .section p {
-            margin: 0 0 10px;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-
-        /* BULLET LIST */
-
-        .pen-list {
-            margin-bottom: 10px;
-            padding-left: 27px;
-        }
-
-        .pen-list li {
-            margin-bottom: 7px;
-            padding-left: 2px;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-
-        /* NUMBERED LIST */
-
-        .number-list {
-            margin-bottom: 0;
-            padding-left: 28px;
-        }
-
-        .number-list li {
-            margin-bottom: 9px;
-            padding-left: 3px;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-        .point-name {
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-
-
-        /* GROOMING FLOW */
-
-        .vertical-flow {
-            width: 100%;
-            max-width: 340px;
-            margin: 15px auto;
-            color: #173f8a;
-            font-size: 17px;
-            line-height: 1.3;
-            text-align: center;
-        }
-
-        .flow-item {
-            text-align: center;
-        }
-
-        .flow-arrow {
-            margin: 4px 0;
-            font-size: 21px;
-            line-height: 1;
-            text-align: center;
-        }
-
-
-        /* WARNING SIGNS TABLE */
-
-        .table-wrapper {
-            width: 100%;
-            overflow-x: auto;
-        }
-
-        .warning-table {
-            width: 100%;
-            border-collapse: collapse;
-            color: #173f8a;
-            font-size: 16.5px;
-            line-height: 1.45;
-        }
-
-        .warning-table th,
-        .warning-table td {
-            border: 1px solid #777777;
-            padding: 8px 9px;
-            vertical-align: top;
-            font-weight: normal;
-        }
-
-        .warning-table th {
-            text-align: left;
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-
-        .warning-table td {
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-        .warning-table th:first-child,
-        .warning-table td:first-child {
-            width: 42%;
-        }
-
-        .warning-table th:last-child,
-        .warning-table td:last-child {
-            width: 58%;
-        }
-
-
-        /* CONCLUSION */
-
-        .conclusion {
-            margin-bottom: 0;
-        }
-
-
-        /* BOTTOM NAVIGATION */
-
-        .bottom-nav {
-            display: flex;
-            align-items: center;
-            margin-top: 14px;
-        }
-
-        .nav-link {
-            display: inline-block;
-            background: #ffffff;
-            border: 1px solid #d6d6d6;
-            border-radius: 5px;
-            padding: 9px 13px;
-            color: #1d4f91;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-
-        /* MOBILE */
-
-        @media (max-width: 600px) {
-
-            .page-container {
-                padding: 12px 8px 25px;
-            }
-
-            .back-link {
-                margin-left: 3px;
-                margin-bottom: 9px;
-                font-size: 13px;
-            }
-
-            .answer-sheet {
-                padding: 22px 16px 26px;
-                font-size: 15.5px;
-                line-height: 1.6;
-            }
-
-            .question {
-                margin-bottom: 22px;
-                font-size: 16px;
-                line-height: 1.5;
-            }
-
-            .answer-heading {
-                font-size: 16px;
-                line-height: 1.35;
-            }
-
-            .section {
-                margin-bottom: 19px;
-            }
-
-            .section p {
-                margin-bottom: 9px;
-            }
-
-            .pen-list {
-                padding-left: 23px;
-            }
-
-            .number-list {
-                padding-left: 24px;
-            }
-
-            .pen-list li {
-                margin-bottom: 6px;
-            }
-
-            .number-list li {
-                margin-bottom: 8px;
-            }
-
-            .vertical-flow {
-                max-width: 280px;
-                margin: 12px auto;
-                font-size: 14.5px;
-                line-height: 1.25;
-            }
-
-            .flow-arrow {
-                margin: 3px 0;
-                font-size: 18px;
-            }
-
-            .warning-table {
-                font-size: 13.5px;
-                line-height: 1.4;
-            }
-
-            .warning-table th,
-            .warning-table td {
-                padding: 6px;
-            }
-
-            .bottom-nav {
-                margin-top: 10px;
-            }
-
-            .nav-link {
-                padding: 8px 10px;
-                font-size: 12.5px;
-            }
-
-        }
-
-    </style>
-</head>
-
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Q9 - Online Social Networking and Pedophilia</title>
+
+<link href="../style.css" rel="stylesheet"/></head>
 <body>
-
 <div class="page-container">
-
-
-    <!-- TOP NAVIGATION -->
-
-    <a href="index.html" class="back-link">
+<!-- TOP NAVIGATION -->
+<a class="back-link" href="index.html">
         ← Back to Unit I
     </a>
-
-
-    <!-- EXAM ANSWER -->
-
-    <main class="answer-sheet">
-
-
-        <!-- QUESTION -->
-
-        <p class="question">
+<!-- EXAM ANSWER -->
+<main class="answer-sheet">
+<!-- QUESTION -->
+<h1 class="question">
             Q9. Analyze the Relationship Between Online Social Networking
             and Pedophilia, Including Risk Factors and Warning Signs.
-        </p>
-
-
-        <!-- INTRODUCTION -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+        </h1>
+<!-- INTRODUCTION -->
+<section class="section">
+<h2 class="answer-heading">
                 Introduction
             </h2>
-
-            <p>
+<p>
                 Online social networking allows people to communicate,
                 share information and make friends. However, sexual
                 offenders may misuse these platforms to contact, groom
                 and exploit children.
             </p>
-
-            <p>
+<p>
                 Social networking does not cause pedophilia, but features
                 such as fake profiles, private messaging and access to
                 personal information can provide opportunities for
                 offenders to approach children.
             </p>
-
-        </section>
-
-
-        <!-- 1. ROLE OF ONLINE SOCIAL NETWORKING -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</section>
+<!-- 1. ROLE OF ONLINE SOCIAL NETWORKING -->
+<section class="section">
+<h2 class="answer-heading">
                 1. Role of Online Social Networking
             </h2>
-
-            <p>
+<p>
                 Offenders may misuse social networking platforms to:
             </p>
-
-            <ul class="pen-list">
-
-                <li>
+<ul class="answer-list">
+<li>
                     Find and contact children.
                 </li>
-
-                <li>
+<li>
                     Create fake profiles or identities.
                 </li>
-
-                <li>
+<li>
                     Learn about a child's interests and personal details.
                 </li>
-
-                <li>
+<li>
                     Communicate through private messages.
                 </li>
-
-                <li>
+<li>
                     Build trust over time.
                 </li>
-
-                <li>
+<li>
                     Ask for private photos, videos or meetings.
                 </li>
-
-            </ul>
-
-        </section>
-
-
-        <!-- 2. ONLINE GROOMING -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</ul>
+</section>
+<!-- 2. ONLINE GROOMING -->
+<section class="section">
+<h2 class="answer-heading">
                 2. Online Grooming
             </h2>
-
-            <p>
+<p>
                 Online grooming is the process of building trust with a
                 child for the purpose of sexual exploitation.
             </p>
-
-            <p>
+<p>
                 A common pattern is:
             </p>
-
-
-            <!-- VERTICAL FLOW -->
-
-            <div class="vertical-flow">
-
-                <div class="flow-item">
+<!-- VERTICAL FLOW -->
+<div class="vertical-flow">
+<div class="flow-item">
                     Finding a Child Online
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Starting Friendly Conversation
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Building Trust
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Moving to Private Chats
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Introducing Sexual Topics
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Seeking Sexual Content or Exploitation
                 </div>
-
-            </div>
-
-            <p>
+</div>
+<p>
                 Offenders may use friendship, compliments, attention or
                 gifts to gain the child's trust.
             </p>
-
-        </section>
-
-
-        <!-- 3. RISK FACTORS -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</section>
+<!-- 3. RISK FACTORS -->
+<section class="section">
+<h2 class="answer-heading">
                 3. Risk Factors
             </h2>
-
-            <p>
+<p>
                 Factors that may increase the risk of online victimization
                 include:
             </p>
+<ol class="answer-list">
+<li>
 
-            <ol class="number-list">
-
-                <li>
-                    <span class="point-name">
                         Public Profiles:
-                    </span>
+                    
                     Personal information is visible to strangers.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Unknown Friend Requests:
-                    </span>
+                    
                     Strangers can directly contact the child.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Sharing Personal Information:
-                    </span>
+                    
                     Age, school or location may be exposed.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Private Chats with Strangers:
-                    </span>
+                    
                     These can create opportunities for manipulation.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Lack of Awareness:
-                    </span>
+                    
                     Children may not recognize grooming behaviour.
                 </li>
-
-            </ol>
-
-        </section>
-
-
-        <!-- 4. WARNING SIGNS -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</ol>
+</section>
+<!-- 4. WARNING SIGNS -->
+<section class="section">
+<h2 class="answer-heading">
                 4. Warning Signs
             </h2>
-
-            <div class="table-wrapper">
-
-                <table class="warning-table">
-
-                    <thead>
-                        <tr>
-                            <th>Warning Sign</th>
-                            <th>Concern</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>Gives excessive attention</td>
-                            <td>May be trying to gain trust.</td>
-                        </tr>
-
-                        <tr>
-                            <td>Asks for personal information</td>
-                            <td>May be collecting private details.</td>
-                        </tr>
-
-                        <tr>
-                            <td>Wants conversations kept secret</td>
-                            <td>May be hiding inappropriate contact.</td>
-                        </tr>
-
-                        <tr>
-                            <td>Asks for private photos or videos</td>
-                            <td>Sign of possible exploitation.</td>
-                        </tr>
-
-                        <tr>
-                            <td>Offers gifts or money</td>
-                            <td>May be used to influence the child.</td>
-                        </tr>
-
-                        <tr>
-                            <td>Uses threats or blackmail</td>
-                            <td>May be trying to control the victim.</td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-        </section>
-
-
-        <!-- 5. EFFECTS ON VICTIMS -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+<div class="table-wrapper">
+<table class="answer-table">
+<thead>
+<tr>
+<th>Warning Sign</th>
+<th>Concern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gives excessive attention</td>
+<td>May be trying to gain trust.</td>
+</tr>
+<tr>
+<td>Asks for personal information</td>
+<td>May be collecting private details.</td>
+</tr>
+<tr>
+<td>Wants conversations kept secret</td>
+<td>May be hiding inappropriate contact.</td>
+</tr>
+<tr>
+<td>Asks for private photos or videos</td>
+<td>Sign of possible exploitation.</td>
+</tr>
+<tr>
+<td>Offers gifts or money</td>
+<td>May be used to influence the child.</td>
+</tr>
+<tr>
+<td>Uses threats or blackmail</td>
+<td>May be trying to control the victim.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- 5. EFFECTS ON VICTIMS -->
+<section class="section">
+<h2 class="answer-heading">
                 5. Effects on Victims
             </h2>
-
-            <p>
+<p>
                 Online exploitation may cause:
             </p>
-
-            <ul class="pen-list">
-
-                <li>Fear and anxiety</li>
-
-                <li>Shame and emotional stress</li>
-
-                <li>Loss of trust</li>
-
-                <li>Social withdrawal</li>
-
-                <li>Fear of private content being shared</li>
-
-            </ul>
-
-        </section>
-
-
-        <!-- CONCLUSION -->
-
-        <section class="section conclusion">
-
-            <h2 class="answer-heading">
+<ul class="answer-list">
+<li>Fear and anxiety</li>
+<li>Shame and emotional stress</li>
+<li>Loss of trust</li>
+<li>Social withdrawal</li>
+<li>Fear of private content being shared</li>
+</ul>
+</section>
+<!-- CONCLUSION -->
+<section class="section conclusion">
+<h2 class="answer-heading">
                 Conclusion
             </h2>
-
-            <p>
+<p>
                 Social networking can provide offenders with opportunities
                 to identify, contact and groom children. Recognizing risk
                 factors and warning signs, protecting personal information
                 and reporting suspicious behaviour can help reduce online
                 victimization.
             </p>
-
-        </section>
-
-
-    </main>
-
-
-    <!-- BOTTOM NAVIGATION -->
-
-    <nav class="bottom-nav">
-
-        <a href="index.html" class="nav-link">
+</section>
+</main>
+<!-- BOTTOM NAVIGATION -->
+<nav class="bottom-nav">
+<a class="nav-link" href="index.html">
             ← Unit I
         </a>
-
-    </nav>
-
-
+</nav>
 </div>
-
 </body>
-                      </html>
+</html>

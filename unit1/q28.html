@@ -1,719 +1,269 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Q28 - Identity Construction Among Hackers</title>
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            background: #f2f2f2;
-            font-family: "Times New Roman", Times, Georgia, serif;
-        }
-
-
-        /* =========================
-           WEBSITE AREA
-           ========================= */
-
-        .page-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 18px 14px 35px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 12px;
-
-            color: #1d4f91;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-
-        /* =========================
-           EXAM ANSWER SHEET
-           ========================= */
-
-        .answer-sheet {
-            background: #ffffff;
-
-            padding: 34px 40px 38px;
-
-            border: 1px solid #dedede;
-
-            color: #173f8a;
-
-            font-size: 18px;
-            line-height: 1.65;
-        }
-
-
-        /* =========================
-           QUESTION
-           ========================= */
-
-        .question {
-            margin: 0 0 25px;
-
-            font-size: 19px;
-            line-height: 1.5;
-
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-
-        /* =========================
-           SECTIONS
-           ========================= */
-
-        .section {
-            margin-bottom: 22px;
-        }
-
-
-        /* =========================
-           HEADINGS
-           ========================= */
-
-        .answer-heading {
-            display: inline;
-
-            color: #173f8a;
-
-            font-size: 18px;
-            font-weight: normal;
-            line-height: 1.35;
-
-            text-decoration-line: underline;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 3px;
-
-            text-align: left;
-        }
-
-        .answer-heading + p,
-        .answer-heading + .pen-list,
-        .answer-heading + .number-list,
-        .answer-heading + .vertical-flow {
-            margin-top: 10px;
-        }
-
-
-        /* =========================
-           PARAGRAPHS
-           ========================= */
-
-        .section p {
-            margin: 0 0 10px;
-
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-
-        /* =========================
-           BULLET POINTS
-           ========================= */
-
-        .pen-list {
-            margin-bottom: 10px;
-            padding-left: 27px;
-        }
-
-        .pen-list li {
-            margin-bottom: 6px;
-            padding-left: 2px;
-
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-
-        /* =========================
-           NUMBERED POINTS
-           ========================= */
-
-        .number-list {
-            margin-bottom: 0;
-            padding-left: 28px;
-        }
-
-        .number-list li {
-            margin-bottom: 9px;
-            padding-left: 3px;
-
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-
-        /* =========================
-           IMPORTANT POINT NAMES
-           ========================= */
-
-        .point-name {
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-
-
-        /* =========================
-           VERTICAL FLOW
-           ========================= */
-
-        .vertical-flow {
-            width: 100%;
-            max-width: 330px;
-
-            margin: 14px auto 4px;
-
-            color: #173f8a;
-
-            font-size: 17px;
-            line-height: 1.3;
-
-            text-align: center;
-        }
-
-        .flow-item {
-            text-align: center;
-        }
-
-        .flow-arrow {
-            margin: 4px 0;
-
-            font-size: 21px;
-            line-height: 1;
-
-            text-align: center;
-        }
-
-
-        /* =========================
-           CONCLUSION
-           ========================= */
-
-        .conclusion {
-            margin-bottom: 0;
-        }
-
-
-        /* =========================
-           BOTTOM UNIT NAVIGATION
-           ========================= */
-
-        .bottom-nav {
-            display: flex;
-            align-items: center;
-
-            margin-top: 14px;
-        }
-
-        .nav-link {
-            display: inline-block;
-
-            background: #ffffff;
-
-            border: 1px solid #d6d6d6;
-            border-radius: 5px;
-
-            padding: 9px 13px;
-
-            color: #1d4f91;
-            text-decoration: none;
-
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           MOBILE
-           ========================= */
-
-        @media (max-width: 600px) {
-
-            .page-container {
-                padding: 12px 8px 25px;
-            }
-
-            .back-link {
-                margin-left: 3px;
-                margin-bottom: 9px;
-
-                font-size: 13px;
-            }
-
-            .answer-sheet {
-                padding: 22px 16px 26px;
-
-                font-size: 15.5px;
-                line-height: 1.6;
-            }
-
-
-            /* Question */
-
-            .question {
-                margin-bottom: 22px;
-
-                font-size: 16px;
-                line-height: 1.5;
-
-                text-align: justify;
-                text-justify: inter-word;
-            }
-
-
-            /* Headings */
-
-            .answer-heading {
-                font-size: 16px;
-                line-height: 1.35;
-            }
-
-
-            /* Sections */
-
-            .section {
-                margin-bottom: 19px;
-            }
-
-            .section p {
-                margin-bottom: 9px;
-            }
-
-
-            /* Lists */
-
-            .pen-list {
-                padding-left: 23px;
-            }
-
-            .number-list {
-                padding-left: 24px;
-            }
-
-            .pen-list li {
-                margin-bottom: 5px;
-            }
-
-            .number-list li {
-                margin-bottom: 8px;
-            }
-
-
-            /* Vertical flow */
-
-            .vertical-flow {
-                max-width: 280px;
-
-                margin-top: 12px;
-
-                font-size: 14.5px;
-                line-height: 1.25;
-            }
-
-            .flow-arrow {
-                margin: 3px 0;
-
-                font-size: 18px;
-            }
-
-
-            /* Bottom navigation */
-
-            .bottom-nav {
-                margin-top: 10px;
-            }
-
-            .nav-link {
-                padding: 8px 10px;
-
-                font-size: 12.5px;
-            }
-
-        }
-
-    </style>
-</head>
-
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Q28 - Identity Construction Among Hackers</title>
+
+<link href="../style.css" rel="stylesheet"/></head>
 <body>
-
 <div class="page-container">
-
-
-    <!-- =========================
+<!-- =========================
          TOP NAVIGATION
          ========================= -->
-
-    <a href="index.html" class="back-link">
+<a class="back-link" href="index.html">
         ← Back to Unit I
     </a>
-
-
-
-    <!-- =========================
+<!-- =========================
          EXAM ANSWER
          ========================= -->
-
-    <main class="answer-sheet">
-
-
-        <!-- QUESTION -->
-
-        <p class="question">
+<main class="answer-sheet">
+<!-- QUESTION -->
+<h1 class="question">
             Q28. Analyze Identity Construction Among Hackers, Including
             Its Psychological and Social Factors and the Influence of
             Online Anonymity.
-        </p>
-
-
-
-        <!-- INTRODUCTION -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+        </h1>
+<!-- INTRODUCTION -->
+<section class="section">
+<h2 class="answer-heading">
                 Introduction
             </h2>
-
-            <p>
+<p>
                 Identity construction among hackers means the way hackers
                 develop and present their identity in the online world.
                 A hacker may create a separate online identity using a
                 nickname, username or fake profile.
             </p>
-
-            <p>
+<p>
                 This identity can be influenced by the hacker's personal
                 thinking, social environment and the anonymity provided
                 by the internet.
             </p>
-
-        </section>
-
-
-
-        <!-- 1. IDENTITY CONSTRUCTION -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</section>
+<!-- 1. IDENTITY CONSTRUCTION -->
+<section class="section">
+<h2 class="answer-heading">
                 1. Identity Construction Among Hackers
             </h2>
-
-            <p>
+<p>
                 Hackers may create an online identity that is different
                 from their real-life identity.
             </p>
-
-            <p>
+<p>
                 They may use:
             </p>
-
-            <ul class="pen-list">
-
-                <li>
+<ul class="answer-list">
+<li>
                     Special usernames or nicknames.
                 </li>
-
-                <li>
+<li>
                     Fake names and profiles.
                 </li>
-
-                <li>
+<li>
                     Hacker symbols or language.
                 </li>
-
-                <li>
+<li>
                     Membership in online hacker groups.
                 </li>
-
-                <li>
+<li>
                     Their technical skills and achievements to build
                     a reputation.
                 </li>
-
-            </ul>
-
-            <p>
+</ul>
+<p>
                 For some hackers, their online identity becomes an important
                 part of how they see themselves and how others in the hacker
                 community see them.
             </p>
-
-        </section>
-
-
-
-        <!-- 2. PSYCHOLOGICAL FACTORS -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</section>
+<!-- 2. PSYCHOLOGICAL FACTORS -->
+<section class="section">
+<h2 class="answer-heading">
                 2. Psychological Factors
             </h2>
-
-            <p>
+<p>
                 Psychological factors are related to a person's thinking,
                 feelings and motivation.
             </p>
-
-            <p>
+<p>
                 Important psychological factors include:
             </p>
+<ol class="answer-list">
+<li>
 
-            <ol class="number-list">
-
-                <li>
-                    <span class="point-name">
                         Curiosity:
-                    </span>
+                    
                     Some hackers enjoy exploring computer systems and
                     finding out how they work.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Challenge and excitement:
-                    </span>
+                    
                     Breaking through security can be seen as a difficult
                     challenge that gives a feeling of excitement.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Need for recognition:
-                    </span>
+                    
                     Some hackers want others to notice and respect their
                     technical skills.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Sense of achievement:
-                    </span>
+                    
                     Successfully solving a difficult technical problem
                     may give them satisfaction.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Desire for power or control:
-                    </span>
+                    
                     Some hackers may enjoy having control over systems
                     or information.
                 </li>
-
-            </ol>
-
-        </section>
-
-
-
-        <!-- 3. SOCIAL FACTORS -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</ol>
+</section>
+<!-- 3. SOCIAL FACTORS -->
+<section class="section">
+<h2 class="answer-heading">
                 3. Social Factors
             </h2>
-
-            <p>
+<p>
                 A hacker's identity can also be influenced by other people
                 and online communities.
             </p>
+<ol class="answer-list">
+<li>
 
-            <ol class="number-list">
-
-                <li>
-                    <span class="point-name">
                         Peer influence:
-                    </span>
+                    
                     Friends or other hackers may influence a person's
                     behaviour.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Online communities:
-                    </span>
+                    
                     Hacker forums and groups can bring people with similar
                     interests together.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Learning from others:
-                    </span>
+                    
                     Members may learn technical knowledge, ideas and
                     behaviour from other members.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Group recognition:
-                    </span>
+                    
                     A hacker may try to gain respect and status within
                     a group.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Group belonging:
-                    </span>
+                    
                     Being part of a hacker community may give a person
                     a feeling of belonging.
                 </li>
-
-            </ol>
-
-        </section>
-
-
-
-        <!-- 4. ONLINE ANONYMITY -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</ol>
+</section>
+<!-- 4. ONLINE ANONYMITY -->
+<section class="section">
+<h2 class="answer-heading">
                 4. Influence of Online Anonymity
             </h2>
-
-            <p>
+<p>
                 Online anonymity means being able to hide one's real
                 identity on the internet.
             </p>
-
-            <p>
+<p>
                 It plays an important role in hacker identity because:
             </p>
-
-            <ul class="pen-list">
-
-                <li>
+<ul class="answer-list">
+<li>
                     Hackers can use fake names instead of their real names.
                 </li>
-
-                <li>
+<li>
                     They can hide personal details.
                 </li>
-
-                <li>
+<li>
                     They may feel less fear of being identified.
                 </li>
-
-                <li>
+<li>
                     They can create a different personality online.
                 </li>
-
-                <li>
+<li>
                     They may feel more confident taking risks online.
                 </li>
-
-                <li>
+<li>
                     It can make it easier to separate their hacker identity
                     from their real-life identity.
                 </li>
-
-            </ul>
-
-            <p>
+</ul>
+<p>
                 However, anonymity does not guarantee that a hacker cannot
                 be identified by investigators.
             </p>
-
-        </section>
-
-
-
-        <!-- 5. PROCESS -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</section>
+<!-- 5. PROCESS -->
+<section class="section">
+<h2 class="answer-heading">
                 5. Process of Hacker Identity Construction
             </h2>
-
-            <p>
+<p>
                 The process can be understood as:
             </p>
-
-
-            <!-- QUICK VERTICAL FLOW -->
-
-            <div class="vertical-flow">
-
-                <div class="flow-item">
+<!-- QUICK VERTICAL FLOW -->
+<div class="vertical-flow">
+<div class="flow-item">
                     Interest in Technology
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Learning Technical Skills
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Joining Online Communities
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Using an Online Identity
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Recognition from Other Hackers
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Development of Hacker Identity
                 </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- CONCLUSION -->
-
-        <section class="section conclusion">
-
-            <h2 class="answer-heading">
+</div>
+</section>
+<!-- CONCLUSION -->
+<section class="section conclusion">
+<h2 class="answer-heading">
                 Conclusion
             </h2>
-
-            <p>
+<p>
                 Hacker identity is shaped by a combination of psychological
                 factors, social factors and online anonymity. Curiosity,
                 challenge and recognition can influence the individual,
@@ -721,28 +271,16 @@
                 Anonymity allows hackers to hide their real identity and
                 create a separate online identity.
             </p>
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- =========================
+</section>
+</main>
+<!-- =========================
          BOTTOM NAVIGATION
          ========================= -->
-
-    <nav class="bottom-nav">
-
-        <a href="index.html" class="nav-link">
+<nav class="bottom-nav">
+<a class="nav-link" href="index.html">
             ← Unit I
         </a>
-
-    </nav>
-
-
+</nav>
 </div>
-
 </body>
 </html>

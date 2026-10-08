@@ -1,415 +1,36 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Q13 - Internet Child Pornography Consumers</title>
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            background: #f2f2f2;
-            font-family: "Times New Roman", Times, Georgia, serif;
-        }
-
-
-        /* =========================
-           WEBSITE AREA
-           ========================= */
-
-        .page-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 18px 14px 35px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 12px;
-
-            color: #1d4f91;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-
-        /* =========================
-           EXAM ANSWER SHEET
-           ========================= */
-
-        .answer-sheet {
-            background: #ffffff;
-
-            padding: 34px 40px 38px;
-
-            border: 1px solid #dedede;
-
-            color: #173f8a;
-
-            font-size: 18px;
-            line-height: 1.65;
-        }
-
-
-        /* =========================
-           QUESTION
-           ========================= */
-
-        .question {
-            margin: 0 0 25px;
-
-            font-size: 19px;
-            line-height: 1.5;
-
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-
-        /* =========================
-           SECTIONS
-           ========================= */
-
-        .section {
-            margin-bottom: 22px;
-        }
-
-
-        /* =========================
-           HEADINGS
-           ========================= */
-
-        .answer-heading,
-        .sub-heading {
-            display: inline;
-
-            color: #173f8a;
-
-            font-weight: normal;
-
-            text-decoration-line: underline;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 3px;
-
-            text-align: left;
-        }
-
-        .answer-heading {
-            font-size: 18px;
-            line-height: 1.35;
-        }
-
-        .sub-heading {
-            font-size: 17px;
-            line-height: 1.35;
-        }
-
-        .answer-heading + p,
-        .answer-heading + .number-list,
-        .answer-heading + .pen-list,
-        .sub-heading + p {
-            margin-top: 10px;
-        }
-
-
-        /* =========================
-           PARAGRAPHS
-           ========================= */
-
-        .section p,
-        .factor-part p {
-            margin: 0 0 10px;
-
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-
-        /* =========================
-           NUMBERED POINTS
-           ========================= */
-
-        .number-list {
-            margin-bottom: 0;
-            padding-left: 28px;
-        }
-
-        .number-list li {
-            margin-bottom: 9px;
-            padding-left: 3px;
-
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-
-        /* =========================
-           BULLET POINTS
-           ========================= */
-
-        .pen-list {
-            margin-bottom: 10px;
-            padding-left: 27px;
-        }
-
-        .pen-list li {
-            margin-bottom: 6px;
-            padding-left: 2px;
-
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-
-        /* =========================
-           IMPORTANT POINT NAMES
-           ========================= */
-
-        .point-name {
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-
-
-        /* =========================
-           PSYCHOLOGICAL FACTORS
-           ========================= */
-
-        .factor-part {
-            margin: 14px 0 17px;
-        }
-
-
-        /* =========================
-           VERTICAL FLOW
-           ========================= */
-
-        .vertical-flow {
-            width: 100%;
-            max-width: 350px;
-
-            margin: 14px auto 4px;
-
-            color: #173f8a;
-
-            font-size: 17px;
-            line-height: 1.3;
-
-            text-align: center;
-        }
-
-        .flow-item {
-            text-align: center;
-        }
-
-        .flow-arrow {
-            margin: 4px 0;
-
-            font-size: 21px;
-            line-height: 1;
-
-            text-align: center;
-        }
-
-
-        /* =========================
-           CONCLUSION
-           ========================= */
-
-        .conclusion {
-            margin-bottom: 0;
-        }
-
-
-        /* =========================
-           BOTTOM UNIT NAVIGATION
-           ========================= */
-
-        .bottom-nav {
-            display: flex;
-            align-items: center;
-
-            margin-top: 14px;
-        }
-
-        .nav-link {
-            display: inline-block;
-
-            background: #ffffff;
-
-            border: 1px solid #d6d6d6;
-            border-radius: 5px;
-
-            padding: 9px 13px;
-
-            color: #1d4f91;
-            text-decoration: none;
-
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           MOBILE
-           ========================= */
-
-        @media (max-width: 600px) {
-
-            .page-container {
-                padding: 12px 8px 25px;
-            }
-
-            .back-link {
-                margin-left: 3px;
-                margin-bottom: 9px;
-
-                font-size: 13px;
-            }
-
-            .answer-sheet {
-                padding: 22px 16px 26px;
-
-                font-size: 15.5px;
-                line-height: 1.6;
-            }
-
-
-            /* Question */
-
-            .question {
-                margin-bottom: 22px;
-
-                font-size: 16px;
-                line-height: 1.5;
-            }
-
-
-            /* Headings */
-
-            .answer-heading {
-                font-size: 16px;
-                line-height: 1.35;
-            }
-
-            .sub-heading {
-                font-size: 15.5px;
-                line-height: 1.35;
-            }
-
-
-            /* Sections */
-
-            .section {
-                margin-bottom: 19px;
-            }
-
-            .factor-part {
-                margin: 12px 0 15px;
-            }
-
-
-            /* Lists */
-
-            .number-list {
-                padding-left: 24px;
-            }
-
-            .pen-list {
-                padding-left: 23px;
-            }
-
-            .number-list li {
-                margin-bottom: 8px;
-            }
-
-            .pen-list li {
-                margin-bottom: 5px;
-            }
-
-
-            /* Vertical flow */
-
-            .vertical-flow {
-                max-width: 290px;
-
-                margin-top: 12px;
-
-                font-size: 14.5px;
-                line-height: 1.25;
-            }
-
-            .flow-arrow {
-                margin: 3px 0;
-
-                font-size: 18px;
-            }
-
-
-            /* Bottom navigation */
-
-            .bottom-nav {
-                margin-top: 10px;
-            }
-
-            .nav-link {
-                padding: 8px 10px;
-
-                font-size: 12.5px;
-            }
-
-        }
-
-    </style>
-</head>
-
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Q13 - Internet Child Pornography Consumers</title>
+
+<link href="../style.css" rel="stylesheet"/></head>
 <body>
-
 <div class="page-container">
-
-
-    <!-- =========================
+<!-- =========================
          TOP NAVIGATION
          ========================= -->
-
-    <a href="index.html" class="back-link">
+<a class="back-link" href="index.html">
         ← Back to Unit I
     </a>
-
-
-
-    <!-- =========================
+<!-- =========================
          EXAM ANSWER
          ========================= -->
-
-    <main class="answer-sheet">
-
-
-        <!-- QUESTION -->
-
-        <p class="question">
+<main class="answer-sheet">
+<!-- QUESTION -->
+<h1 class="question">
             Q13. Explain the Term Internet Child Pornography Consumers
             with Reference to Their Online Patterns and the Psychological
             Factors That Drive Such Behavior.
-        </p>
-
-
-
-        <!-- INTRODUCTION -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+        </h1>
+<!-- INTRODUCTION -->
+<section class="section">
+<h2 class="answer-heading">
                 Introduction
             </h2>
-
-            <p>
+<p>
                 Internet Child Pornography Consumers are people who use the
                 internet to search for, view, download, store, or share
                 illegal sexual material involving children. A more current
@@ -417,302 +38,207 @@
                 (CSAM) because it makes clear that the material records
                 the sexual abuse or exploitation of a child.
             </p>
-
-            <p>
+<p>
                 Their behaviour can be understood by studying their online
                 patterns and the psychological factors that may drive such
                 behaviour.
             </p>
-
-        </section>
-
-
-
-        <!-- 1. ONLINE PATTERNS -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</section>
+<!-- 1. ONLINE PATTERNS -->
+<section class="section">
+<h2 class="answer-heading">
                 1. Online Patterns of Consumers
             </h2>
-
-            <p>
+<p>
                 Some common online patterns include:
             </p>
+<ol class="answer-list">
+<li>
 
-            <ol class="number-list">
-
-                <li>
-                    <span class="point-name">
                         Searching for illegal material:
-                    </span>
+                    
                     They may repeatedly search online for sexual material
                     involving children.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Downloading and storing:
-                    </span>
+                    
                     Some consumers download and keep illegal images or
                     videos on digital devices.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Repeated viewing:
-                    </span>
+                    
                     The material may be viewed repeatedly over a period
                     of time.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Sharing or exchanging:
-                    </span>
+                    
                     Some offenders may exchange illegal material with
                     other offenders through online networks or groups.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Using hidden identities:
-                    </span>
+                    
                     Fake usernames or accounts may be used to hide their
                     real identity.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Joining online communities:
-                    </span>
+                    
                     Some offenders may communicate with others who have
                     similar illegal interests.
                 </li>
+<li>
 
-                <li>
-                    <span class="point-name">
                         Keeping activities secret:
-                    </span>
+                    
                     They may hide files, accounts or online activities
                     because they know the behaviour is illegal.
                 </li>
-
-            </ol>
-
-        </section>
-
-
-
-        <!-- 2. PSYCHOLOGICAL FACTORS -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</ol>
+</section>
+<!-- 2. PSYCHOLOGICAL FACTORS -->
+<section class="section">
+<h2 class="answer-heading">
                 2. Psychological Factors
             </h2>
-
-            <p>
+<p>
                 Several psychological factors may help explain why some
                 offenders continue this behaviour.
             </p>
-
-
-            <!-- A -->
-
-            <div class="factor-part">
-
-                <h3 class="sub-heading">
+<!-- A -->
+<div class="subpart">
+<h3 class="sub-heading">
                     a) Sexual Interest in Children
                 </h3>
-
-                <p>
+<p>
                     Some offenders may have a sexual interest in children,
                     which can lead them to seek such illegal material.
                 </p>
-
-            </div>
-
-
-            <!-- B -->
-
-            <div class="factor-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- B -->
+<div class="subpart">
+<h3 class="sub-heading">
                     b) Curiosity
                 </h3>
-
-                <p>
+<p>
                     For some individuals, the behaviour may begin with
                     curiosity and later develop into repeated viewing.
                 </p>
-
-            </div>
-
-
-            <!-- C -->
-
-            <div class="factor-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- C -->
+<div class="subpart">
+<h3 class="sub-heading">
                     c) Habit and Repetition
                 </h3>
-
-                <p>
+<p>
                     Repeated use may develop into a strong habit, making
                     the person continue seeking similar material.
                 </p>
-
-            </div>
-
-
-            <!-- D -->
-
-            <div class="factor-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- D -->
+<div class="subpart">
+<h3 class="sub-heading">
                     d) Feeling of Anonymity
                 </h3>
-
-                <p>
+<p>
                     The internet can create a feeling that a person is
                     hidden or cannot be identified. This may reduce fear
                     and encourage illegal behaviour.
                 </p>
-
-            </div>
-
-
-            <!-- E -->
-
-            <div class="factor-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- E -->
+<div class="subpart">
+<h3 class="sub-heading">
                     e) Online Group Influence
                 </h3>
-
-                <p>
+<p>
                     Interaction with other offenders may make the behaviour
                     seem more acceptable within that group and encourage
                     continued consumption.
                 </p>
-
-            </div>
-
-
-            <!-- F -->
-
-            <div class="factor-part">
-
-                <h3 class="sub-heading">
+</div>
+<!-- F -->
+<div class="subpart">
+<h3 class="sub-heading">
                     f) Lack of Self-Control
                 </h3>
-
-                <p>
+<p>
                     Some offenders may have difficulty controlling their
                     urges or stopping their online behaviour even when
                     they understand its harmful and illegal nature.
                 </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- 3. RELATIONSHIP -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</div>
+</section>
+<!-- 3. RELATIONSHIP -->
+<section class="section">
+<h2 class="answer-heading">
                 3. Relationship Between Online Patterns and Psychological Factors
             </h2>
-
-            <p>
+<p>
                 The relationship can be shown as:
             </p>
-
-
-            <!-- QUICK VERTICAL FLOW -->
-
-            <div class="vertical-flow">
-
-                <div class="flow-item">
+<!-- QUICK VERTICAL FLOW -->
+<div class="vertical-flow">
+<div class="flow-item">
                     Psychological Interest / Curiosity
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Searching Online
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Viewing Illegal Material
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Repeated Use
                 </div>
-
-                <div class="flow-arrow">
+<div class="flow-arrow">
                     ↓
                 </div>
-
-                <div class="flow-item">
+<div class="flow-item">
                     Possible Sharing or Interaction with Others
                 </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- 4. HARMFUL AND CRIMINAL NATURE -->
-
-        <section class="section">
-
-            <h2 class="answer-heading">
+</div>
+</section>
+<!-- 4. HARMFUL AND CRIMINAL NATURE -->
+<section class="section">
+<h2 class="answer-heading">
                 4. Harmful and Criminal Nature
             </h2>
-
-            <p>
+<p>
                 This behaviour is serious because the material involves
                 the sexual abuse and exploitation of children. Viewing,
                 possessing, distributing or producing such material can
                 also be a criminal offence under applicable law.
             </p>
-
-            <p>
+<p>
                 Demand for such material can contribute to the continued
                 exploitation of children and can cause long-lasting harm
                 to victims.
             </p>
-
-        </section>
-
-
-
-        <!-- CONCLUSION -->
-
-        <section class="section conclusion">
-
-            <h2 class="answer-heading">
+</section>
+<!-- CONCLUSION -->
+<section class="section conclusion">
+<h2 class="answer-heading">
                 Conclusion
             </h2>
-
-            <p>
+<p>
                 Internet Child Pornography Consumers are individuals who
                 use the internet to consume illegal sexual material
                 involving children. Their online patterns may include
@@ -723,28 +249,16 @@
                 is harmful because it is connected with the sexual
                 exploitation and abuse of children.
             </p>
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- =========================
+</section>
+</main>
+<!-- =========================
          BOTTOM NAVIGATION
          ========================= -->
-
-    <nav class="bottom-nav">
-
-        <a href="index.html" class="nav-link">
+<nav class="bottom-nav">
+<a class="nav-link" href="index.html">
             ← Unit I
         </a>
-
-    </nav>
-
-
+</nav>
 </div>
-
 </body>
 </html>
