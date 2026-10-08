@@ -1,189 +1,280 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Cyber Criminology</title>
+<title>Cyber Criminology | Questions & Answers</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            background: #f4f4f4;
-            color: #222;
-            font-family: "Times New Roman", Times, serif;
-            line-height: 1.5;
-        }
+html {
+    -webkit-text-size-adjust: 100%;
+}
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 25px 18px 45px;
-        }
+body {
+    margin: 0;
+    background: #F3F3F0;
+    color: #242424;
+    font-family: Georgia, Cambria, "Times New Roman", serif;
+    line-height: 1.5;
+}
 
-        .header {
-            text-align: center;
-            background: #ffffff;
-            padding: 30px 20px;
-            border-radius: 8px;
-            margin-bottom: 26px;
-            border-top: 5px solid #263b5e;
-        }
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 18px 45px;
+}
 
-        .header h1 {
-            margin: 0;
-            font-size: 32px;
-            font-weight: normal;
-            letter-spacing: 1px;
-            color: #1d2f4d;
-        }
+/* Header */
 
-        .section-title {
-            font-size: 20px;
-            font-weight: normal;
-            color: #1d2f4d;
-            margin: 0 0 14px;
-            border-bottom: 1px solid #bbb;
-            padding-bottom: 6px;
-        }
+.header {
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 9px;
+    margin-bottom: 26px;
+    border-top: 5px solid #263B5E;
+    overflow: hidden;
+}
 
-        .unit-card {
-            display: block;
-            background: #ffffff;
-            margin-bottom: 16px;
-            padding: 20px;
-            border-radius: 7px;
-            text-decoration: none;
-            color: inherit;
-            border-left: 4px solid #263b5e;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-        }
+.header-content {
+    padding: 30px 20px 23px;
+}
 
-        .unit-number {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #666;
-        }
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #1D2F4D;
+}
 
-        .unit-card h2 {
-            margin: 3px 0 10px;
-            font-size: 22px;
-            font-weight: normal;
-            color: #1d2f4d;
-        }
+.subtitle {
+    margin: 9px 0 0;
+    font-family: system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #526A7D;
+}
 
-        .open-unit {
-            font-size: 16px;
-            color: #1d4f91;
-        }
+/* Banner image */
 
-        /* Mobile */
-        @media (max-width: 600px) {
+.hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 7;
+    object-fit: cover;
+    object-position: center;
+}
 
-            .container {
-                padding: 14px 10px 30px;
-            }
+/* Section heading */
 
-            .header {
-                padding: 20px 10px;
-                margin-bottom: 20px;
-            }
+.section-title {
+    font-size: 22px;
+    font-weight: 400;
+    color: #1D2F4D;
+    margin: 0 0 17px;
+    border-bottom: 1px solid #C9C9C5;
+    padding-bottom: 8px;
+}
 
-            .header h1 {
-                font-size: 25px;
-                letter-spacing: 0.5px;
-            }
+/* Unit cards */
 
-            .section-title {
-                font-size: 18px;
-                margin-bottom: 12px;
-            }
+.unit-card {
+    display: block;
+    background: #FFFFFF;
+    margin-bottom: 16px;
+    padding: 22px;
+    border-radius: 9px;
+    text-decoration: none;
+    color: inherit;
+    border-left: 5px solid #263B5E;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
 
-            .unit-card {
-                padding: 15px 14px;
-                margin-bottom: 12px;
-            }
+.unit-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
 
-            .unit-number {
-                font-size: 12px;
-            }
+.unit-card:focus-visible {
+    outline: 2px solid #245487;
+    outline-offset: 3px;
+}
 
-            .unit-card h2 {
-                font-size: 17px;
-                margin: 3px 0 7px;
-                white-space: nowrap;
-                letter-spacing: -0.2px;
-            }
+.unit-number {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666666;
+}
 
-            .open-unit {
-                font-size: 14px;
-            }
-        }
+.unit-card h2 {
+    margin: 5px 0 11px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #1D2F4D;
+}
 
-        /* Extra-small phones */
-        @media (max-width: 380px) {
+.open-unit {
+    font-size: 16px;
+    color: #245487;
+}
 
-            .unit-card h2 {
-                font-size: 16px;
-            }
-        }
-    </style>
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 14px 10px 30px;
+    }
+
+    .header {
+        margin-bottom: 24px;
+    }
+
+    .header-content {
+        padding: 24px 12px 20px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+        letter-spacing: 0.5px;
+    }
+
+    .subtitle {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+        line-height: 1.6;
+    }
+
+    .hero-image {
+        aspect-ratio: 16 / 8.5;
+    }
+
+    .section-title {
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+
+    .unit-card {
+        padding: 17px 15px;
+        margin-bottom: 13px;
+    }
+
+    .unit-number {
+        font-size: 12px;
+    }
+
+    .unit-card h2 {
+        font-size: 18px;
+        margin: 5px 0 8px;
+        line-height: 1.4;
+    }
+
+    .open-unit {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .subtitle {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .unit-card h2 {
+        font-size: 17px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .unit-card {
+        transition: none;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-    <header class="header">
+<header class="header">
+
+    <div class="header-content">
         <h1>CYBER CRIMINOLOGY</h1>
-    </header>
 
+        <p class="subtitle">
+            EXAM ORIENTED QUESTIONS &amp; ANSWERS
+        </p>
+    </div>
 
-    <h2 class="section-title">Select a Unit</h2>
+    <img
+        src="cyber-banner.png"
+        alt="Cyber criminology illustration featuring a digital globe, cybersecurity, online crime and justice"
+        class="hero-image"
+        width="1920"
+        height="768"
+        fetchpriority="high"
+    >
 
+</header>
 
-    <a href="unit1/index.html" class="unit-card">
+<main>
 
-        <div class="unit-number">UNIT I</div>
+<h2 class="section-title">Select a Unit</h2>
 
-        <h2>Introduction to Cyber Criminology</h2>
+<a href="unit1/index.html" class="unit-card">
 
-        <div class="open-unit">
-            View Unit I →
-        </div>
+    <div class="unit-number">UNIT I</div>
 
-    </a>
+    <h2>Introduction to Cyber Criminology</h2>
 
+    <div class="open-unit">
+        View Unit I →
+    </div>
 
-    <a href="unit2/index.html" class="unit-card">
+</a>
 
-        <div class="unit-number">UNIT II</div>
+<a href="unit2/index.html" class="unit-card">
 
-        <h2>Digital Piracy and Cyber Victimization</h2>
+    <div class="unit-number">UNIT II</div>
 
-        <div class="open-unit">
-            View Unit II →
-        </div>
+    <h2>Digital Piracy and Cyber Victimization</h2>
 
-    </a>
+    <div class="open-unit">
+        View Unit II →
+    </div>
 
+</a>
 
-    <a href="unit3/index.html" class="unit-card">
+<a href="unit3/index.html" class="unit-card">
 
-        <div class="unit-number">UNIT III</div>
+    <div class="unit-number">UNIT III</div>
 
-        <h2>Cyber Crime, Victimization and Human Rights</h2>
+    <h2>Cyber Crime, Victimization and Human Rights</h2>
 
-        <div class="open-unit">
-            View Unit III →
-        </div>
+    <div class="open-unit">
+        View Unit III →
+    </div>
 
-    </a>
+</a>
+
+</main>
 
 </div>
 
