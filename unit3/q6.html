@@ -18,7 +18,9 @@
 
 * { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+}
 
 body {
   margin: 0;
@@ -43,7 +45,9 @@ body {
 }
 
 .back-link:hover,
-.nav-link:hover { text-decoration: underline; }
+.nav-link:hover {
+  text-decoration: underline;
+}
 
 .answer-sheet {
   background: var(--paper);
@@ -64,7 +68,9 @@ body {
   line-height: 1.5;
 }
 
-.section { margin-bottom: 30px; }
+.section {
+  margin-bottom: 30px;
+}
 
 .answer-heading {
   margin: 0 0 12px;
@@ -74,13 +80,16 @@ body {
   line-height: 1.4;
 }
 
-p, .question, .answer-heading {
+p,
+.question,
+.answer-heading {
   text-wrap: pretty;
 }
 
 .section p {
   margin: 0 0 13px;
   text-align: left;
+  font-weight: 400;
 }
 
 .answer-list {
@@ -92,15 +101,18 @@ p, .question, .answer-heading {
   margin-bottom: 7px;
   padding-left: 3px;
   line-height: 1.65;
+  font-weight: 400;
 }
 
-.answer-list li::marker { color: #526A7D; }
+.answer-list li::marker {
+  color: #526A7D;
+}
+
+/* Example */
 
 .example {
   margin-top: 14px;
 }
-
-.example strong { color: var(--heading); }
 
 /* Flowchart */
 
@@ -117,6 +129,7 @@ p, .question, .answer-heading {
   padding: 9px 12px;
   color: var(--heading);
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -127,12 +140,21 @@ p, .question, .answer-heading {
   line-height: 1;
 }
 
-.conclusion { margin-bottom: 0; }
-.conclusion p:last-child { margin-bottom: 0; }
+/* Conclusion */
+
+.conclusion {
+  margin-bottom: 0;
+}
+
+.conclusion p:last-child {
+  margin-bottom: 0;
+}
 
 /* Navigation */
 
-.bottom-nav { margin-top: 16px; }
+.bottom-nav {
+  margin-top: 16px;
+}
 
 .nav-link {
   display: inline-block;
@@ -151,10 +173,12 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
-/* Mobile */
+/* Mobile responsiveness */
 
 @media (max-width: 600px) {
-  .page-container { padding: 12px 9px 28px; }
+  .page-container {
+    padding: 12px 9px 28px;
+  }
 
   .back-link {
     margin: 0 0 11px 4px;
@@ -173,7 +197,9 @@ a:focus-visible {
     line-height: 1.5;
   }
 
-  .section { margin-bottom: 25px; }
+  .section {
+    margin-bottom: 25px;
+  }
 
   .answer-heading {
     font-size: 18px;
@@ -181,7 +207,9 @@ a:focus-visible {
     margin-bottom: 11px;
   }
 
-  .section p { margin-bottom: 12px; }
+  .section p {
+    margin-bottom: 12px;
+  }
 
   .answer-list {
     padding-left: 23px;
@@ -203,29 +231,41 @@ a:focus-visible {
     font-size: 15px;
   }
 
-  .flow-arrow { font-size: 19px; }
+  .flow-arrow {
+    font-size: 19px;
+  }
 
-  .bottom-nav { margin-top: 12px; }
-  .nav-link { font-size: 13px; }
+  .bottom-nav {
+    margin-top: 12px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
 }
 </style>
 </head>
 
 <body>
+
 <div class="page-container">
 
-<a href="index.html" class="back-link">← Back to Unit III</a>
+<a href="index.html" class="back-link">
+  ← Back to Unit III
+</a>
 
 <main class="answer-sheet">
 
-<h1 class="question">Q6. Analyze the Role of Anonymity in the Online Victimization of Women.</h1>
+<h1 class="question">
+Q6. Analyze the Role of Anonymity in the Online Victimization of Women.
+</h1>
 
 <section class="section">
 <h2 class="answer-heading">Introduction</h2>
 
-<p><strong>Online anonymity</strong> means hiding one's real identity while using the internet. A person may use <strong>fake names, fake profiles or anonymous accounts</strong> so that others do not easily know who they really are.</p>
+<p>Online anonymity means hiding one's real identity while using the internet. A person may use fake names, fake profiles or anonymous accounts so that others do not easily know who they really are.</p>
 
-<p>Anonymity can provide privacy for normal users, but offenders may misuse it to <strong>harass, threaten, stalk, deceive or abuse women online</strong>.</p>
+<p>Anonymity can provide privacy for normal users, but offenders may misuse it to harass, threaten, stalk, deceive or abuse women online.</p>
 </section>
 
 <section class="section">
@@ -235,7 +275,7 @@ a:focus-visible {
 
 <p>Because their identity is hidden, they may feel that it is difficult for the victim or authorities to identify them.</p>
 
-<p class="example"><strong>Example:</strong> A person creates a fake social media account to send abusive messages to a woman.</p>
+<p class="example">Example: A person creates a fake social media account to send abusive messages to a woman.</p>
 </section>
 
 <section class="section">
@@ -311,7 +351,7 @@ a:focus-visible {
 <li>Threaten to publish private material</li>
 </ul>
 
-<p>This can damage the victim's <strong>privacy and reputation</strong>.</p>
+<p>This can damage the victim's privacy and reputation.</p>
 </section>
 
 <section class="section">
@@ -334,7 +374,9 @@ a:focus-visible {
 <section class="section">
 <h2 class="answer-heading">8. Role of Anonymity in Victimization</h2>
 
-<div class="vertical-flow" role="img" aria-label="Online anonymity leads to a hidden or fake identity, lower fear of identification, harassment, threats, stalking or impersonation, and online victimization of women.">
+<div class="vertical-flow"
+role="img"
+aria-label="Online anonymity leads to a hidden or fake identity, lower fear of identification, harassment, threats, stalking or impersonation, and online victimization of women.">
 
 <div class="flow-item">Online Anonymity</div>
 <div class="flow-arrow" aria-hidden="true">↓</div>
@@ -372,7 +414,7 @@ a:focus-visible {
 <section class="section conclusion">
 <h2 class="answer-heading">Conclusion</h2>
 
-<p>Anonymity plays an important role in the online victimization of women because it can allow offenders to <strong>hide their identity and reduce their fear of being caught</strong>. Fake profiles and anonymous accounts may be misused for harassment, threats, cyberstalking, impersonation and misuse of personal information. Therefore, while anonymity has legitimate uses for privacy, its misuse can increase the risk of online victimization.</p>
+<p>Anonymity plays an important role in the online victimization of women because it can allow offenders to hide their identity and reduce their fear of being caught. Fake profiles and anonymous accounts may be misused for harassment, threats, cyberstalking, impersonation and misuse of personal information. Therefore, while anonymity has legitimate uses for privacy, its misuse can increase the risk of online victimization.</p>
 </section>
 
 </main>
@@ -382,5 +424,6 @@ a:focus-visible {
 </nav>
 
 </div>
+
 </body>
-                                       </html>
+</html>
