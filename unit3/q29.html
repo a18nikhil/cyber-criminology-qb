@@ -1,289 +1,30 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Q29 - Women's Victimization on Social Networks</title>
 
-<style>
-:root {
-  color-scheme: light;
-  --text: #242424;
-  --heading: #18354D;
-  --paper: #FAFAF7;
-  --background: #F3F3F0;
-  --border: #DEDEDA;
-  --link: #245487;
-}
-
-* { box-sizing: border-box; }
-
-html {
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-  background: var(--background);
-  color: var(--text);
-  font-family: Georgia, Cambria, "Times New Roman", serif;
-}
-
-.page-container {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 22px 16px 40px;
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 15px;
-  color: var(--link);
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.back-link:hover,
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-.answer-sheet {
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 40px 46px;
-  font-size: 18px;
-  line-height: 1.75;
-  text-align: left;
-  overflow-wrap: break-word;
-}
-
-.question {
-  margin: 0 0 30px;
-  color: var(--heading);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-.section {
-  margin-bottom: 30px;
-}
-
-.answer-heading {
-  margin: 0 0 12px;
-  color: var(--heading);
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-/* Improved text wrapping */
-
-p,
-.question,
-.answer-heading {
-  text-wrap: pretty;
-}
-
-.section p {
-  margin: 0 0 13px;
-  text-align: left;
-  font-weight: 400;
-}
-
-/* Lists */
-
-.answer-list {
-  margin: 12px 0 15px;
-  padding-left: 26px;
-}
-
-.answer-list li {
-  margin-bottom: 7px;
-  padding-left: 3px;
-  line-height: 1.65;
-  font-weight: 400;
-}
-
-.answer-list li::marker {
-  color: #526A7D;
-}
-
-/* Comparison table */
-
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 16px 0 10px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.answer-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 16px;
-  line-height: 1.55;
-  text-align: left;
-}
-
-.answer-table th,
-.answer-table td {
-  border: 1px solid #D3D5D4;
-  padding: 11px 13px;
-  vertical-align: top;
-  text-align: left;
-  overflow-wrap: break-word;
-}
-
-.answer-table th {
-  background: #EDEFEF;
-  color: var(--heading);
-  font-weight: 700;
-}
-
-.answer-table td {
-  font-weight: 400;
-  color: var(--text);
-}
-
-.answer-table tbody tr:nth-child(even) {
-  background: #F5F5F2;
-}
-
-/* Conclusion */
-
-.conclusion {
-  margin-bottom: 0;
-}
-
-.conclusion p:last-child {
-  margin-bottom: 0;
-}
-
-/* Navigation */
-
-.bottom-nav {
-  margin-top: 16px;
-}
-
-.nav-link {
-  display: inline-block;
-  padding: 10px 14px;
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  color: var(--link);
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-a:focus-visible {
-  outline: 2px solid var(--link);
-  outline-offset: 3px;
-}
-
-/* Mobile responsiveness */
-
-@media (max-width: 600px) {
-  .page-container {
-    padding: 12px 9px 28px;
-  }
-
-  .back-link {
-    margin: 0 0 11px 4px;
-    font-size: 13px;
-  }
-
-  .answer-sheet {
-    padding: 25px 19px 30px;
-    font-size: 17px;
-    line-height: 1.7;
-  }
-
-  .question {
-    margin-bottom: 26px;
-    font-size: 18px;
-    line-height: 1.5;
-  }
-
-  .section {
-    margin-bottom: 25px;
-  }
-
-  .answer-heading {
-    font-size: 18px;
-    line-height: 1.4;
-    margin-bottom: 11px;
-  }
-
-  .section p {
-    margin-bottom: 12px;
-  }
-
-  .answer-list {
-    padding-left: 23px;
-    margin: 10px 0 13px;
-  }
-
-  .answer-list li {
-    margin-bottom: 6px;
-    padding-left: 2px;
-  }
-
-  .answer-table {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .answer-table th,
-  .answer-table td {
-    padding: 9px 8px;
-  }
-
-  .bottom-nav {
-    margin-top: 12px;
-  }
-
-  .nav-link {
-    font-size: 13px;
-  }
-}
-</style>
-</head>
-
+<link href="../style.css" rel="stylesheet"/></head>
 <body>
-
 <div class="page-container">
-
-<a href="index.html" class="back-link">
+<a class="back-link" href="index.html">
   ← Back to Unit III
 </a>
-
 <main class="answer-sheet">
-
 <h1 class="question">
 Q29. Analyze the Vulnerabilities and Factors Contributing to Women's Victimization on Social Networks.
 </h1>
-
 <section class="section">
 <h2 class="answer-heading">Introduction</h2>
-
 <p>Social networking platforms allow people to communicate, share photos and information, and connect with others. However, women may face different forms of online victimization, such as harassment, cyberstalking, impersonation, threats, fraud and misuse of personal information.</p>
-
 <p>Certain vulnerabilities and online factors can increase the risk of such victimization.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">1. Sharing Personal Information</h2>
-
 <p>Sharing too much personal information publicly can increase vulnerability.</p>
-
 <p>This may include:</p>
-
 <ul class="answer-list">
 <li>Phone number</li>
 <li>Email address</li>
@@ -292,25 +33,17 @@ Q29. Analyze the Vulnerabilities and Factors Contributing to Women's Victimizati
 <li>Daily routine</li>
 <li>Personal photographs</li>
 </ul>
-
 <p>Offenders may use this information for stalking, harassment, fraud or impersonation.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">2. Public Social Media Profiles</h2>
-
 <p>When an account is public, unknown people may easily view posts, photographs, friends and other personal details.</p>
-
 <p>This gives offenders more information that can be misused.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">3. Fake Profiles and Anonymity</h2>
-
 <p>Offenders can use fake or anonymous accounts to hide their real identity.</p>
-
 <p>They may use such accounts to:</p>
-
 <ul class="answer-list">
 <li>Send abusive messages</li>
 <li>Make threats</li>
@@ -319,22 +52,15 @@ Q29. Analyze the Vulnerabilities and Factors Contributing to Women's Victimizati
 <li>Continue harassment after being blocked</li>
 </ul>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">4. Contact with Unknown People</h2>
-
 <p>Accepting friend or follow requests from strangers can increase the risk of victimization.</p>
-
 <p>An offender may first behave politely to gain trust and later misuse personal information or begin harassment.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">5. Misuse of Photos and Personal Content</h2>
-
 <p>Photos or other content posted online may be copied, edited or shared without permission.</p>
-
 <p>They may be used for:</p>
-
 <ul class="answer-list">
 <li>Fake profiles</li>
 <li>Impersonation</li>
@@ -343,14 +69,10 @@ Q29. Analyze the Vulnerabilities and Factors Contributing to Women's Victimizati
 <li>Threats or blackmail</li>
 </ul>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">6. Weak Privacy and Security</h2>
-
 <p>Poor security practices can make social media accounts easier to misuse.</p>
-
 <p>Examples include:</p>
-
 <ul class="answer-list">
 <li>Weak passwords</li>
 <li>Same password for different accounts</li>
@@ -359,14 +81,10 @@ Q29. Analyze the Vulnerabilities and Factors Contributing to Women's Victimizati
 <li>Accepting unknown links or messages</li>
 </ul>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">7. Gender-Based Harassment</h2>
-
 <p>Women may face harassment specifically because of their gender.</p>
-
 <p>This can include:</p>
-
 <ul class="answer-list">
 <li>Abusive comments</li>
 <li>Sexual messages</li>
@@ -374,21 +92,15 @@ Q29. Analyze the Vulnerabilities and Factors Contributing to Women's Victimizati
 <li>Threats</li>
 <li>Offensive posts or messages</li>
 </ul>
-
 <p>Such behaviour may discourage women from participating freely on social networks.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">8. Lack of Awareness</h2>
-
 <p>Some users may not know how to use privacy settings, recognize fake accounts, block offenders or report abusive behaviour.</p>
-
 <p>This lack of awareness can increase vulnerability.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">9. Major Factors at a Glance</h2>
-
 <div class="table-wrapper">
 <table class="answer-table">
 <thead>
@@ -430,12 +142,9 @@ Q29. Analyze the Vulnerabilities and Factors Contributing to Women's Victimizati
 </table>
 </div>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">10. Effects on Women Victims</h2>
-
 <p>Online victimization may cause:</p>
-
 <ul class="answer-list">
 <li>Fear and anxiety</li>
 <li>Emotional stress</li>
@@ -446,20 +155,14 @@ Q29. Analyze the Vulnerabilities and Factors Contributing to Women's Victimizati
 <li>Withdrawal from social media</li>
 </ul>
 </section>
-
 <section class="section conclusion">
 <h2 class="answer-heading">Conclusion</h2>
-
 <p>Women's victimization on social networks can be increased by public profiles, excessive sharing of personal information, contact with strangers, fake accounts, weak security and misuse of photos. Gender-based harassment can further increase the problem. Better privacy settings, strong account security and careful online behaviour can help reduce these risks.</p>
 </section>
-
 </main>
-
 <nav class="bottom-nav">
-<a href="index.html" class="nav-link">← Unit III</a>
+<a class="nav-link" href="index.html">← Unit III</a>
 </nav>
-
 </div>
-
 </body>
 </html>

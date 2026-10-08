@@ -1,415 +1,102 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Q10 - Cyberbullying and Its Impact on Victims</title>
 
-<style>
-:root {
-  color-scheme: light;
-  --text: #242424;
-  --heading: #18354D;
-  --paper: #FAFAF7;
-  --background: #F3F3F0;
-  --border: #DEDEDA;
-  --link: #245487;
-}
-
-* { box-sizing: border-box; }
-
-html { -webkit-text-size-adjust: 100%; }
-
-body {
-  margin: 0;
-  background: var(--background);
-  color: var(--text);
-  font-family: Georgia, Cambria, "Times New Roman", serif;
-}
-
-.page-container {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 22px 16px 40px;
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 15px;
-  color: var(--link);
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.back-link:hover,
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-.answer-sheet {
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 40px 46px;
-  font-size: 18px;
-  line-height: 1.75;
-  text-align: left;
-  overflow-wrap: break-word;
-}
-
-.question {
-  margin: 0 0 30px;
-  color: var(--heading);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-.section { margin-bottom: 30px; }
-
-.answer-heading {
-  margin: 0 0 12px;
-  color: var(--heading);
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-.subpart { margin: 19px 0; }
-
-.sub-heading {
-  margin: 0 0 6px;
-  color: var(--heading);
-  font-size: 17.5px;
-  font-weight: 700;
-  line-height: 1.45;
-}
-
-p, .question, .answer-heading, .sub-heading {
-  text-wrap: pretty;
-}
-
-.section p, .subpart p {
-  margin: 0 0 13px;
-  text-align: left;
-  font-weight: 400;
-}
-
-/* Lists */
-
-.answer-list {
-  margin: 12px 0 15px;
-  padding-left: 26px;
-}
-
-.answer-list li {
-  margin-bottom: 7px;
-  padding-left: 3px;
-  line-height: 1.65;
-  font-weight: 400;
-}
-
-.answer-list li::marker {
-  color: #526A7D;
-}
-
-/* Flowchart */
-
-.vertical-flow {
-  max-width: 340px;
-  margin: 22px auto;
-  text-align: center;
-}
-
-.flow-item {
-  background: #FFFFFF;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 9px 12px;
-  color: var(--heading);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-.flow-arrow {
-  margin: 5px 0;
-  color: #526A7D;
-  font-size: 20px;
-  line-height: 1;
-}
-
-/* Comparison table */
-
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 16px 0 10px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.answer-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 16px;
-  line-height: 1.55;
-  text-align: left;
-}
-
-.answer-table th,
-.answer-table td {
-  border: 1px solid #D3D5D4;
-  padding: 11px 13px;
-  vertical-align: top;
-  text-align: left;
-  overflow-wrap: break-word;
-}
-
-.answer-table th {
-  background: #EDEFEF;
-  color: var(--heading);
-  font-weight: 700;
-}
-
-.answer-table td {
-  color: var(--text);
-  font-weight: 400;
-}
-
-.answer-table tbody tr:nth-child(even) {
-  background: #F5F5F2;
-}
-
-/* Conclusion */
-
-.conclusion { margin-bottom: 0; }
-.conclusion p:last-child { margin-bottom: 0; }
-
-/* Navigation */
-
-.bottom-nav { margin-top: 16px; }
-
-.nav-link {
-  display: inline-block;
-  padding: 10px 14px;
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  color: var(--link);
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-a:focus-visible {
-  outline: 2px solid var(--link);
-  outline-offset: 3px;
-}
-
-/* Mobile */
-
-@media (max-width: 600px) {
-  .page-container { padding: 12px 9px 28px; }
-
-  .back-link {
-    margin: 0 0 11px 4px;
-    font-size: 13px;
-  }
-
-  .answer-sheet {
-    padding: 25px 19px 30px;
-    font-size: 17px;
-    line-height: 1.7;
-  }
-
-  .question {
-    margin-bottom: 26px;
-    font-size: 18px;
-    line-height: 1.5;
-  }
-
-  .section { margin-bottom: 25px; }
-
-  .answer-heading {
-    font-size: 18px;
-    line-height: 1.4;
-    margin-bottom: 11px;
-  }
-
-  .subpart { margin: 17px 0; }
-
-  .sub-heading {
-    font-size: 17px;
-    margin-bottom: 5px;
-  }
-
-  .section p, .subpart p {
-    margin-bottom: 12px;
-  }
-
-  .answer-list {
-    padding-left: 23px;
-    margin: 10px 0 13px;
-  }
-
-  .answer-list li {
-    margin-bottom: 6px;
-    padding-left: 2px;
-  }
-
-  .vertical-flow {
-    max-width: 300px;
-    margin: 18px auto;
-  }
-
-  .flow-item {
-    padding: 9px 10px;
-    font-size: 15px;
-  }
-
-  .flow-arrow { font-size: 19px; }
-
-  .answer-table {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .answer-table th,
-  .answer-table td {
-    padding: 9px 8px;
-  }
-
-  .bottom-nav { margin-top: 12px; }
-  .nav-link { font-size: 13px; }
-}
-</style>
-</head>
-
+<link href="../style.css" rel="stylesheet"/></head>
 <body>
-
 <div class="page-container">
-
-<a href="index.html" class="back-link">
+<a class="back-link" href="index.html">
   ← Back to Unit III
 </a>
-
 <main class="answer-sheet">
-
 <h1 class="question">
 Q10. Describe Cyberbullying and Its Impact on Victims.
 </h1>
-
 <section class="section">
 <h2 class="answer-heading">Introduction</h2>
-
 <p>Cyberbullying means using the internet or digital technology to repeatedly harass, insult, threaten, embarrass or harm another person.</p>
-
 <p>It can take place through social media, messaging apps, emails, online games and other digital platforms.</p>
-
 <p>Unlike traditional bullying, cyberbullying can happen at any time and from any place, and harmful content can quickly reach many people.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">1. Common Forms of Cyberbullying</h2>
-
 <div class="subpart">
 <h3 class="sub-heading">a) Abusive Messages</h3>
 <p>Sending repeated insulting, rude or threatening messages to a person.</p>
 <p>Example: Repeatedly sending hurtful messages to a student through a messaging app.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">b) Spreading Rumours</h3>
 <p>Posting or sharing false information about someone to damage their reputation.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">c) Online Humiliation</h3>
 <p>Posting embarrassing comments, photos or videos to make fun of someone publicly.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">d) Impersonation</h3>
 <p>Creating a fake account or using another person's account to post harmful content in their name.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">e) Exclusion</h3>
 <p>Intentionally excluding someone from online groups, chats or activities to make them feel isolated.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">f) Sharing Private Content</h3>
 <p>Sharing someone's private messages, photographs or videos without their permission to embarrass or harm them.</p>
 </div>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">2. How Cyberbullying Occurs</h2>
-
-<div class="vertical-flow" role="img"
-aria-label="Cyberbullying process: digital platform, harmful message or post or image, repeated sharing or harassment, victim feels threatened or humiliated, emotional and social harm.">
-
+<div aria-label="Cyberbullying process: digital platform, harmful message or post or image, repeated sharing or harassment, victim feels threatened or humiliated, emotional and social harm." class="vertical-flow" role="img">
 <div class="flow-item">Digital Platform</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Harmful Message / Post / Image</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Repeated Sharing or Harassment</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Victim Feels Threatened or Humiliated</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Emotional and Social Harm</div>
-
 </div>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">3. Impact on Victims</h2>
-
 <div class="subpart">
 <h3 class="sub-heading">a) Emotional Stress</h3>
 <p>Victims may experience sadness, fear, anger, embarrassment and stress.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">b) Anxiety</h3>
 <p>A victim may constantly worry about receiving another harmful message or seeing another embarrassing post.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">c) Loss of Confidence</h3>
 <p>Repeated insults and humiliation can reduce a person's self-confidence and self-esteem.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">d) Social Isolation</h3>
 <p>Victims may avoid friends, social media or social activities because they feel embarrassed or unsafe.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">e) Educational Problems</h3>
 <p>Students experiencing cyberbullying may have difficulty concentrating on studies, which can affect their academic performance.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">f) Sleep Problems</h3>
 <p>Fear and stress caused by cyberbullying may disturb normal sleep.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">g) Damage to Reputation</h3>
 <p>False rumours, embarrassing images or harmful posts can damage a person's reputation, especially when they are widely shared.</p>
 </div>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">4. Cyberbullying and Its Effects</h2>
-
 <div class="table-wrapper">
 <table class="answer-table">
 <thead>
@@ -447,19 +134,14 @@ aria-label="Cyberbullying process: digital platform, harmful message or post or 
 </table>
 </div>
 </section>
-
 <section class="section conclusion">
 <h2 class="answer-heading">Conclusion</h2>
-
 <p>Cyberbullying is the use of digital platforms to harass, threaten, embarrass or harm another person. It can take many forms, including abusive messages, rumours, impersonation, exclusion and sharing private content. Its effects can be serious, causing fear, stress, anxiety, loss of confidence, social isolation and educational problems.</p>
 </section>
-
 </main>
-
 <nav class="bottom-nav">
-<a href="index.html" class="nav-link">← Unit III</a>
+<a class="nav-link" href="index.html">← Unit III</a>
 </nav>
-
 </div>
 </body>
 </html>

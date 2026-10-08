@@ -1,307 +1,25 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Q14 - Cyber Vandalism</title>
 
-<style>
-:root {
-  color-scheme: light;
-  --text: #242424;
-  --heading: #18354D;
-  --paper: #FAFAF7;
-  --background: #F3F3F0;
-  --border: #DEDEDA;
-  --link: #245487;
-}
-
-* { box-sizing: border-box; }
-
-html { -webkit-text-size-adjust: 100%; }
-
-body {
-  margin: 0;
-  background: var(--background);
-  color: var(--text);
-  font-family: Georgia, Cambria, "Times New Roman", serif;
-}
-
-.page-container {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 22px 16px 40px;
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 15px;
-  color: var(--link);
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.back-link:hover,
-.nav-link:hover { text-decoration: underline; }
-
-.answer-sheet {
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 40px 46px;
-  font-size: 18px;
-  line-height: 1.75;
-  text-align: left;
-  overflow-wrap: break-word;
-}
-
-.question {
-  margin: 0 0 30px;
-  color: var(--heading);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-.section { margin-bottom: 30px; }
-
-.answer-heading {
-  margin: 0 0 12px;
-  color: var(--heading);
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-.subpart { margin: 19px 0; }
-
-.sub-heading {
-  margin: 0 0 6px;
-  color: var(--heading);
-  font-size: 17.5px;
-  font-weight: 700;
-  line-height: 1.45;
-}
-
-p, .question, .answer-heading, .sub-heading {
-  text-wrap: pretty;
-}
-
-.section p, .subpart p {
-  margin: 0 0 13px;
-  text-align: left;
-  font-weight: 400;
-}
-
-/* Lists */
-
-.answer-list {
-  margin: 12px 0 15px;
-  padding-left: 26px;
-}
-
-.answer-list li {
-  margin-bottom: 7px;
-  padding-left: 3px;
-  line-height: 1.65;
-  font-weight: 400;
-}
-
-.answer-list li::marker { color: #526A7D; }
-
-/* Comparison table */
-
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 16px 0 10px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.answer-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 16px;
-  line-height: 1.55;
-  text-align: left;
-}
-
-.answer-table th,
-.answer-table td {
-  border: 1px solid #D3D5D4;
-  padding: 11px 13px;
-  vertical-align: top;
-  text-align: left;
-  overflow-wrap: break-word;
-}
-
-.answer-table th {
-  background: #EDEFEF;
-  color: var(--heading);
-  font-weight: 700;
-}
-
-.answer-table td {
-  color: var(--text);
-  font-weight: 400;
-}
-
-.answer-table tbody tr:nth-child(even) {
-  background: #F5F5F2;
-}
-
-/* Flowchart */
-
-.vertical-flow {
-  max-width: 340px;
-  margin: 22px auto;
-  text-align: center;
-}
-
-.flow-item {
-  background: #FFFFFF;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 9px 12px;
-  color: var(--heading);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-.flow-arrow {
-  margin: 5px 0;
-  color: #526A7D;
-  font-size: 20px;
-  line-height: 1;
-}
-
-/* Conclusion */
-
-.conclusion { margin-bottom: 0; }
-.conclusion p:last-child { margin-bottom: 0; }
-
-/* Navigation */
-
-.bottom-nav { margin-top: 16px; }
-
-.nav-link {
-  display: inline-block;
-  padding: 10px 14px;
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  color: var(--link);
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-a:focus-visible {
-  outline: 2px solid var(--link);
-  outline-offset: 3px;
-}
-
-/* Mobile */
-
-@media (max-width: 600px) {
-  .page-container { padding: 12px 9px 28px; }
-
-  .back-link {
-    margin: 0 0 11px 4px;
-    font-size: 13px;
-  }
-
-  .answer-sheet {
-    padding: 25px 19px 30px;
-    font-size: 17px;
-    line-height: 1.7;
-  }
-
-  .question {
-    margin-bottom: 26px;
-    font-size: 18px;
-    line-height: 1.5;
-  }
-
-  .section { margin-bottom: 25px; }
-
-  .answer-heading {
-    font-size: 18px;
-    line-height: 1.4;
-    margin-bottom: 11px;
-  }
-
-  .subpart { margin: 17px 0; }
-
-  .sub-heading {
-    font-size: 17px;
-    margin-bottom: 5px;
-  }
-
-  .section p, .subpart p { margin-bottom: 12px; }
-
-  .answer-list {
-    padding-left: 23px;
-    margin: 10px 0 13px;
-  }
-
-  .answer-list li {
-    margin-bottom: 6px;
-    padding-left: 2px;
-  }
-
-  .answer-table {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .answer-table th,
-  .answer-table td {
-    padding: 9px 8px;
-  }
-
-  .vertical-flow {
-    max-width: 300px;
-    margin: 18px auto;
-  }
-
-  .flow-item {
-    padding: 9px 10px;
-    font-size: 15px;
-  }
-
-  .flow-arrow { font-size: 19px; }
-
-  .bottom-nav { margin-top: 12px; }
-  .nav-link { font-size: 13px; }
-}
-</style>
-</head>
-
+<link href="../style.css" rel="stylesheet"/></head>
 <body>
 <div class="page-container">
-
-<a href="index.html" class="back-link">← Back to Unit III</a>
-
+<a class="back-link" href="index.html">← Back to Unit III</a>
 <main class="answer-sheet">
-
 <h1 class="question">Q14. Discuss Cyber Vandalism as a Form of Cybercrime, Covering Its Motivations and Consequences.</h1>
-
 <section class="section">
 <h2 class="answer-heading">Introduction</h2>
-
 <p>Cyber vandalism is a form of cybercrime in which a person deliberately damages, changes, destroys or disrupts digital systems, websites, data or online services without permission.</p>
-
 <p>It is similar to physical vandalism, but the damage is done to digital property instead of physical property.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">1. Common Examples of Cyber Vandalism</h2>
-
 <p>Cyber vandalism may include:</p>
-
 <ul class="answer-list">
 <li>Changing the content of a website without permission.</li>
 <li>Deleting or damaging digital files.</li>
@@ -311,81 +29,64 @@ a:focus-visible {
 <li>Intentionally spreading harmful programs to cause damage.</li>
 </ul>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">2. Motivations Behind Cyber Vandalism</h2>
-
 <p>People may commit cyber vandalism for different reasons.</p>
-
 <div class="subpart">
 <h3 class="sub-heading">a) Fun or Excitement</h3>
 <p>Some offenders attack systems simply for entertainment, curiosity or the excitement of causing disruption.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">b) Revenge</h3>
 <p>A person may damage a website, files or computer system because of anger or a personal conflict.</p>
 <p>Example: A former employee damages company data after leaving the organization.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">c) Showing Technical Skills</h3>
 <p>Some offenders may attack websites or systems to prove their computer skills or gain recognition among others.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">d) Political or Social Reasons</h3>
 <p>Attackers may damage or change websites to spread a political or social message.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">e) Attention and Recognition</h3>
 <p>Some offenders want publicity or recognition from online groups and may commit cyber vandalism to attract attention.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">f) Causing Disruption</h3>
 <p>The main aim may simply be to disturb the normal functioning of an organization, website or online service.</p>
 </div>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">3. Consequences of Cyber Vandalism</h2>
-
 <div class="subpart">
 <h3 class="sub-heading">a) Financial Loss</h3>
 <p>Organizations may have to spend money repairing damaged systems, restoring data and improving security.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">b) Loss of Data</h3>
 <p>Important files or information may be changed, damaged or permanently deleted.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">c) Disruption of Services</h3>
 <p>Websites, networks or online services may become unavailable or stop working properly.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">d) Damage to Reputation</h3>
 <p>A damaged or altered website can reduce people's trust in an organization.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">e) Privacy and Security Risks</h3>
 <p>Cyber vandalism may expose private or sensitive information and create further security problems.</p>
 </div>
-
 <div class="subpart">
 <h3 class="sub-heading">f) Legal Consequences for Offenders</h3>
 <p>Cyber vandalism may lead to legal action, fines or other penalties depending on the nature of the offence and applicable law.</p>
 </div>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">4. Motivation and Possible Result</h2>
-
 <div class="table-wrapper">
 <table class="answer-table">
 <thead>
@@ -423,41 +124,28 @@ a:focus-visible {
 </table>
 </div>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">5. Simple Flow</h2>
-
-<div class="vertical-flow" role="img" aria-label="Motivation leads to unauthorized access or attack, followed by damage, change or disruption, resulting in cyber vandalism and financial, data and reputation loss.">
-
+<div aria-label="Motivation leads to unauthorized access or attack, followed by damage, change or disruption, resulting in cyber vandalism and financial, data and reputation loss." class="vertical-flow" role="img">
 <div class="flow-item">Motivation</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Unauthorized Access or Attack</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Damage / Change / Disruption</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Cyber Vandalism</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Financial, Data and Reputation Loss</div>
-
 </div>
 </section>
-
 <section class="section conclusion">
 <h2 class="answer-heading">Conclusion</h2>
-
 <p>Cyber vandalism is the intentional damage, alteration or disruption of digital property. Offenders may be motivated by fun, revenge, recognition, political reasons or a desire to cause disruption. Its consequences can include financial loss, loss of data, interruption of services, security problems and damage to reputation.</p>
 </section>
-
 </main>
-
 <nav class="bottom-nav">
-<a href="index.html" class="nav-link">← Unit III</a>
+<a class="nav-link" href="index.html">← Unit III</a>
 </nav>
-
 </div>
 </body>
 </html>

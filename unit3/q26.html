@@ -1,354 +1,45 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Q26 - Cybercrime Victimization and Human Rights</title>
 
-<style>
-:root {
-  color-scheme: light;
-  --text: #242424;
-  --heading: #18354D;
-  --paper: #FAFAF7;
-  --background: #F3F3F0;
-  --border: #DEDEDA;
-  --link: #245487;
-}
-
-* { box-sizing: border-box; }
-
-html {
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-  background: var(--background);
-  color: var(--text);
-  font-family: Georgia, Cambria, "Times New Roman", serif;
-}
-
-.page-container {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 22px 16px 40px;
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 15px;
-  color: var(--link);
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.back-link:hover,
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-.answer-sheet {
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 40px 46px;
-  font-size: 18px;
-  line-height: 1.75;
-  text-align: left;
-  overflow-wrap: break-word;
-}
-
-.question {
-  margin: 0 0 30px;
-  color: var(--heading);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-.section {
-  margin-bottom: 30px;
-}
-
-.answer-heading {
-  margin: 0 0 12px;
-  color: var(--heading);
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-p,
-.question,
-.answer-heading {
-  text-wrap: pretty;
-}
-
-.section p {
-  margin: 0 0 13px;
-  text-align: left;
-  font-weight: 400;
-}
-
-/* Lists */
-
-.answer-list {
-  margin: 12px 0 15px;
-  padding-left: 26px;
-}
-
-.answer-list li {
-  margin-bottom: 7px;
-  padding-left: 3px;
-  line-height: 1.65;
-  font-weight: 400;
-}
-
-.answer-list li::marker {
-  color: #526A7D;
-}
-
-/* Flowchart */
-
-.vertical-flow {
-  max-width: 340px;
-  margin: 22px auto;
-  text-align: center;
-}
-
-.flow-item {
-  background: #FFFFFF;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 9px 12px;
-  color: var(--heading);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-.flow-arrow {
-  margin: 5px 0;
-  color: #526A7D;
-  font-size: 20px;
-  line-height: 1;
-}
-
-/* Comparison table */
-
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 16px 0 10px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.answer-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 16px;
-  line-height: 1.55;
-  text-align: left;
-}
-
-.answer-table th,
-.answer-table td {
-  border: 1px solid #D3D5D4;
-  padding: 11px 13px;
-  vertical-align: top;
-  text-align: left;
-  overflow-wrap: break-word;
-}
-
-.answer-table th {
-  background: #EDEFEF;
-  color: var(--heading);
-  font-weight: 700;
-}
-
-.answer-table td {
-  color: var(--text);
-  font-weight: 400;
-}
-
-.answer-table tbody tr:nth-child(even) {
-  background: #F5F5F2;
-}
-
-/* Conclusion */
-
-.conclusion {
-  margin-bottom: 0;
-}
-
-.conclusion p:last-child {
-  margin-bottom: 0;
-}
-
-/* Navigation */
-
-.bottom-nav {
-  margin-top: 16px;
-}
-
-.nav-link {
-  display: inline-block;
-  padding: 10px 14px;
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  color: var(--link);
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-a:focus-visible {
-  outline: 2px solid var(--link);
-  outline-offset: 3px;
-}
-
-/* Mobile */
-
-@media (max-width: 600px) {
-  .page-container {
-    padding: 12px 9px 28px;
-  }
-
-  .back-link {
-    margin: 0 0 11px 4px;
-    font-size: 13px;
-  }
-
-  .answer-sheet {
-    padding: 25px 19px 30px;
-    font-size: 17px;
-    line-height: 1.7;
-  }
-
-  .question {
-    margin-bottom: 26px;
-    font-size: 18px;
-    line-height: 1.5;
-  }
-
-  .section {
-    margin-bottom: 25px;
-  }
-
-  .answer-heading {
-    font-size: 18px;
-    line-height: 1.4;
-    margin-bottom: 11px;
-  }
-
-  .section p {
-    margin-bottom: 12px;
-  }
-
-  .answer-list {
-    padding-left: 23px;
-    margin: 10px 0 13px;
-  }
-
-  .answer-list li {
-    margin-bottom: 6px;
-    padding-left: 2px;
-  }
-
-  .vertical-flow {
-    max-width: 300px;
-    margin: 18px auto;
-  }
-
-  .flow-item {
-    padding: 9px 10px;
-    font-size: 15px;
-  }
-
-  .flow-arrow {
-    font-size: 19px;
-  }
-
-  .answer-table {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .answer-table th,
-  .answer-table td {
-    padding: 9px 8px;
-  }
-
-  .bottom-nav {
-    margin-top: 12px;
-  }
-
-  .nav-link {
-    font-size: 13px;
-  }
-}
-</style>
-</head>
-
+<link href="../style.css" rel="stylesheet"/></head>
 <body>
-
 <div class="page-container">
-
-<a href="index.html" class="back-link">
+<a class="back-link" href="index.html">
   ← Back to Unit III
 </a>
-
 <main class="answer-sheet">
-
 <h1 class="question">
 Q26. Discuss the Connection Between Cybercrime Victimization and Human Rights, and Highlight Which Rights Are Most Violated.
 </h1>
-
 <section class="section">
 <h2 class="answer-heading">Introduction</h2>
-
 <p>Cybercrime victimization occurs when a person suffers harm because of crimes committed through computers, mobile devices or the internet.</p>
-
 <p>Cybercrime is also connected with human rights because online crimes can affect a person's privacy, dignity, safety, freedom and property.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">1. Connection Between Cybercrime and Human Rights</h2>
-
 <p>Human rights protect the basic freedom, dignity and security of every person.</p>
-
 <p>When cybercriminals steal personal information, threaten people, spread private content or damage digital property, they may interfere with these rights.</p>
-
 <p>For example:</p>
-
-<div class="vertical-flow"
-role="img"
-aria-label="Cybercrime causes harm to an individual, affecting privacy, safety, dignity or property, which may result in a human rights violation.">
-
+<div aria-label="Cybercrime causes harm to an individual, affecting privacy, safety, dignity or property, which may result in a human rights violation." class="vertical-flow" role="img">
 <div class="flow-item">Cybercrime</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Harm to Individual</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Privacy / Safety / Dignity / Property Affected</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Human Rights Violation</div>
-
 </div>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">2. Right to Privacy</h2>
-
 <p>The right to privacy is one of the most commonly affected rights in cyberspace.</p>
-
 <p>It may be violated through:</p>
-
 <ul class="answer-list">
 <li>Hacking personal accounts</li>
 <li>Stealing personal information</li>
@@ -356,37 +47,24 @@ aria-label="Cybercrime causes harm to an individual, affecting privacy, safety, 
 <li>Sharing private photos without permission</li>
 <li>Unauthorized access to emails or messages</li>
 </ul>
-
 <p>Example: Hacking someone's email account and reading private messages without permission.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">3. Right to Dignity and Reputation</h2>
-
 <p>Every person has the right to be treated with dignity and to protect their reputation.</p>
-
 <p>Cyberbullying, online harassment, fake posts and sharing embarrassing content can harm a person's dignity and reputation.</p>
-
 <p>Example: Posting false and insulting information about someone on social media.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">4. Right to Security and Safety</h2>
-
 <p>People have a right to personal security and protection from threats and abuse.</p>
-
 <p>Cyberstalking, online threats and repeated harassment can make victims feel unsafe.</p>
-
 <p>Example: A cyberstalker repeatedly sends threatening messages to a victim.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">5. Right to Property</h2>
-
 <p>Cybercrime may affect a person's money or digital property.</p>
-
 <p>This can happen through:</p>
-
 <ul class="answer-list">
 <li>Online financial fraud</li>
 <li>Identity theft</li>
@@ -394,29 +72,20 @@ aria-label="Cybercrime causes harm to an individual, affecting privacy, safety, 
 <li>Unauthorized financial transactions</li>
 <li>Damage to digital files</li>
 </ul>
-
 <p>Example: A cybercriminal steals banking details and transfers money from the victim's account.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">6. Freedom of Expression</h2>
-
 <p>People should be able to express themselves online without unlawful threats or harassment.</p>
-
 <p>Cyberbullying, trolling, threats and online abuse may cause victims to stop expressing their opinions or participating online.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">7. Right to Equality and Non-Discrimination</h2>
-
 <p>Online abuse may target people because of their gender, race, religion or other personal characteristics.</p>
-
 <p>Such targeted harassment can affect the person's right to equal treatment and freedom from discrimination.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">8. Major Rights Violated by Cybercrime</h2>
-
 <div class="table-wrapper">
 <table class="answer-table">
 <thead>
@@ -454,20 +123,14 @@ aria-label="Cybercrime causes harm to an individual, affecting privacy, safety, 
 </table>
 </div>
 </section>
-
 <section class="section conclusion">
 <h2 class="answer-heading">Conclusion</h2>
-
 <p>Cybercrime victimization and human rights are closely connected because cybercrime can harm a person's privacy, dignity, security, property, freedom and equality. Among these, the right to privacy, dignity, security and property are commonly affected. Therefore, protecting people from cybercrime is also important for protecting their human rights.</p>
 </section>
-
 </main>
-
 <nav class="bottom-nav">
-<a href="index.html" class="nav-link">← Unit III</a>
+<a class="nav-link" href="index.html">← Unit III</a>
 </nav>
-
 </div>
-
 </body>
 </html>

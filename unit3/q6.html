@@ -1,290 +1,36 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Q6 - Anonymity and Online Victimization of Women</title>
 
-<style>
-:root {
-  color-scheme: light;
-  --text: #242424;
-  --heading: #18354D;
-  --paper: #FAFAF7;
-  --background: #F3F3F0;
-  --border: #DEDEDA;
-  --link: #245487;
-}
-
-* { box-sizing: border-box; }
-
-html {
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-  background: var(--background);
-  color: var(--text);
-  font-family: Georgia, Cambria, "Times New Roman", serif;
-}
-
-.page-container {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 22px 16px 40px;
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 15px;
-  color: var(--link);
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.back-link:hover,
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-.answer-sheet {
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 40px 46px;
-  font-size: 18px;
-  line-height: 1.75;
-  text-align: left;
-  overflow-wrap: break-word;
-}
-
-.question {
-  margin: 0 0 30px;
-  color: var(--heading);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-.section {
-  margin-bottom: 30px;
-}
-
-.answer-heading {
-  margin: 0 0 12px;
-  color: var(--heading);
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-p,
-.question,
-.answer-heading {
-  text-wrap: pretty;
-}
-
-.section p {
-  margin: 0 0 13px;
-  text-align: left;
-  font-weight: 400;
-}
-
-.answer-list {
-  margin: 12px 0 15px;
-  padding-left: 26px;
-}
-
-.answer-list li {
-  margin-bottom: 7px;
-  padding-left: 3px;
-  line-height: 1.65;
-  font-weight: 400;
-}
-
-.answer-list li::marker {
-  color: #526A7D;
-}
-
-/* Example */
-
-.example {
-  margin-top: 14px;
-}
-
-/* Flowchart */
-
-.vertical-flow {
-  max-width: 340px;
-  margin: 22px auto;
-  text-align: center;
-}
-
-.flow-item {
-  background: #FFFFFF;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 9px 12px;
-  color: var(--heading);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-.flow-arrow {
-  margin: 5px 0;
-  color: #526A7D;
-  font-size: 20px;
-  line-height: 1;
-}
-
-/* Conclusion */
-
-.conclusion {
-  margin-bottom: 0;
-}
-
-.conclusion p:last-child {
-  margin-bottom: 0;
-}
-
-/* Navigation */
-
-.bottom-nav {
-  margin-top: 16px;
-}
-
-.nav-link {
-  display: inline-block;
-  padding: 10px 14px;
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  color: var(--link);
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-a:focus-visible {
-  outline: 2px solid var(--link);
-  outline-offset: 3px;
-}
-
-/* Mobile responsiveness */
-
-@media (max-width: 600px) {
-  .page-container {
-    padding: 12px 9px 28px;
-  }
-
-  .back-link {
-    margin: 0 0 11px 4px;
-    font-size: 13px;
-  }
-
-  .answer-sheet {
-    padding: 25px 19px 30px;
-    font-size: 17px;
-    line-height: 1.7;
-  }
-
-  .question {
-    margin-bottom: 26px;
-    font-size: 18px;
-    line-height: 1.5;
-  }
-
-  .section {
-    margin-bottom: 25px;
-  }
-
-  .answer-heading {
-    font-size: 18px;
-    line-height: 1.4;
-    margin-bottom: 11px;
-  }
-
-  .section p {
-    margin-bottom: 12px;
-  }
-
-  .answer-list {
-    padding-left: 23px;
-    margin: 10px 0 13px;
-  }
-
-  .answer-list li {
-    margin-bottom: 6px;
-    padding-left: 2px;
-  }
-
-  .vertical-flow {
-    max-width: 300px;
-    margin: 18px auto;
-  }
-
-  .flow-item {
-    padding: 9px 10px;
-    font-size: 15px;
-  }
-
-  .flow-arrow {
-    font-size: 19px;
-  }
-
-  .bottom-nav {
-    margin-top: 12px;
-  }
-
-  .nav-link {
-    font-size: 13px;
-  }
-}
-</style>
-</head>
-
+<link href="../style.css" rel="stylesheet"/></head>
 <body>
-
 <div class="page-container">
-
-<a href="index.html" class="back-link">
+<a class="back-link" href="index.html">
   ← Back to Unit III
 </a>
-
 <main class="answer-sheet">
-
 <h1 class="question">
 Q6. Analyze the Role of Anonymity in the Online Victimization of Women.
 </h1>
-
 <section class="section">
 <h2 class="answer-heading">Introduction</h2>
-
 <p>Online anonymity means hiding one's real identity while using the internet. A person may use fake names, fake profiles or anonymous accounts so that others do not easily know who they really are.</p>
-
 <p>Anonymity can provide privacy for normal users, but offenders may misuse it to harass, threaten, stalk, deceive or abuse women online.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">1. Hides the Offender's Identity</h2>
-
 <p>Anonymity allows offenders to hide their real name and personal details.</p>
-
 <p>Because their identity is hidden, they may feel that it is difficult for the victim or authorities to identify them.</p>
-
 <p class="example">Example: A person creates a fake social media account to send abusive messages to a woman.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">2. Reduces Fear of Being Caught</h2>
-
 <p>When offenders believe that their identity cannot easily be discovered, they may feel less afraid of punishment.</p>
-
 <p>This can encourage:</p>
-
 <ul class="answer-list">
 <li>Abusive comments</li>
 <li>Threatening messages</li>
@@ -293,14 +39,10 @@ Q6. Analyze the Role of Anonymity in the Online Victimization of Women.
 <li>Spreading false information</li>
 </ul>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">3. Encourages Fake Profiles</h2>
-
 <p>Offenders may create fake profiles and pretend to be someone else.</p>
-
 <p>They may use these profiles to:</p>
-
 <ul class="answer-list">
 <li>Contact women</li>
 <li>Gain their trust</li>
@@ -309,22 +51,15 @@ Q6. Analyze the Role of Anonymity in the Online Victimization of Women.
 <li>Commit fraud or other forms of exploitation</li>
 </ul>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">4. Encourages Cyberstalking</h2>
-
 <p>An anonymous offender may repeatedly monitor or contact a woman through different accounts.</p>
-
 <p>Even if one account is blocked, the offender may create another fake account and continue the harassment.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">5. Enables Threats and Abusive Messages</h2>
-
 <p>Anonymity may make some people behave more aggressively because they feel protected by the screen.</p>
-
 <p>Women may receive:</p>
-
 <ul class="answer-list">
 <li>Insults</li>
 <li>Sexual comments</li>
@@ -332,17 +67,12 @@ Q6. Analyze the Role of Anonymity in the Online Victimization of Women.
 <li>Unwanted messages</li>
 <li>Abusive comments</li>
 </ul>
-
 <p>Such behaviour can create fear and emotional stress.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">6. Misuse of Personal Information and Images</h2>
-
 <p>Anonymous offenders may misuse a woman's photographs or personal information.</p>
-
 <p>They may:</p>
-
 <ul class="answer-list">
 <li>Create fake profiles using her photos</li>
 <li>Share private information</li>
@@ -350,56 +80,37 @@ Q6. Analyze the Role of Anonymity in the Online Victimization of Women.
 <li>Spread rumours</li>
 <li>Threaten to publish private material</li>
 </ul>
-
 <p>This can damage the victim's privacy and reputation.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">7. Makes Reporting and Identification Difficult</h2>
-
 <p>Anonymity can make it harder to identify the actual offender.</p>
-
 <p>The offender may use:</p>
-
 <ul class="answer-list">
 <li>Fake names</li>
 <li>Multiple accounts</li>
 <li>False information</li>
 <li>Temporary accounts</li>
 </ul>
-
 <p>As a result, investigation and action against the offender may become more difficult.</p>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">8. Role of Anonymity in Victimization</h2>
-
-<div class="vertical-flow"
-role="img"
-aria-label="Online anonymity leads to a hidden or fake identity, lower fear of identification, harassment, threats, stalking or impersonation, and online victimization of women.">
-
+<div aria-label="Online anonymity leads to a hidden or fake identity, lower fear of identification, harassment, threats, stalking or impersonation, and online victimization of women." class="vertical-flow" role="img">
 <div class="flow-item">Online Anonymity</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Hidden or Fake Identity</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Lower Fear of Identification</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Harassment / Threats / Stalking / Impersonation</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-
+<div aria-hidden="true" class="flow-arrow">↓</div>
 <div class="flow-item">Online Victimization of Women</div>
-
 </div>
 </section>
-
 <section class="section">
 <h2 class="answer-heading">9. Impact on Women Victims</h2>
-
 <p>Online victimization can cause:</p>
-
 <ul class="answer-list">
 <li>Fear and anxiety</li>
 <li>Emotional stress</li>
@@ -410,20 +121,14 @@ aria-label="Online anonymity leads to a hidden or fake identity, lower fear of i
 <li>Feeling unsafe online</li>
 </ul>
 </section>
-
 <section class="section conclusion">
 <h2 class="answer-heading">Conclusion</h2>
-
 <p>Anonymity plays an important role in the online victimization of women because it can allow offenders to hide their identity and reduce their fear of being caught. Fake profiles and anonymous accounts may be misused for harassment, threats, cyberstalking, impersonation and misuse of personal information. Therefore, while anonymity has legitimate uses for privacy, its misuse can increase the risk of online victimization.</p>
 </section>
-
 </main>
-
 <nav class="bottom-nav">
-<a href="index.html" class="nav-link">← Unit III</a>
+<a class="nav-link" href="index.html">← Unit III</a>
 </nav>
-
 </div>
-
 </body>
 </html>
