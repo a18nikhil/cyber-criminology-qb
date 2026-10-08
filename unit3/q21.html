@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q21 - Common Forms of Cyber Vandalism</title>
+
+<style>
+:root {
+  color-scheme: light;
+  --text: #242424;
+  --heading: #18354D;
+  --paper: #FAFAF7;
+  --background: #F3F3F0;
+  --border: #DEDEDA;
+  --link: #245487;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+
+.page-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 22px 16px 40px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--link);
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.back-link:hover,
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.answer-sheet {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 40px 46px;
+  font-size: 18px;
+  line-height: 1.75;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.question {
+  margin: 0 0 30px;
+  color: var(--heading);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.section { margin-bottom: 30px; }
+
+.answer-heading {
+  margin: 0 0 12px;
+  color: var(--heading);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+p, .question, .answer-heading {
+  text-wrap: pretty;
+}
+
+.section p {
+  margin: 0 0 13px;
+  text-align: left;
+  font-weight: 400;
+}
+
+/* Lists */
+
+.answer-list {
+  margin: 12px 0 15px;
+  padding-left: 26px;
+}
+
+.answer-list li {
+  margin-bottom: 7px;
+  padding-left: 3px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.answer-list li::marker {
+  color: #526A7D;
+}
+
+/* Comparison table */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 16px 0 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.answer-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.answer-table th,
+.answer-table td {
+  border: 1px solid #D3D5D4;
+  padding: 11px 13px;
+  vertical-align: top;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.answer-table th {
+  background: #EDEFEF;
+  color: var(--heading);
+  font-weight: 700;
+}
+
+.answer-table td {
+  color: var(--text);
+  font-weight: 400;
+}
+
+.answer-table tbody tr:nth-child(even) {
+  background: #F5F5F2;
+}
+
+/* Conclusion */
+
+.conclusion { margin-bottom: 0; }
+.conclusion p:last-child { margin-bottom: 0; }
+
+/* Navigation */
+
+.bottom-nav { margin-top: 16px; }
+
+.nav-link {
+  display: inline-block;
+  padding: 10px 14px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--link);
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .page-container { padding: 12px 9px 28px; }
+
+  .back-link {
+    margin: 0 0 11px 4px;
+    font-size: 13px;
+  }
+
+  .answer-sheet {
+    padding: 25px 19px 30px;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .question {
+    margin-bottom: 26px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .section { margin-bottom: 25px; }
+
+  .answer-heading {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 11px;
+  }
+
+  .section p { margin-bottom: 12px; }
+
+  .answer-list {
+    padding-left: 23px;
+    margin: 10px 0 13px;
+  }
+
+  .answer-list li {
+    margin-bottom: 6px;
+    padding-left: 2px;
+  }
+
+  .answer-table {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .answer-table th,
+  .answer-table td {
+    padding: 9px 8px;
+  }
+
+  .bottom-nav { margin-top: 12px; }
+  .nav-link { font-size: 13px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page-container">
+
+<a href="index.html" class="back-link">
+  ← Back to Unit III
+</a>
+
+<main class="answer-sheet">
+
+<h1 class="question">
+Q21. Define Cyber Vandalism and Explain Its Common Forms.
+</h1>
+
+<section class="section">
+<h2 class="answer-heading">Introduction</h2>
+
+<p>Cyber vandalism is the intentional damage, alteration, destruction or disruption of digital property without permission.</p>
+
+<p>Digital property may include websites, computer systems, networks, software and data. It is similar to physical vandalism, but the damage takes place in the digital world.</p>
+</section>
+
+<section class="section">
+<h2 class="answer-heading">1. Website Defacement</h2>
+
+<p>Website defacement means changing the appearance or content of a website without the owner's permission.</p>
+
+<p>An offender may replace the original webpage with:</p>
+
+<ul class="answer-list">
+<li>Offensive messages</li>
+<li>Unwanted images</li>
+<li>Political messages</li>
+<li>False information</li>
+</ul>
+
+<p>Example: An attacker changes the homepage of an organization's website and displays an unwanted message.</p>
+</section>
+
+<section class="section">
+<h2 class="answer-heading">2. Data Destruction</h2>
+
+<p>It involves intentionally deleting, changing or damaging digital data.</p>
+
+<p>Important documents, records or databases may be destroyed or made unusable.</p>
+
+<p>Example: An attacker deletes important files from a company's computer system.</p>
+</section>
+
+<section class="section">
+<h2 class="answer-heading">3. Website or Service Disruption</h2>
+
+<p>Cyber vandals may attempt to make a website or online service unavailable to its users.</p>
+
+<p>This can disturb the normal activities of businesses, institutions or other organizations.</p>
+
+<p>Example: An attack causes an organization's website to become unavailable for several hours.</p>
+</section>
+
+<section class="section">
+<h2 class="answer-heading">4. Malware-Based Vandalism</h2>
+
+<p>Malicious software may be used to intentionally damage computers or data.</p>
+
+<p>It may:</p>
+
+<ul class="answer-list">
+<li>Delete files</li>
+<li>Damage software</li>
+<li>Change system settings</li>
+<li>Stop computers from working properly</li>
+</ul>
+</section>
+
+<section class="section">
+<h2 class="answer-heading">5. Unauthorized Modification of Digital Content</h2>
+
+<p>An offender may gain unauthorized access and change digital information.</p>
+
+<p>Example: Changing information stored on a website or database without permission.</p>
+</section>
+
+<section class="section">
+<h2 class="answer-heading">6. Social Media or Online Account Vandalism</h2>
+
+<p>An offender may gain unauthorized access to an online account and change or delete its content.</p>
+
+<p>Example: A hacked social media account is used to post offensive content or delete the owner's posts.</p>
+</section>
+
+<section class="section">
+<h2 class="answer-heading">7. Common Forms at a Glance</h2>
+
+<div class="table-wrapper">
+<table class="answer-table">
+<thead>
+<tr>
+<th scope="col">Form</th>
+<th scope="col">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Website Defacement</td>
+<td>Changing a website without permission</td>
+</tr>
+<tr>
+<td>Data Destruction</td>
+<td>Deleting or damaging digital files</td>
+</tr>
+<tr>
+<td>Service Disruption</td>
+<td>Making online services unavailable</td>
+</tr>
+<tr>
+<td>Malware-Based Vandalism</td>
+<td>Using malware to cause digital damage</td>
+</tr>
+<tr>
+<td>Unauthorized Modification</td>
+<td>Changing digital information without permission</td>
+</tr>
+<tr>
+<td>Account Vandalism</td>
+<td>Damaging or changing an online account</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="section conclusion">
+<h2 class="answer-heading">Conclusion</h2>
+
+<p>Cyber vandalism is the deliberate damage or disruption of digital property. Its common forms include website defacement, data destruction, service disruption, malware-based damage, unauthorized modification and online account vandalism. Such acts can cause loss of data, financial damage and interruption of digital services.</p>
+</section>
+
+</main>
+
+<nav class="bottom-nav">
+<a href="index.html" class="nav-link">← Unit III</a>
+</nav>
+
+</div>
+
+</body>
+</html>
