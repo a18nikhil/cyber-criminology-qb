@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q19 - Cyber-Routine Activities Theory</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #f2f2f2;
+    font-family: "Times New Roman", Times, Georgia, serif;
+}
+
+.page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 18px 14px 35px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #1d4f91;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.answer-sheet {
+    background: #fff;
+    padding: 34px 40px 38px;
+    border: 1px solid #dedede;
+    color: #173f8a;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+.question {
+    margin: 0 0 25px;
+    font-size: 19px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.section { margin-bottom: 22px; }
+
+.answer-heading {
+    display: inline;
+    color: #173f8a;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.answer-heading + p,
+.answer-heading + .pen-list {
+    margin-top: 10px;
+}
+
+.section p {
+    margin: 0 0 10px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.pen-list {
+    margin-bottom: 10px;
+    padding-left: 27px;
+}
+
+.pen-list li {
+    margin-bottom: 7px;
+    padding-left: 2px;
+    text-align: justify;
+}
+
+.point-name {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* THEORY DIAGRAM */
+
+.theory-diagram {
+    width: 100%;
+    max-width: 350px;
+    margin: 18px auto;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.35;
+}
+
+.diagram-item {
+    text-align: center;
+}
+
+.diagram-symbol {
+    margin: 4px 0;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.conclusion { margin-bottom: 0; }
+
+.bottom-nav { margin-top: 14px; }
+
+.nav-link {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    padding: 9px 13px;
+    color: #1d4f91;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .page-container { padding: 12px 8px 25px; }
+    .back-link { margin: 0 0 9px 3px; font-size: 13px; }
+
+    .answer-sheet {
+        padding: 22px 16px 26px;
+        font-size: 15.5px;
+        line-height: 1.6;
+    }
+
+    .question { margin-bottom: 22px; font-size: 16px; }
+    .answer-heading { font-size: 16px; }
+    .section { margin-bottom: 19px; }
+    .pen-list { padding-left: 23px; }
+    .pen-list li { margin-bottom: 6px; }
+
+    .theory-diagram {
+        max-width: 280px;
+        font-size: 14.5px;
+        margin: 14px auto;
+    }
+
+    .diagram-symbol { font-size: 18px; }
+
+    .bottom-nav { margin-top: 10px; }
+    .nav-link { padding: 8px 10px; font-size: 12.5px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page-container">
+
+<a href="index.html" class="back-link">← Back to Unit II</a>
+
+<main class="answer-sheet">
+
+<p class="question">
+Q19. Describe Cyber-Routine Activities Theory, Its Three Main Components, and How It Explains Patterns of Online Victimization.
+</p>
+
+<section class="section">
+<h2 class="answer-heading">Introduction</h2>
+
+<p>Cyber-Routine Activities Theory explains why some people are more likely to become victims of cybercrime because of their regular online activities.</p>
+
+<p>According to this theory, cybercrime is more likely to occur when three things come together:</p>
+
+<ol class="pen-list">
+<li>A motivated offender</li>
+<li>A suitable target</li>
+<li>Lack of capable guardianship</li>
+</ol>
+</section>
+
+<section class="section">
+<h2 class="answer-heading">1. Motivated Offender</h2>
+
+<p>A motivated offender is a person who is willing and able to commit a cybercrime.</p>
+
+<p>Such offenders may include:</p>
+
+<ul class="pen-list">
+<li>Hackers</li>
+<li>Online scammers</li>
+<li>Cyberstalkers</li>
+<li>Identity thieves</li>
+<li>Other online offenders</li>
+</ul>
+
+<p>They use the internet to search for possible victims and opportunities.</p>
+
+<p><span class="point-name">Example:</span> A scammer searching social media for people to target with fake messages.</p>
+</section>
+
+<section class="section">
+<h2 class="answer-heading">2. Suitable Target</h2>
+
+<p>A suitable target is a person, account, device or organization that appears easy or valuable to attack.</p>
+
+<p>A person may become a suitable target because of:</p>
+
+<ul class="pen-list">
+<li>Weak passwords</li>
+<li>Sharing too much personal information</li>
+<li>Accepting unknown friend requests</li>
+<li>Clicking unknown links</li>
+<li>Using unsafe websites</li>
+<li>Keeping accounts public</li>
+</ul>
+
+<p><span class="point-name">Example:</span> A public social media account containing personal details may become an easy target for an offender.</p>
+</section>
+
+<section class="section">
+<h2 class="answer-heading">3. Lack of Capable Guardianship</h2>
+
+<p>Capable guardianship means protection that can prevent or reduce cybercrime.</p>
+
+<p>Lack of guardianship may include:</p>
+
+<ul class="pen-list">
+<li>No antivirus or security software</li>
+<li>Weak privacy settings</li>
+<li>No two-factor authentication</li>
+<li>Outdated software</li>
+<li>Poor awareness of online threats</li>
+<li>Lack of parental or organizational monitoring where needed</li>
+</ul>
+
+<p>When protection is weak, offenders may find it easier to attack the target.</p>
+</section>
+
+<section class="section">
+<h2 class="answer-heading">4. Three Components of the Theory</h2>
+
+<p>The three components are motivated offender, suitable target and lack of capable guardianship. These conditions help explain when online victimization becomes more likely.</p>
+</section>
+
+<section class="section">
+<h2 class="answer-heading">5. How the Theory Explains Online Victimization</h2>
+
+<p>The theory suggests that online victimization becomes more likely when all three conditions come together.</p>
+
+<div class="theory-diagram">
+    <div class="diagram-item">Motivated Offender</div>
+    <div class="diagram-symbol">+</div>
+    <div class="diagram-item">Suitable Target</div>
+    <div class="diagram-symbol">+</div>
+    <div class="diagram-item">Lack of Capable Guardianship</div>
+    <div class="diagram-symbol">↓</div>
+    <div class="diagram-item">Higher Risk of Cyber Victimization</div>
+</div>
+
+<p>For example, suppose a person regularly shares personal information publicly and uses weak passwords. An online offender finds the account, and the person has no strong security protection. These conditions can increase the risk of account hacking, fraud or identity theft.</p>
+</section>
+
+<section class="section">
+<h2 class="answer-heading">6. Online Activities and Victimization</h2>
+
+<p>The theory also explains why different online lifestyles create different levels of risk.</p>
+
+<p>Activities that may increase exposure include:</p>
+
+<ul class="pen-list">
+<li>Spending more time on unsafe online platforms</li>
+<li>Communicating with unknown people</li>
+<li>Sharing personal information publicly</li>
+<li>Downloading files from unknown sources</li>
+<li>Clicking suspicious links</li>
+<li>Using the same weak password on many accounts</li>
+</ul>
+
+<p>Therefore, a person's daily online routine can affect their exposure to cybercrime.</p>
+</section>
+
+<section class="section conclusion">
+<h2 class="answer-heading">Conclusion</h2>
+
+<p>Cyber-Routine Activities Theory explains cyber victimization through three main components: a motivated offender, a suitable target and lack of capable guardianship. When these three conditions come together in cyberspace, the possibility of becoming a victim of cybercrime increases.</p>
+</section>
+
+</main>
+
+<nav class="bottom-nav">
+<a href="index.html" class="nav-link">← Unit II</a>
+</nav>
+
+</div>
+
+</body>
+</html>
