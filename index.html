@@ -110,12 +110,32 @@ body {
     outline-offset: 3px;
 }
 
+/* Unit Top Row */
+
+.unit-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+}
+
 .unit-number {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #666666;
 }
+
+.question-count {
+    font-family: system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #92979C;
+    letter-spacing: 0.1px;
+    white-space: nowrap;
+}
+
+/* Unit Content */
 
 .unit-card h2 {
     margin: 5px 0 11px;
@@ -175,6 +195,11 @@ body {
         font-size: 12px;
     }
 
+    .question-count {
+        font-size: 11px;
+        color: #92979C;
+    }
+
     .unit-card h2 {
         font-size: 18px;
         margin: 5px 0 8px;
@@ -199,6 +224,10 @@ body {
 
     .unit-card h2 {
         font-size: 17px;
+    }
+
+    .question-count {
+        font-size: 10px;
     }
 }
 
@@ -241,9 +270,14 @@ body {
 
 <h2 class="section-title">Select a Unit</h2>
 
+<!-- UNIT I -->
+
 <a href="unit1/index.html" class="unit-card">
 
-    <div class="unit-number">UNIT I</div>
+    <div class="unit-top">
+        <span class="unit-number">UNIT I</span>
+        <span class="question-count">10 Questions</span>
+    </div>
 
     <h2>Introduction to Cyber Criminology</h2>
 
@@ -253,9 +287,14 @@ body {
 
 </a>
 
+<!-- UNIT II -->
+
 <a href="unit2/index.html" class="unit-card">
 
-    <div class="unit-number">UNIT II</div>
+    <div class="unit-top">
+        <span class="unit-number">UNIT II</span>
+        <span class="question-count">12 Questions</span>
+    </div>
 
     <h2>Digital Piracy and Cyber Victimization</h2>
 
@@ -265,9 +304,14 @@ body {
 
 </a>
 
+<!-- UNIT III -->
+
 <a href="unit3/index.html" class="unit-card">
 
-    <div class="unit-number">UNIT III</div>
+    <div class="unit-top">
+        <span class="unit-number">UNIT III</span>
+        <span class="question-count">8 Questions</span>
+    </div>
 
     <h2>Cyber Crime, Victimization and Human Rights</h2>
 
