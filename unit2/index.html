@@ -1,798 +1,570 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit II - Cyber Criminology</title>
 
-    <title>Unit II - Cyber Criminology</title>
+<style>
+* {
+    box-sizing: border-box;
+}
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+body {
+    margin: 0;
+    background: #f3f4f6;
+    color: #222;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.5;
+}
 
-        body {
-            margin: 0;
-            background: #f3f4f6;
-            color: #222;
-            font-family: "Times New Roman", Times, serif;
-            line-height: 1.5;
-        }
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 22px 18px 45px;
+}
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 22px 18px 45px;
-        }
+/* BACK LINK */
 
+.back-link {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #1d4f91;
+    text-decoration: none;
+    font-size: 16px;
+}
 
-        /* BACK LINK */
+/* UNIT HEADER */
 
-        .back-link {
-            display: inline-block;
-            margin-bottom: 14px;
-            color: #1d4f91;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-
-        /* UNIT HEADER */
-
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-
-            background: #ffffff;
-            border-top: 5px solid #263b5e;
-            border-radius: 8px;
-
-            padding: 24px 20px;
-            margin-bottom: 24px;
-        }
-
-        .unit-label {
-            flex-shrink: 0;
-
-            display: inline-block;
-            background: #263b5e;
-            color: #ffffff;
-
-            padding: 5px 12px;
-            border-radius: 4px;
-
-            font-size: 15px;
-            letter-spacing: 1px;
-            white-space: nowrap;
-        }
-
-        .header h1 {
-            margin: 0;
-            color: #1d2f4d;
-            font-size: 27px;
-            font-weight: normal;
-            line-height: 1.2;
-        }
-
-
-        /* TOPIC CARD */
-
-        .topic {
-            background: #ffffff;
-            border-radius: 8px;
-            margin-bottom: 18px;
-            overflow: hidden;
-            box-shadow: 0 2px 7px rgba(0,0,0,0.06);
-        }
-
-
-        /* TOPIC HEADER */
-
-        .topic-heading {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            padding: 14px 16px;
-
-            border-left: 5px solid #263b5e;
-            border-bottom: 1px solid #e3e5e8;
-
-            background: #fafbfc;
-        }
-
-        .topic-number {
-            flex-shrink: 0;
-
-            display: inline-block;
-            color: #1d4f91;
-            background: #eaf0f8;
-
-            padding: 3px 8px;
-            border-radius: 3px;
-
-            font-size: 12px;
-            letter-spacing: 0.6px;
-            white-space: nowrap;
-        }
-
-        .topic-heading h2 {
-            margin: 0;
-            color: #1d2f4d;
-            font-size: 20px;
-            font-weight: normal;
-            line-height: 1.25;
-        }
-
-
-        /* QUESTION CARDS */
-
-        .question-link {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-
-            margin: 12px;
-            padding: 13px 14px;
-
-            background: #f7f8fa;
-            border: 1px solid #e4e6e9;
-            border-radius: 6px;
-
-            text-decoration: none;
-            color: #222;
-        }
-
-        .question-link + .question-link {
-            margin-top: 0;
-        }
-
-        .q-number {
-            flex-shrink: 0;
-
-            background: #263b5e;
-            color: #ffffff;
-
-            padding: 4px 8px;
-            border-radius: 4px;
-
-            font-size: 14px;
-            line-height: 1.2;
-        }
-
-        .question-content {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .question-text {
-            font-size: 16px;
-            line-height: 1.4;
-            text-align: justify;
-text-justify: inter-word;
-        }
-
-        .view-answer {
-            display: block;
-            margin-top: 6px;
-            color: #1d4f91;
-            font-size: 14px;
-        }
-
-
-        /* MOBILE */
-
-        @media (max-width: 600px) {
-
-            .container {
-                padding: 14px 10px 30px;
-            }
-
-            .back-link {
-                font-size: 14px;
-                margin-bottom: 10px;
-            }
-
-
-            /* HORIZONTAL UNIT HEADER */
-
-            .header {
-    justify-content: flex-start;
+.header {
+    display: flex;
     align-items: center;
-    gap: 6px;
-
-    padding: 16px 8px;
-    margin-bottom: 17px;
+    justify-content: center;
+    gap: 12px;
+    background: #ffffff;
+    border-top: 5px solid #263b5e;
+    border-radius: 8px;
+    padding: 24px 20px;
+    margin-bottom: 24px;
 }
 
 .unit-label {
     flex-shrink: 0;
-    font-size: 9px;
-    padding: 4px 5px;
-    letter-spacing: 0.2px;
-}
-
-.header h1 {
-    flex: 1;
-    min-width: 0;
-
+    display: inline-block;
+    background: #263b5e;
+    color: #ffffff;
+    padding: 5px 12px;
+    border-radius: 4px;
     font-size: 15px;
-    line-height: 1.15;
-    letter-spacing: -0.35px;
-
+    letter-spacing: 1px;
     white-space: nowrap;
 }
 
+.header h1 {
+    margin: 0;
+    color: #1d2f4d;
+    font-size: 27px;
+    font-weight: normal;
+    line-height: 1.2;
+}
 
-            /* TOPICS */
+/* TOPIC CARD */
 
-            .topic {
-                margin-bottom: 14px;
-            }
+.topic {
+    background: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.06);
+}
 
-            .topic-heading {
-                gap: 7px;
-                padding: 11px 10px;
-            }
+/* TOPIC HEADER */
 
-            .topic-number {
-                font-size: 9px;
-                padding: 3px 5px;
-                letter-spacing: 0.3px;
-            }
+.topic-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border-left: 5px solid #263b5e;
+    border-bottom: 1px solid #e3e5e8;
+    background: #fafbfc;
+}
 
-            .topic-heading h2 {
-                font-size: 14px;
-                line-height: 1.2;
-                letter-spacing: -0.2px;
-            }
+.topic-number {
+    flex-shrink: 0;
+    display: inline-block;
+    color: #1d4f91;
+    background: #eaf0f8;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+}
 
+.topic-heading h2 {
+    margin: 0;
+    color: #1d2f4d;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.25;
+}
 
-            /* QUESTIONS */
+/* QUESTION CARDS */
 
-            .question-link {
-                gap: 9px;
-                margin: 9px;
-                padding: 10px;
-            }
+.question-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 12px;
+    padding: 13px 14px;
+    background: #f7f8fa;
+    border: 1px solid #e4e6e9;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #222;
+}
 
-            .question-link + .question-link {
-                margin-top: 0;
-            }
+.question-link + .question-link {
+    margin-top: 0;
+}
 
-            .q-number {
-                font-size: 12px;
-                padding: 4px 6px;
-            }
+.q-number {
+    flex-shrink: 0;
+    background: #263b5e;
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.2;
+}
 
-            .question-text {
-                font-size: 14px;
-                line-height: 1.35;
-                text-align: justify;
-text-justify: inter-word;
-            }
+.question-content {
+    flex: 1;
+    min-width: 0;
+}
 
-            .view-answer {
-                margin-top: 5px;
-                font-size: 12px;
-            }
-        }
+.question-text {
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: justify;
+    text-justify: inter-word;
+}
 
+.view-answer {
+    display: block;
+    margin-top: 6px;
+    color: #1d4f91;
+    font-size: 14px;
+}
 
-        /* EXTRA SMALL PHONES */
+/* BOTTOM NAVIGATION */
 
-        @media (max-width: 380px) {
+.bottom-nav {
+    margin-top: 28px;
+    text-align: left;
+}
 
-            .header {
-                gap: 6px;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
+.bottom-back-link {
+    display: inline-block;
+    padding: 11px 17px;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 6px;
+    color: #1d4f91;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
 
-            .unit-label {
-                font-size: 9px;
-                padding: 4px 5px;
-            }
+.bottom-back-link:hover {
+    background: #f0f3f7;
+}
 
-            .header h1 {
-                font-size: 16px;
-            }
+.bottom-back-link:focus-visible {
+    outline: 2px solid #1d4f91;
+    outline-offset: 3px;
+}
 
-            .topic-heading {
-                gap: 5px;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
+/* MOBILE */
 
-            .topic-number {
-                font-size: 8.5px;
-                padding: 3px 4px;
-            }
+@media (max-width: 600px) {
 
-            .topic-heading h2 {
-                font-size: 13px;
-                letter-spacing: -0.3px;
-            }
+    .container {
+        padding: 14px 10px 30px;
+    }
 
-            .question-text {
-                font-size: 13.5px;
-            }
-        }
+    .back-link {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
 
-    </style>
+    /* HORIZONTAL UNIT HEADER */
+
+    .header {
+        justify-content: flex-start;
+        align-items: center;
+        gap: 6px;
+        padding: 16px 8px;
+        margin-bottom: 17px;
+    }
+
+    .unit-label {
+        flex-shrink: 0;
+        font-size: 9px;
+        padding: 4px 5px;
+        letter-spacing: 0.2px;
+    }
+
+    .header h1 {
+        flex: 1;
+        min-width: 0;
+        font-size: 15px;
+        line-height: 1.15;
+        letter-spacing: -0.35px;
+        white-space: nowrap;
+    }
+
+    /* TOPICS */
+
+    .topic {
+        margin-bottom: 14px;
+    }
+
+    .topic-heading {
+        gap: 7px;
+        padding: 11px 10px;
+    }
+
+    .topic-number {
+        font-size: 9px;
+        padding: 3px 5px;
+        letter-spacing: 0.3px;
+    }
+
+    .topic-heading h2 {
+        font-size: 14px;
+        line-height: 1.2;
+        letter-spacing: -0.2px;
+    }
+
+    /* QUESTIONS */
+
+    .question-link {
+        gap: 9px;
+        margin: 9px;
+        padding: 10px;
+    }
+
+    .question-link + .question-link {
+        margin-top: 0;
+    }
+
+    .q-number {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+
+    .question-text {
+        font-size: 14px;
+        line-height: 1.35;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .view-answer {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .bottom-nav {
+        margin-top: 22px;
+    }
+
+    .bottom-back-link {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width: 380px) {
+
+    .header {
+        gap: 6px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .unit-label {
+        font-size: 9px;
+        padding: 4px 5px;
+    }
+
+    .header h1 {
+        font-size: 16px;
+    }
+
+    .topic-heading {
+        gap: 5px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .topic-number {
+        font-size: 8.5px;
+        padding: 3px 4px;
+    }
+
+    .topic-heading h2 {
+        font-size: 13px;
+        letter-spacing: -0.3px;
+    }
+
+    .question-text {
+        font-size: 13.5px;
+    }
+}
+</style>
 </head>
-
 
 <body>
 
 <div class="container">
 
-
     <a href="../index.html" class="back-link">
         ← Back to Units
     </a>
 
-
     <!-- UNIT HEADER -->
 
     <header class="header">
-
-        <div class="unit-label">
-            UNIT II
-        </div>
-
-        <h1>
-            Digital Piracy and Cyber Victimization
-        </h1>
-
+        <div class="unit-label">UNIT II</div>
+        <h1>Digital Piracy and Cyber Victimization</h1>
     </header>
-
-
 
     <!-- TOPIC 1 -->
 
     <section class="topic">
-
         <div class="topic-heading">
-
-            <div class="topic-number">
-                TOPIC 1
-            </div>
-
-            <h2>
-                Digital Piracy
-            </h2>
-
+            <div class="topic-number">TOPIC 1</div>
+            <h2>Digital Piracy</h2>
         </div>
 
-
         <a href="q4.html" class="question-link">
-
-            <span class="q-number">
-                Q4
-            </span>
-
+            <span class="q-number">Q4</span>
             <div class="question-content">
-
                 <div class="question-text">
                     Define digital piracy and explain its common forms.
                 </div>
-
-                <span class="view-answer">
-                    View Answer →
-                </span>
-
+                <span class="view-answer">View Answer →</span>
             </div>
-
         </a>
-
     </section>
-
-
 
     <!-- TOPIC 2 -->
 
     <section class="topic">
-
         <div class="topic-heading">
-
-            <div class="topic-number">
-                TOPIC 2
-            </div>
-
-            <h2>
-                RIAA Strategy and P2P Network Users
-            </h2>
-
+            <div class="topic-number">TOPIC 2</div>
+            <h2>RIAA Strategy and P2P Network Users</h2>
         </div>
 
-
         <a href="q2.html" class="question-link">
-
-            <span class="q-number">
-                Q2
-            </span>
-
+            <span class="q-number">Q2</span>
             <div class="question-content">
-
                 <div class="question-text">
                     Analyze the RIAA Strategy, its objectives, tactics
                     against P2P users, and its effectiveness in curbing piracy.
                 </div>
-
-                <span class="view-answer">
-                    View Answer →
-                </span>
-
+                <span class="view-answer">View Answer →</span>
             </div>
-
         </a>
 
-
         <a href="q30.html" class="question-link">
-
-            <span class="q-number">
-                Q30
-            </span>
-
+            <span class="q-number">Q30</span>
             <div class="question-content">
-
                 <div class="question-text">
                     Describe P2P network users, their role in digital piracy,
                     and the associated risks and legal consequences.
                 </div>
-
-                <span class="view-answer">
-                    View Answer →
-                </span>
-
+                <span class="view-answer">View Answer →</span>
             </div>
-
         </a>
-
     </section>
-
-
 
     <!-- TOPIC 3 -->
 
     <section class="topic">
-
         <div class="topic-heading">
-
-            <div class="topic-number">
-                TOPIC 3
-            </div>
-
-            <h2>
-                Criminological Predictors of Digital Piracy
-            </h2>
-
+            <div class="topic-number">TOPIC 3</div>
+            <h2>Criminological Predictors of Digital Piracy</h2>
         </div>
 
-
         <a href="q17.html" class="question-link">
-
-            <span class="q-number">
-                Q17
-            </span>
-
+            <span class="q-number">Q17</span>
             <div class="question-content">
-
                 <div class="question-text">
                     List and explain any three criminological predictors
                     of digital piracy.
                 </div>
-
-                <span class="view-answer">
-                    View Answer →
-                </span>
-
+                <span class="view-answer">View Answer →</span>
             </div>
-
         </a>
 
-
         <a href="q20.html" class="question-link">
-
-            <span class="q-number">
-                Q20
-            </span>
-
+            <span class="q-number">Q20</span>
             <div class="question-content">
-
                 <div class="question-text">
                     Explain the criminological predictors of digital piracy
                     among internet users.
                 </div>
-
-                <span class="view-answer">
-                    View Answer →
-                </span>
-
+                <span class="view-answer">View Answer →</span>
             </div>
-
         </a>
-
     </section>
-
-
 
     <!-- TOPIC 4 -->
 
     <section class="topic">
-
         <div class="topic-heading">
-
-            <div class="topic-number">
-                TOPIC 4
-            </div>
-
-            <h2>
-                Music Piracy and Neutralization
-            </h2>
-
+            <div class="topic-number">TOPIC 4</div>
+            <h2>Music Piracy and Neutralization</h2>
         </div>
 
-
         <a href="q15.html" class="question-link">
-
-            <span class="q-number">
-                Q15
-            </span>
-
+            <span class="q-number">Q15</span>
             <div class="question-content">
-
                 <div class="question-text">
                     Describe digital piracy and its common forms, and explain
                     how offenders use neutralization techniques to justify
                     their behavior.
                 </div>
-
-                <span class="view-answer">
-                    View Answer →
-                </span>
-
+                <span class="view-answer">View Answer →</span>
             </div>
-
         </a>
-
     </section>
-
-
 
     <!-- TOPIC 5 -->
 
     <section class="topic">
-
         <div class="topic-heading">
-
-            <div class="topic-number">
-                TOPIC 5
-            </div>
-
-            <h2>
-                Digital File Sharing
-            </h2>
-
+            <div class="topic-number">TOPIC 5</div>
+            <h2>Digital File Sharing</h2>
         </div>
 
-
         <a href="q5.html" class="question-link">
-
-            <span class="q-number">
-                Q5
-            </span>
-
+            <span class="q-number">Q5</span>
             <div class="question-content">
-
                 <div class="question-text">
                     Describe digital file sharing and its legal and ethical issues.
                 </div>
-
-                <span class="view-answer">
-                    View Answer →
-                </span>
-
+                <span class="view-answer">View Answer →</span>
             </div>
-
         </a>
-
     </section>
-
-
 
     <!-- TOPIC 6 -->
 
     <section class="topic">
-
         <div class="topic-heading">
-
-            <div class="topic-number">
-                TOPIC 6
-            </div>
-
-            <h2>
-                Cyber-Routine Activities
-            </h2>
-
+            <div class="topic-number">TOPIC 6</div>
+            <h2>Cyber-Routine Activities</h2>
         </div>
 
-
         <a href="q19.html" class="question-link">
-
-            <span class="q-number">
-                Q19
-            </span>
-
+            <span class="q-number">Q19</span>
             <div class="question-content">
-
                 <div class="question-text">
                     Describe Cyber-Routine Activities Theory, its three main
                     components, and how it explains patterns of online
                     victimization.
                 </div>
-
-                <span class="view-answer">
-                    View Answer →
-                </span>
-
+                <span class="view-answer">View Answer →</span>
             </div>
-
         </a>
 
-
         <a href="q27.html" class="question-link">
-
-            <span class="q-number">
-                Q27
-            </span>
-
+            <span class="q-number">Q27</span>
             <div class="question-content">
-
                 <div class="question-text">
                     Discuss Cyber-Routine Activities Theory and its
                     application to online victimization.
                 </div>
-
-                <span class="view-answer">
-                    View Answer →
-                </span>
-
+                <span class="view-answer">View Answer →</span>
             </div>
-
         </a>
-
     </section>
-
-
 
     <!-- TOPIC 7 -->
 
     <section class="topic">
-
         <div class="topic-heading">
-
-            <div class="topic-number">
-                TOPIC 7
-            </div>
-
-            <h2>
-                Online Lifestyle and Cybercrime Victimization
-            </h2>
-
+            <div class="topic-number">TOPIC 7</div>
+            <h2>Online Lifestyle and Cybercrime Victimization</h2>
         </div>
 
-
         <a href="q12.html" class="question-link">
-
-            <span class="q-number">
-                Q12
-            </span>
-
+            <span class="q-number">Q12</span>
             <div class="question-content">
-
                 <div class="question-text">
                     Describe how online lifestyle patterns increase the risk
                     of cybercrime victimization.
                 </div>
-
-                <span class="view-answer">
-                    View Answer →
-                </span>
-
+                <span class="view-answer">View Answer →</span>
             </div>
-
         </a>
-
     </section>
-
-
 
     <!-- TOPIC 8 -->
 
     <section class="topic">
-
         <div class="topic-heading">
-
-            <div class="topic-number">
-                TOPIC 8
-            </div>
-
-            <h2>
-                Adolescent Online Victimization
-            </h2>
-
+            <div class="topic-number">TOPIC 8</div>
+            <h2>Adolescent Online Victimization</h2>
         </div>
 
-
         <a href="q7.html" class="question-link">
-
-            <span class="q-number">
-                Q7
-            </span>
-
+            <span class="q-number">Q7</span>
             <div class="question-content">
-
                 <div class="question-text">
                     Examine adolescent online victimization, including its
                     causes, patterns and consequences.
                 </div>
-
-                <span class="view-answer">
-                    View Answer →
-                </span>
-
+                <span class="view-answer">View Answer →</span>
             </div>
-
         </a>
-
     </section>
-
-
 
     <!-- TOPIC 9 -->
 
     <section class="topic">
-
         <div class="topic-heading">
-
-            <div class="topic-number">
-                TOPIC 9
-            </div>
-
-            <h2>
-                Cyber Stalking
-            </h2>
-
+            <div class="topic-number">TOPIC 9</div>
+            <h2>Cyber Stalking</h2>
         </div>
 
-
         <a href="q22.html" class="question-link">
-
-            <span class="q-number">
-                Q22
-            </span>
-
+            <span class="q-number">Q22</span>
             <div class="question-content">
-
                 <div class="question-text">
                     Describe the concept of cyberstalking, the methods used
                     by stalkers, and the psychological impact on victims.
                 </div>
-
-                <span class="view-answer">
-                    View Answer →
-                </span>
-
+                <span class="view-answer">View Answer →</span>
             </div>
-
         </a>
-
     </section>
 
+    <!-- BOTTOM NAVIGATION -->
+
+    <nav class="bottom-nav" aria-label="Bottom navigation">
+        <a href="../index.html" class="bottom-back-link">
+            ← Back to Units
+        </a>
+    </nav>
 
 </div>
 
