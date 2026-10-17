@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#071527">
 
-<title>Cyber Criminology | Exam Oriented Questions & Answers</title>
+<title>Cyber Criminology</title>
 
 <style>
 
@@ -69,66 +69,47 @@ body {
 }
 
 /* ==========================================
-   PAGE CONTAINER
+   MAIN CONTAINER
 ========================================== */
 
 .container {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-
     padding: 65px 24px 65px;
 }
 
 /* ==========================================
-   HEADER
+   TITLE SECTION
 ========================================== */
 
 .hero {
     position: relative;
     text-align: center;
-    padding: 35px 20px 48px;
+    padding: 35px 20px 55px;
 }
 
 .hero::before {
     content: "";
     position: absolute;
 
-    width: 290px;
-    height: 290px;
+    width: 320px;
+    height: 320px;
 
-    top: -65px;
+    top: -80px;
     left: 50%;
     transform: translateX(-50%);
 
     background: radial-gradient(
         circle,
-        rgba(51, 167, 231, 0.17),
+        rgba(64, 160, 220, 0.16),
         transparent 70%
     );
 
     pointer-events: none;
 }
 
-.hero-label {
-    display: inline-block;
-
-    margin-bottom: 22px;
-    padding: 8px 17px;
-
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    color: #8DDCFF;
-
-    border: 1px solid rgba(100, 200, 255, 0.28);
-    border-radius: 50px;
-
-    background: rgba(42, 125, 180, 0.10);
-}
+/* MAIN TITLE */
 
 .hero-title {
     position: relative;
@@ -136,52 +117,35 @@ body {
 
     margin: 0;
 
-    font-size: clamp(40px, 6vw, 69px);
+    font-size: clamp(42px, 6vw, 72px);
     font-weight: 700;
-    line-height: 1.12;
-    letter-spacing: -1.5px;
+    line-height: 1.15;
+    letter-spacing: -1px;
 
-    color: #FFFFFF;
+    color: #F5E6C8;
 
     text-shadow:
-        0 4px 25px rgba(0, 0, 0, 0.22);
+        0 4px 22px rgba(0, 0, 0, 0.28);
 }
 
 .hero-title span {
     display: block;
-
-    color: #8EDBFF;
+    color: #E8C98B;
 }
 
 /* DECORATIVE LINE */
 
 .hero-divider {
-    width: 105px;
+    width: 110px;
     height: 2px;
-
-    margin: 25px auto 23px;
+    margin: 25px auto 0;
 
     background: linear-gradient(
         90deg,
         transparent,
-        #68CFFF,
+        #D9B46C,
         transparent
     );
-}
-
-/* SUBTITLE */
-
-.hero-subtitle {
-    margin: 0;
-
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 2.5px;
-    line-height: 1.7;
-
-    text-transform: uppercase;
-    color: #B8D0E4;
 }
 
 /* ==========================================
@@ -199,11 +163,13 @@ body {
     overflow: hidden;
 
     display: flex;
+    justify-content: center;
     align-items: center;
 
-    min-height: 135px;
-    padding: 30px 34px;
+    min-height: 145px;
+    padding: 32px 25px;
 
+    text-align: center;
     text-decoration: none;
     color: #F3F8FF;
 
@@ -225,7 +191,7 @@ body {
         box-shadow 0.2s ease;
 }
 
-/* ACCENT LINE */
+/* LEFT ACCENT */
 
 .unit-card::before {
     content: "";
@@ -239,12 +205,12 @@ body {
 
     background: linear-gradient(
         180deg,
-        #83DDFF,
-        #2077BA
+        #DCC18B,
+        #9D793B
     );
 }
 
-/* DECORATIVE GLOW */
+/* SUBTLE CARD GLOW */
 
 .unit-card::after {
     content: "";
@@ -261,7 +227,7 @@ body {
 
     background: radial-gradient(
         circle,
-        rgba(47, 153, 225, 0.13),
+        rgba(212, 175, 110, 0.10),
         transparent 70%
     );
 
@@ -271,50 +237,58 @@ body {
 .unit-card:hover {
     transform: translateY(-3px);
 
-    border-color: rgba(130, 210, 255, 0.55);
+    border-color: rgba(226, 193, 130, 0.55);
 
     box-shadow:
         0 12px 32px rgba(0, 0, 0, 0.20);
 }
 
 .unit-card:focus-visible {
-    outline: 3px solid #8EDBFF;
+    outline: 3px solid #E8C98B;
     outline-offset: 4px;
 }
 
-/* UNIT CONTENT */
+/* ==========================================
+   UNIT CONTENT
+========================================== */
 
 .unit-content {
     position: relative;
     z-index: 1;
+
     width: 100%;
+    text-align: center;
 }
 
-.unit-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    gap: 12px;
-    margin-bottom: 15px;
-}
-
-.unit-number {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-
-    color: #82CFFF;
-}
+/* QUESTION COUNT - TOP RIGHT */
 
 .question-count {
+    position: absolute;
+    top: 14px;
+    right: 19px;
+
     font-family: Arial, sans-serif;
     font-size: 12px;
     font-weight: 400;
 
-    color: #9CB2C8;
+    color: #A6B6C6;
 }
+
+/* UNIT NUMBER */
+
+.unit-number {
+    display: block;
+    margin-bottom: 13px;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+
+    color: #D8BE8C;
+}
+
+/* UNIT TITLE */
 
 .unit-title {
     display: block;
@@ -337,11 +311,11 @@ body {
     }
 
     .hero {
-        padding-bottom: 55px;
+        padding-bottom: 65px;
     }
 
     .unit-card {
-        min-height: 145px;
+        min-height: 155px;
     }
 }
 
@@ -356,31 +330,18 @@ body {
     }
 
     .hero {
-        padding: 20px 5px 30px;
-    }
-
-    .hero-label {
-        margin-bottom: 16px;
-        padding: 7px 13px;
-
-        font-size: 9px;
-        letter-spacing: 2px;
+        padding: 30px 5px 42px;
     }
 
     .hero-title {
-        font-size: clamp(36px, 10vw, 48px);
-        letter-spacing: -0.8px;
+        font-size: clamp(38px, 10vw, 49px);
         line-height: 1.12;
+        letter-spacing: -0.5px;
     }
 
     .hero-divider {
-        margin: 19px auto 17px;
+        margin-top: 20px;
         width: 85px;
-    }
-
-    .hero-subtitle {
-        font-size: 10px;
-        letter-spacing: 1.4px;
     }
 
     .units {
@@ -388,22 +349,21 @@ body {
     }
 
     .unit-card {
-        min-height: 112px;
-        padding: 20px 20px 21px;
+        min-height: 118px;
+        padding: 31px 17px 23px;
         border-radius: 14px;
     }
 
-    .unit-top {
-        margin-bottom: 11px;
+    .question-count {
+        top: 10px;
+        right: 13px;
+        font-size: 11px;
     }
 
     .unit-number {
         font-size: 11px;
+        margin-bottom: 10px;
         letter-spacing: 2px;
-    }
-
-    .question-count {
-        font-size: 11px;
     }
 
     .unit-title {
@@ -424,12 +384,12 @@ body {
     }
 
     .hero-title {
-        font-size: 35px;
+        font-size: 36px;
     }
 
     .unit-card {
-        padding: 18px 16px;
-        min-height: 105px;
+        min-height: 110px;
+        padding: 28px 13px 20px;
     }
 
     .unit-title {
@@ -448,16 +408,12 @@ body {
     }
 
     .hero {
-        padding-top: 10px;
-        padding-bottom: 22px;
-    }
-
-    .hero-label {
-        margin-bottom: 12px;
+        padding-top: 15px;
+        padding-bottom: 28px;
     }
 
     .hero-divider {
-        margin: 13px auto;
+        margin-top: 15px;
     }
 
     .units {
@@ -465,9 +421,9 @@ body {
     }
 
     .unit-card {
-        min-height: 96px;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        min-height: 100px;
+        padding-top: 24px;
+        padding-bottom: 18px;
     }
 
     .unit-title {
@@ -494,13 +450,9 @@ body {
 
 <main class="container">
 
-    <!-- HEADER -->
+    <!-- MAIN TITLE -->
 
     <header class="hero">
-
-        <div class="hero-label">
-            Digital Study Notes
-        </div>
 
         <h1 class="hero-title">
             Cyber
@@ -508,10 +460,6 @@ body {
         </h1>
 
         <div class="hero-divider"></div>
-
-        <p class="hero-subtitle">
-            Exam Oriented Questions &amp; Answers
-        </p>
 
     </header>
 
@@ -523,19 +471,15 @@ body {
 
         <a href="unit1/index.html" class="unit-card">
 
+            <span class="question-count">
+                10 Questions
+            </span>
+
             <div class="unit-content">
 
-                <div class="unit-top">
-
-                    <span class="unit-number">
-                        UNIT I
-                    </span>
-
-                    <span class="question-count">
-                        10 Questions
-                    </span>
-
-                </div>
+                <span class="unit-number">
+                    UNIT I
+                </span>
 
                 <span class="unit-title">
                     Introduction to Cyber Criminology
@@ -549,19 +493,15 @@ body {
 
         <a href="unit2/index.html" class="unit-card">
 
+            <span class="question-count">
+                12 Questions
+            </span>
+
             <div class="unit-content">
 
-                <div class="unit-top">
-
-                    <span class="unit-number">
-                        UNIT II
-                    </span>
-
-                    <span class="question-count">
-                        12 Questions
-                    </span>
-
-                </div>
+                <span class="unit-number">
+                    UNIT II
+                </span>
 
                 <span class="unit-title">
                     Digital Piracy and Cyber Victimization
@@ -575,19 +515,15 @@ body {
 
         <a href="unit3/index.html" class="unit-card">
 
+            <span class="question-count">
+                8 Questions
+            </span>
+
             <div class="unit-content">
 
-                <div class="unit-top">
-
-                    <span class="unit-number">
-                        UNIT III
-                    </span>
-
-                    <span class="question-count">
-                        8 Questions
-                    </span>
-
-                </div>
+                <span class="unit-number">
+                    UNIT III
+                </span>
 
                 <span class="unit-title">
                     Cyber Crime, Victimization and Human Rights
