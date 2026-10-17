@@ -1572,3 +1572,126 @@ body.unit-index .back-link, body.unit-index .question-card {
 }
 
 
+/* =========================================
+   Q25 - RESPONSIVE COMPARISON TABLES
+========================================= */
+
+.question-page .q25-table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 18px 0 24px;
+
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    border: 1px solid #CBD5DF;
+    border-radius: 9px;
+
+    background: #FFFFFF;
+}
+
+.question-page .q25-table {
+    width: 100%;
+    min-width: 660px;
+
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    font-family: Georgia, Cambria, serif;
+    font-size: 15px;
+    line-height: 1.55;
+
+    color: #253747;
+}
+
+/* COLUMN WIDTHS */
+
+.question-page .q25-table th:first-child {
+    width: 23%;
+}
+
+.question-page .q25-table th:nth-child(2) {
+    width: 38.5%;
+}
+
+.question-page .q25-table th:nth-child(3) {
+    width: 38.5%;
+}
+
+/* TABLE HEADER */
+
+.question-page .q25-table thead th {
+    padding: 13px 14px;
+
+    background: #173453;
+    color: #FFFFFF;
+
+    font-weight: 600;
+    text-align: left;
+    vertical-align: middle;
+
+    border-right: 1px solid #49627A;
+    border-bottom: 2px solid #B99B66;
+}
+
+/* TABLE CELLS */
+
+.question-page .q25-table tbody th,
+.question-page .q25-table tbody td {
+    padding: 12px 14px;
+
+    text-align: left;
+    vertical-align: top;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+
+    border-right: 1px solid #E0E6EC;
+    border-bottom: 1px solid #E0E6EC;
+}
+
+/* FIRST COLUMN */
+
+.question-page .q25-table tbody th {
+    background: #EDF3F8;
+    color: #173453;
+
+    font-weight: 600;
+}
+
+/* ALTERNATING ROWS */
+
+.question-page .q25-table tbody tr:nth-child(even) td {
+    background: #F7F9FB;
+}
+
+/* REMOVE EXTRA OUTER BORDERS */
+
+.question-page .q25-table tr > *:last-child {
+    border-right: none;
+}
+
+.question-page .q25-table tbody tr:last-child > * {
+    border-bottom: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .question-page .q25-table {
+        min-width: 620px;
+        font-size: 14px;
+    }
+
+    .question-page .q25-table thead th,
+    .question-page .q25-table tbody th,
+    .question-page .q25-table tbody td {
+        padding: 11px 12px;
+    }
+
+    .question-page .q25-table-wrapper {
+        margin: 15px 0 20px;
+    }
+}
+
