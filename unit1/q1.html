@@ -3,22 +3,380 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071527">
 
-    <title>Q1 - Bandura's Theory of Reciprocal Determinism</title>
+<title>Q1 - Bandura's Theory of Reciprocal Determinism</title>
 
-    <link href="../style.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+
+<style>
+
+/* =========================================
+   PAGE BACKGROUND
+========================================= */
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-color: #071527;
+
+    background-image:
+        radial-gradient(
+            ellipse at 12% 10%,
+            rgba(28, 124, 190, 0.25),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 90% 85%,
+            rgba(35, 105, 175, 0.22),
+            transparent 48%
+        ),
+        linear-gradient(
+            rgba(120, 190, 240, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(120, 190, 240, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            145deg,
+            #071527 0%,
+            #102B49 52%,
+            #08182D 100%
+        );
+
+    background-size:
+        auto,
+        auto,
+        42px 42px,
+        42px 42px,
+        auto;
+
+    background-attachment: fixed;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.page-container {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+    padding: 24px 18px 45px;
+
+    box-sizing: border-box;
+}
+
+/* =========================================
+   TOP BACK BUTTON
+========================================= */
+
+.page-container > .back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    width: auto;
+    margin: 0 0 22px;
+    padding: 11px 19px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    color: #F5E6C8;
+    background: #173453;
+
+    border: 1px solid #DCC18B;
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.18);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.page-container > .back-link:hover {
+    background: #244D73;
+    transform: translateY(-1px);
+}
+
+.page-container > .back-link:focus-visible {
+    outline: 3px solid #E8C98B;
+    outline-offset: 4px;
+}
+
+.back-arrow {
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* =========================================
+   ANSWER PANEL
+========================================= */
+
+.page-container .answer-sheet {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding: 38px 42px;
+
+    background: #FAFAF7;
+    color: #253747;
+
+    border: 1px solid #DEE5EB;
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+}
+
+.page-container .answer-sheet::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #B28C50,
+        #E6CD9B,
+        #B28C50
+    );
+}
+
+/* =========================================
+   QUESTION TITLE
+========================================= */
+
+.page-container .question {
+    margin-top: 0;
+
+    color: #102A43;
+    line-height: 1.4;
+}
+
+/* =========================================
+   ANSWER TYPOGRAPHY
+========================================= */
+
+.page-container .answer-heading,
+.page-container .sub-heading {
+    color: #163A5A;
+}
+
+.page-container .answer-sheet p,
+.page-container .answer-sheet li {
+    color: #253747;
+}
+
+.page-container .answer-sheet p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.page-container .answer-sheet .example {
+    color: #344C60;
+}
+
+/* =========================================
+   DIAGRAM
+========================================= */
+
+.q1-diagram {
+    margin: 24px auto;
+    text-align: center;
+}
+
+.q1-diagram img {
+    display: block;
+
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+
+    margin: 0 auto;
+
+    border-radius: 6px;
+}
+
+.q1-diagram figcaption {
+    margin-top: 10px;
+
+    font-size: 0.9em;
+    line-height: 1.5;
+
+    text-align: center;
+    color: #526272;
+}
+
+/* =========================================
+   BOTTOM NAVIGATION
+========================================= */
+
+.page-container .bottom-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin-top: 26px;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* TEXT LINK ONLY */
+
+.page-container .next-question {
+    display: inline-block;
+
+    padding: 8px 0;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    font-family: Georgia, Cambria, serif;
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #F5E6C8;
+    text-decoration: none;
+}
+
+.page-container .next-question:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.page-container .next-question:focus-visible {
+    outline: 2px solid #E8C98B;
+    outline-offset: 4px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .page-container {
+        padding: 15px 12px 32px;
+    }
+
+    .page-container > .back-link {
+        margin-bottom: 17px;
+        padding: 10px 16px;
+
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    .back-arrow {
+        font-size: 18px;
+    }
+
+    .page-container .answer-sheet {
+        padding: 24px 19px;
+
+        border-radius: 12px;
+    }
+
+    .q1-diagram {
+        margin: 20px auto;
+    }
+
+    .q1-diagram img {
+        max-width: 100%;
+    }
+
+    .page-container .bottom-nav {
+        margin-top: 20px;
+    }
+
+    .page-container .next-question {
+        font-size: 15px;
+    }
+}
+
+/* =========================================
+   EXTRA SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .page-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .page-container .answer-sheet {
+        padding: 21px 15px;
+    }
+
+    .page-container .next-question {
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-container > .back-link {
+        transition: none;
+    }
+}
+
+</style>
+
 </head>
 
 <body>
 
 <div class="page-container">
 
-    <!-- TOP NAVIGATION -->
+    <!-- TOP BACK BUTTON -->
 
     <a class="back-link" href="index.html">
-        ← Back to Unit I
+        <span class="back-arrow" aria-hidden="true">←</span>
+        <span>Back</span>
     </a>
 
     <!-- EXAM ANSWER -->
@@ -145,16 +503,15 @@
 
             <!-- Q1 DIAGRAM IMAGE -->
 
-            <figure style="margin: 22px auto; text-align: center;">
+            <figure class="q1-diagram">
 
                 <img
                     src="q1.png"
                     alt="Bandura's Theory of Reciprocal Determinism showing the relationship between Personal Factors, Behaviour and Environment"
                     loading="lazy"
-                    style="display: block; width: 100%; max-width: 480px; height: auto; margin: 0 auto;"
                 >
 
-                <figcaption style="margin-top: 10px; font-size: 0.9em; text-align: center;">
+                <figcaption>
                     Bandura's Theory of Reciprocal Determinism
                 </figcaption>
 
@@ -265,12 +622,14 @@
 
     </main>
 
-    <!-- BOTTOM NAVIGATION -->
+    <!-- NEXT QUESTION NAVIGATION -->
 
-    <nav class="bottom-nav">
-        <a class="nav-link" href="index.html">
-            ← Unit I
+    <nav class="bottom-nav" aria-label="Question navigation">
+
+        <a class="next-question" href="q3.html">
+            Next Question: Q3 →
         </a>
+
     </nav>
 
 </div>
