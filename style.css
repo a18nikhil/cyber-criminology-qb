@@ -1727,3 +1727,56 @@ body.unit-index .back-link, body.unit-index .question-card {
   body.unit-index .q-number { width: 38px; min-width: 38px; min-height: 37px; }
   body.unit-index .question-text { font-size: 13.5px; }
 }
+
+
+/* =========================================
+   QUESTION PAGES - MOBILE SIDE SPACING
+   DBMS-STYLE LAYOUT
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* More background visible on both sides */
+
+    body.question-page .page-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px 21px 35px;
+        box-sizing: border-box;
+    }
+
+    /* White answer card */
+
+    body.question-page .answer-sheet {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+
+        padding: 24px 19px;
+
+        border-radius: 11px;
+        box-sizing: border-box;
+    }
+
+    /* Keep navigation aligned with the card */
+
+    body.question-page .bottom-nav {
+        width: 100%;
+        margin-top: 18px;
+    }
+}
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width: 380px) {
+
+    body.question-page .page-container {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    body.question-page .answer-sheet {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+}
