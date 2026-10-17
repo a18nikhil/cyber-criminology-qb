@@ -79,17 +79,17 @@ body {
 }
 
 /* =========================================
-   TOP BACK BUTTON
+   NAVIGATION BUTTONS
 ========================================= */
 
-.page-container > .back-link {
+.page-container > .back-link,
+.page-container .next-question {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 9px;
 
     width: auto;
-    margin: 0 0 22px;
     padding: 11px 19px;
 
     font-family: Arial, sans-serif;
@@ -110,20 +110,28 @@ body {
 
     transition:
         background 0.2s ease,
-        transform 0.2s ease;
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.page-container > .back-link:hover {
+.page-container > .back-link {
+    margin: 0 0 22px;
+}
+
+.page-container > .back-link:hover,
+.page-container .next-question:hover {
     background: #244D73;
+    color: #FFFFFF;
     transform: translateY(-1px);
 }
 
-.page-container > .back-link:focus-visible {
+.page-container > .back-link:focus-visible,
+.page-container .next-question:focus-visible {
     outline: 3px solid #E8C98B;
     outline-offset: 4px;
 }
 
-.back-arrow {
+.nav-arrow {
     font-size: 20px;
     line-height: 1;
 }
@@ -181,6 +189,7 @@ body {
 
     color: #102A43;
     line-height: 1.4;
+    text-align: left;
 }
 
 /* =========================================
@@ -190,16 +199,24 @@ body {
 .page-container .answer-heading,
 .page-container .sub-heading {
     color: #163A5A;
+    text-align: left;
+}
+
+/* REMOVE JUSTIFIED ALIGNMENT */
+
+.page-container .answer-sheet p,
+.page-container .answer-sheet li,
+.page-container .answer-sheet ul,
+.page-container .answer-sheet ol,
+.page-container .answer-sheet .section,
+.page-container .answer-sheet .subpart {
+    text-align: left;
+    text-justify: auto;
 }
 
 .page-container .answer-sheet p,
 .page-container .answer-sheet li {
     color: #253747;
-}
-
-.page-container .answer-sheet p {
-    text-align: justify;
-    text-justify: inter-word;
 }
 
 .page-container .answer-sheet .example {
@@ -246,42 +263,12 @@ body {
     align-items: center;
     justify-content: flex-end;
 
-    margin-top: 26px;
+    margin-top: 24px;
     padding: 0;
 
     background: transparent;
     border: none;
     box-shadow: none;
-}
-
-/* TEXT LINK ONLY */
-
-.page-container .next-question {
-    display: inline-block;
-
-    padding: 8px 0;
-
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-
-    font-family: Georgia, Cambria, serif;
-    font-size: 17px;
-    font-weight: 600;
-
-    color: #F5E6C8;
-    text-decoration: none;
-}
-
-.page-container .next-question:hover {
-    color: #FFFFFF;
-    text-decoration: underline;
-}
-
-.page-container .next-question:focus-visible {
-    outline: 2px solid #E8C98B;
-    outline-offset: 4px;
 }
 
 /* =========================================
@@ -298,21 +285,23 @@ body {
         padding: 15px 12px 32px;
     }
 
-    .page-container > .back-link {
-        margin-bottom: 17px;
+    .page-container > .back-link,
+    .page-container .next-question {
         padding: 10px 16px;
-
         font-size: 14px;
         border-radius: 8px;
     }
 
-    .back-arrow {
+    .page-container > .back-link {
+        margin-bottom: 17px;
+    }
+
+    .nav-arrow {
         font-size: 18px;
     }
 
     .page-container .answer-sheet {
         padding: 24px 19px;
-
         border-radius: 12px;
     }
 
@@ -326,10 +315,6 @@ body {
 
     .page-container .bottom-nav {
         margin-top: 20px;
-    }
-
-    .page-container .next-question {
-        font-size: 15px;
     }
 }
 
@@ -348,8 +333,10 @@ body {
         padding: 21px 15px;
     }
 
+    .page-container > .back-link,
     .page-container .next-question {
-        font-size: 14px;
+        font-size: 13px;
+        padding: 9px 13px;
     }
 }
 
@@ -359,7 +346,8 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
 
-    .page-container > .back-link {
+    .page-container > .back-link,
+    .page-container .next-question {
         transition: none;
     }
 }
@@ -372,11 +360,11 @@ body {
 
 <div class="page-container">
 
-    <!-- TOP BACK BUTTON -->
+    <!-- TOP LEFT UNIT I BUTTON -->
 
     <a class="back-link" href="index.html">
-        <span class="back-arrow" aria-hidden="true">←</span>
-        <span>Back</span>
+        <span class="nav-arrow" aria-hidden="true">←</span>
+        <span>Unit I</span>
     </a>
 
     <!-- EXAM ANSWER -->
@@ -622,12 +610,13 @@ body {
 
     </main>
 
-    <!-- NEXT QUESTION NAVIGATION -->
+    <!-- BOTTOM RIGHT NEXT QUESTION BUTTON -->
 
     <nav class="bottom-nav" aria-label="Question navigation">
 
         <a class="next-question" href="q3.html">
-            Next Question: Q3 →
+            <span>Q3</span>
+            <span class="nav-arrow" aria-hidden="true">→</span>
         </a>
 
     </nav>
