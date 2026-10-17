@@ -1,516 +1,29 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#071527">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#071527" name="theme-color"/>
 <title>Unit I - Cyber Criminology</title>
 
-<style>
-
-/* =========================================
-   GLOBAL
-========================================= */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    min-height: 100%;
-}
-
-body {
-    margin: 0;
-    min-height: 100vh;
-
-    font-family: Georgia, Cambria, "Times New Roman", serif;
-    color: #EAF2FA;
-
-    background-color: #071527;
-
-    background-image:
-        radial-gradient(
-            ellipse at 12% 10%,
-            rgba(28, 124, 190, 0.25),
-            transparent 45%
-        ),
-        radial-gradient(
-            ellipse at 90% 85%,
-            rgba(35, 105, 175, 0.22),
-            transparent 48%
-        ),
-        linear-gradient(
-            rgba(120, 190, 240, 0.035) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(120, 190, 240, 0.035) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            145deg,
-            #071527 0%,
-            #102B49 52%,
-            #08182D 100%
-        );
-
-    background-size:
-        auto,
-        auto,
-        42px 42px,
-        42px 42px,
-        auto;
-
-    background-attachment: fixed;
-}
-
-/* =========================================
-   MAIN CONTAINER
-========================================= */
-
-.container {
-    width: 100%;
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 24px 18px 45px;
-}
-
-/* =========================================
-   PROMINENT BACK BUTTONS
-========================================= */
-
-.back-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-
-    padding: 11px 19px;
-
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0.3px;
-
-    color: #F5E6C8;
-    background: #173453;
-
-    border: 1px solid #DCC18B;
-    border-radius: 9px;
-
-    text-decoration: none;
-
-    box-shadow:
-        0 4px 14px rgba(0, 0, 0, 0.18);
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.back-link:hover {
-    background: #244D73;
-    transform: translateY(-1px);
-
-    box-shadow:
-        0 6px 18px rgba(0, 0, 0, 0.24);
-}
-
-.back-link:focus-visible {
-    outline: 3px solid #E8C98B;
-    outline-offset: 4px;
-}
-
-.back-arrow {
-    font-size: 20px;
-    line-height: 1;
-}
-
-/* =========================================
-   TOP NAVIGATION
-========================================= */
-
-.top-nav {
-    margin-bottom: 22px;
-    text-align: left;
-}
-
-/* =========================================
-   SYLLABUS CARD
-========================================= */
-
-.syllabus {
-    position: relative;
-    overflow: hidden;
-
-    margin-bottom: 28px;
-    padding: 28px 30px;
-
-    background: #FAFAF7;
-    border: 1px solid #DCE4EA;
-    border-radius: 16px;
-
-    color: #26394A;
-
-    box-shadow:
-        0 7px 22px rgba(0, 0, 0, 0.10);
-}
-
-.syllabus::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    height: 4px;
-
-    background: linear-gradient(
-        90deg,
-        #B28C50,
-        #E6CD9B,
-        #B28C50
-    );
-}
-
-.syllabus h1 {
-    margin: 0 0 20px;
-
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.3;
-
-    color: #102A43;
-}
-
-.syllabus p {
-    margin: 0;
-
-    font-size: 18px;
-    line-height: 1.85;
-
-    color: #485765;
-    text-align: left;
-}
-
-/* =========================================
-   QUESTIONS HEADING
-========================================= */
-
-.questions-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-
-    margin: 5px 2px 18px;
-}
-
-.questions-heading h2 {
-    margin: 0;
-
-    font-size: 25px;
-    font-weight: 700;
-
-    color: #F5E6C8;
-}
-
-.questions-count {
-    flex-shrink: 0;
-
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-
-    color: #AFC0D2;
-}
-
-/* =========================================
-   QUESTION LIST
-========================================= */
-
-.question-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-/* =========================================
-   QUESTION CARDS
-========================================= */
-
-.question-card {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-
-    min-height: 90px;
-    padding: 18px 20px;
-
-    background: #FAFAF7;
-    border: 1px solid #DEE5EB;
-    border-radius: 13px;
-
-    text-decoration: none;
-    color: #26394A;
-
-    box-shadow:
-        0 4px 14px rgba(0, 0, 0, 0.07);
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.question-card:hover {
-    transform: translateY(-2px);
-    border-color: #C5A66D;
-
-    box-shadow:
-        0 8px 22px rgba(0, 0, 0, 0.13);
-}
-
-.question-card:focus-visible {
-    outline: 3px solid #DCC18B;
-    outline-offset: 3px;
-}
-
-/* QUESTION NUMBER */
-
-.q-number {
-    flex-shrink: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 55px;
-    min-height: 48px;
-
-    background: #E8EFF4;
-    border-radius: 9px;
-
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-
-    color: #28557A;
-}
-
-/* QUESTION TEXT */
-
-.question-text {
-    flex: 1;
-    min-width: 0;
-
-    font-size: 18px;
-    line-height: 1.45;
-
-    color: #253747;
-    text-align: left;
-}
-
-/* RIGHT ARROW */
-
-.question-arrow {
-    flex-shrink: 0;
-
-    margin-left: 5px;
-
-    font-family: Arial, sans-serif;
-    font-size: 22px;
-
-    color: #7D98AC;
-}
-
-.question-card:hover .question-arrow {
-    color: #A67C3A;
-}
-
-/* =========================================
-   BOTTOM NAVIGATION
-========================================= */
-
-.bottom-nav {
-    margin-top: 32px;
-    text-align: left;
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    .container {
-        padding: 15px 12px 32px;
-    }
-
-    .top-nav {
-        margin-bottom: 17px;
-    }
-
-    .back-link {
-        padding: 10px 16px;
-        font-size: 14px;
-        border-radius: 8px;
-    }
-
-    .back-arrow {
-        font-size: 18px;
-    }
-
-    .syllabus {
-        padding: 23px 19px;
-        margin-bottom: 24px;
-        border-radius: 13px;
-    }
-
-    .syllabus h1 {
-        font-size: 23px;
-        margin-bottom: 15px;
-    }
-
-    .syllabus p {
-        font-size: 16px;
-        line-height: 1.75;
-    }
-
-    .questions-heading {
-        margin-bottom: 14px;
-    }
-
-    .questions-heading h2 {
-        font-size: 22px;
-    }
-
-    .questions-count {
-        font-size: 11px;
-    }
-
-    .question-list {
-        gap: 10px;
-    }
-
-    .question-card {
-        min-height: 78px;
-        gap: 12px;
-        padding: 14px 12px;
-        border-radius: 11px;
-    }
-
-    .q-number {
-        width: 45px;
-        min-height: 43px;
-        font-size: 13px;
-        border-radius: 8px;
-    }
-
-    .question-text {
-        font-size: 16px;
-        line-height: 1.4;
-    }
-
-    .question-arrow {
-        font-size: 19px;
-        margin-left: 0;
-    }
-
-    .bottom-nav {
-        margin-top: 27px;
-    }
-
-    body {
-        background-attachment: scroll;
-    }
-}
-
-/* =========================================
-   EXTRA SMALL PHONES
-========================================= */
-
-@media (max-width: 380px) {
-
-    .container {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .syllabus {
-        padding: 20px 15px;
-    }
-
-    .syllabus h1 {
-        font-size: 21px;
-    }
-
-    .syllabus p {
-        font-size: 15px;
-    }
-
-    .question-card {
-        gap: 9px;
-        padding: 12px 10px;
-    }
-
-    .q-number {
-        width: 40px;
-        min-height: 40px;
-        font-size: 12px;
-    }
-
-    .question-text {
-        font-size: 15px;
-    }
-}
-
-/* =========================================
-   REDUCED MOTION
-========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .back-link,
-    .question-card {
-        transition: none;
-    }
-}
-
-</style>
-
-</head>
-
-<body>
-
+<link href="../style.css" rel="stylesheet"/></head>
+<body class="unit-index">
 <main class="container">
-
-    <!-- TOP BACK BUTTON -->
-
-    <nav class="top-nav" aria-label="Top navigation">
-
-        <a href="../index.html" class="back-link">
-            <span class="back-arrow" aria-hidden="true">←</span>
-            <span>Back</span>
-        </a>
-
-    </nav>
-
-    <!-- UNIT I SYLLABUS TOPICS -->
-
-    <section class="syllabus">
-
-        <h1>
+<!-- TOP BACK BUTTON -->
+<nav aria-label="Top navigation" class="top-nav">
+<a class="back-link" href="../index.html">
+<span aria-hidden="true" class="back-arrow">←</span>
+<span>Back</span>
+</a>
+</nav>
+<!-- UNIT I SYLLABUS TOPICS -->
+<section class="syllabus">
+<h1>
             Unit I Syllabus Topics
         </h1>
-
-        <p>
+<p>
             Café Culture and Yahoo Boyism in Nigeria,
             Internet Gambling,
             Identity Construction Among Hackers,
@@ -520,200 +33,125 @@ body {
             Online Social Networking and Pedophilia,
             Internet as a Terrorist's Tool.
         </p>
-
-    </section>
-
-    <!-- QUESTIONS HEADING -->
-
-    <div class="questions-heading">
-
-        <h2>
+</section>
+<!-- QUESTIONS HEADING -->
+<div class="questions-heading">
+<h2>
             Questions
         </h2>
-
-        <span class="questions-count">
+<span class="questions-count">
             10 Questions
         </span>
-
-    </div>
-
-    <!-- QUESTIONS IN QB NUMBER ORDER -->
-
-    <nav class="question-list" aria-label="Unit I questions">
-
-        <!-- Q1 -->
-
-        <a href="q1.html" class="question-card">
-
-            <span class="q-number">Q1</span>
-
-            <span class="question-text">
+</div>
+<!-- QUESTIONS IN QB NUMBER ORDER -->
+<nav aria-label="Unit I questions" class="question-list">
+<!-- Q1 -->
+<a class="question-card" href="q1.html">
+<span class="q-number">Q1</span>
+<span class="question-text">
                 Explain Bandura's Theory of Reciprocal
                 Determinism and its application to
                 cyber-criminal behavior.
             </span>
-
-            <span class="question-arrow" aria-hidden="true">›</span>
-
-        </a>
-
-        <!-- Q3 -->
-
-        <a href="q3.html" class="question-card">
-
-            <span class="q-number">Q3</span>
-
-            <span class="question-text">
+<span aria-hidden="true" class="question-arrow">›</span>
+</a>
+<!-- Q3 -->
+<a class="question-card" href="q3.html">
+<span class="q-number">Q3</span>
+<span class="question-text">
                 Analyze the profile and behavioral patterns
                 of virtual sex offenders in cyberspace.
             </span>
-
-            <span class="question-arrow" aria-hidden="true">›</span>
-
-        </a>
-
-        <!-- Q9 -->
-
-        <a href="q9.html" class="question-card">
-
-            <span class="q-number">Q9</span>
-
-            <span class="question-text">
+<span aria-hidden="true" class="question-arrow">›</span>
+</a>
+<!-- Q9 -->
+<a class="question-card" href="q9.html">
+<span class="q-number">Q9</span>
+<span class="question-text">
                 Analyze the relationship between online
                 social networking and pedophilia, including
                 risk factors and warning signs.
             </span>
-
-            <span class="question-arrow" aria-hidden="true">›</span>
-
-        </a>
-
-        <!-- Q11 -->
-
-        <a href="q11.html" class="question-card">
-
-            <span class="q-number">Q11</span>
-
-            <span class="question-text">
+<span aria-hidden="true" class="question-arrow">›</span>
+</a>
+<!-- Q11 -->
+<a class="question-card" href="q11.html">
+<span class="q-number">Q11</span>
+<span class="question-text">
                 Examine the Internet as a terrorist tool,
                 including radicalization and propaganda
                 methods.
             </span>
-
-            <span class="question-arrow" aria-hidden="true">›</span>
-
-        </a>
-
-        <!-- Q13 -->
-
-        <a href="q13.html" class="question-card">
-
-            <span class="q-number">Q13</span>
-
-            <span class="question-text">
+<span aria-hidden="true" class="question-arrow">›</span>
+</a>
+<!-- Q13 -->
+<a class="question-card" href="q13.html">
+<span class="q-number">Q13</span>
+<span class="question-text">
                 Explain the term Internet Child Pornography
                 Consumers with reference to their online
                 patterns and the psychological factors
                 that drive such behavior.
             </span>
-
-            <span class="question-arrow" aria-hidden="true">›</span>
-
-        </a>
-
-        <!-- Q16 -->
-
-        <a href="q16.html" class="question-card">
-
-            <span class="q-number">Q16</span>
-
-            <span class="question-text">
+<span aria-hidden="true" class="question-arrow">›</span>
+</a>
+<!-- Q16 -->
+<a class="question-card" href="q16.html">
+<span class="q-number">Q16</span>
+<span class="question-text">
                 Describe the concept of Café Culture and
                 Yahoo Boyism in Nigeria as a form of
                 cybercrime subculture.
             </span>
-
-            <span class="question-arrow" aria-hidden="true">›</span>
-
-        </a>
-
-        <!-- Q18 -->
-
-        <a href="q18.html" class="question-card">
-
-            <span class="q-number">Q18</span>
-
-            <span class="question-text">
+<span aria-hidden="true" class="question-arrow">›</span>
+</a>
+<!-- Q18 -->
+<a class="question-card" href="q18.html">
+<span class="q-number">Q18</span>
+<span class="question-text">
                 Discuss the characteristics and motivations
                 of Internet Child Pornography Consumers.
             </span>
-
-            <span class="question-arrow" aria-hidden="true">›</span>
-
-        </a>
-
-        <!-- Q23 -->
-
-        <a href="q23.html" class="question-card">
-
-            <span class="q-number">Q23</span>
-
-            <span class="question-text">
+<span aria-hidden="true" class="question-arrow">›</span>
+</a>
+<!-- Q23 -->
+<a class="question-card" href="q23.html">
+<span class="q-number">Q23</span>
+<span class="question-text">
                 Discuss Internet gambling as a cybercrime
                 activity, including its nature, appeal
                 and regulatory challenges.
             </span>
-
-            <span class="question-arrow" aria-hidden="true">›</span>
-
-        </a>
-
-        <!-- Q25 -->
-
-        <a href="q25.html" class="question-card">
-
-            <span class="q-number">Q25</span>
-
-            <span class="question-text">
+<span aria-hidden="true" class="question-arrow">›</span>
+</a>
+<!-- Q25 -->
+<a class="question-card" href="q25.html">
+<span class="q-number">Q25</span>
+<span class="question-text">
                 Compare Yahoo Boyism with other forms of
                 cyber-fraud subcultures in terms of
                 social and economic drivers.
             </span>
-
-            <span class="question-arrow" aria-hidden="true">›</span>
-
-        </a>
-
-        <!-- Q28 -->
-
-        <a href="q28.html" class="question-card">
-
-            <span class="q-number">Q28</span>
-
-            <span class="question-text">
+<span aria-hidden="true" class="question-arrow">›</span>
+</a>
+<!-- Q28 -->
+<a class="question-card" href="q28.html">
+<span class="q-number">Q28</span>
+<span class="question-text">
                 Analyze identity construction among hackers,
                 including its psychological and social
                 factors and the influence of online anonymity.
             </span>
-
-            <span class="question-arrow" aria-hidden="true">›</span>
-
-        </a>
-
-    </nav>
-
-    <!-- BOTTOM BACK BUTTON -->
-
-    <nav class="bottom-nav" aria-label="Bottom navigation">
-
-        <a href="../index.html" class="back-link">
-            <span class="back-arrow" aria-hidden="true">←</span>
-            <span>Back</span>
-        </a>
-
-    </nav>
-
+<span aria-hidden="true" class="question-arrow">›</span>
+</a>
+</nav>
+<!-- BOTTOM BACK BUTTON -->
+<nav aria-label="Bottom navigation" class="bottom-nav">
+<a class="back-link" href="../index.html">
+<span aria-hidden="true" class="back-arrow">←</span>
+<span>Back</span>
+</a>
+</nav>
 </main>
-
 </body>
 </html>
